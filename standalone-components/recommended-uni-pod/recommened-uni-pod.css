@@ -1,0 +1,369 @@
+/* FY24-Q1-Sprint1 */
+
+:root {
+    --white: #ffffff;
+    --gray: #707070;
+    --gray2: #767676;
+    --gray-light-op5: rgb(118 118 118 / 5%);
+    --gray-op5: rgb(119 119 119 / 5%);
+    /* v2 colors */
+    --text: #0F172A;
+    --primary-v2: #3460DC;
+    --primary-v2-dark: #173EAD;
+    --primary-v2-focus: #00A0FF;
+    --red-v2: #DC2626;
+  }
+
+  body{
+    margin: 0 auto;
+  }
+  
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Regular';
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?v=4.0.3);
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.svg?v=4.0.3#Lato-Regular) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Bold';
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?v=4.0.3);
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.svg?v=4.0.3#Lato-Bold) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Black';
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.eot?v=4.0.3);
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.svg?v=4.0.3#Lato-Black) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+
+  /* review rwcard component styles */
+  
+  .recUni-wrapper *,
+  .rwcard * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Utility - Start */
+  .border-bottom-dotted {
+      border-bottom: 1px dotted var(--gray);
+  }
+
+  .d-inline-block {
+      display: inline-block;
+  }
+
+  .mt4 {
+      margin-top: 4px;
+  }
+  /* Utility - End */
+
+  .recUni-bg{
+    background-color: var(--gray-light-op5);
+    padding: 56px 0;
+    box-sizing: border-box;
+
+  }
+
+  .recUni-wrapper{
+    max-width: 100%;
+    width: 1106px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .recUni__title{
+    position: relative;
+    text-align: center;
+    margin: 0 24px;
+  }
+
+  .recUni__title::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #636363;
+    left: 0;
+    top: 26px;
+    z-index: 0;
+  }
+
+  .recUni__title h2{
+    color: var(--gray2);
+    margin-bottom: 0;
+    background: #F8F8F8;
+    font: 36px/48px "lato-Bold";
+    display: inline-block;
+    padding: 0 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .recUni__description {
+    color: var(--gray2);
+    font: 18px/28px "lato-Regular";
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    padding: 0 24px;
+}
+
+  .recUni-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .recUni-card {
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  /* .recUni-whole-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1
+  } */
+  
+  .recUni__bg {
+    position: relative;
+    height: 218px;
+    background-color: var(--gray-op5);
+  }
+  
+  .recUni__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .recUni__logo {
+    width: 70px;
+    height: 66px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    border: 4px solid var(--white);
+    background-color: var(--white);
+    border-radius: 4px;
+    object-fit: contain;
+  }
+  
+  .recUni-info {
+    background: transparent;
+    padding: 24px 0 16px;
+    min-height: 140px;
+  }
+  
+  .recUni-info__name {
+    margin: 0;
+    font: 16px/24px "lato-Bold";
+    color: var(--text);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+
+  .recUni-info__name--course{
+    font: 20px/24px "lato-Bold";
+    -webkit-line-clamp: 1;
+
+  }
+
+  .recUni-info__name--uni{
+    font: 14px/24px "lato-Bold";
+    margin-top: 4px;
+  }
+
+  .rating-value {
+    font: 14px/20px "lato-Regular";
+    color: var(--text);
+  }
+  
+  .recUni__viewLink-wrap {
+    position: relative;
+    height: 24px;
+  }
+  
+  .recUni-card .recUni__viewLink {
+    color: var(--primary-v2);
+    font: 16px/24px "lato-Bold";
+    text-decoration: none;
+    display: block;
+  }
+
+  .recUni-card .recUni__viewLink:hover {
+    text-decoration: underline;
+  }
+  
+  .recUni-card .recUni__viewLink::after{
+    content: '';
+    background-image: url(https://images-dom.aws.test.idp-connect.com/wu-cont/images/chub_gallery_right_arw-v2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    margin-left: 8px;
+  }
+  
+  .recUni-card .rwcard__review {
+    padding-top: 8px;
+  }
+
+  .rwcard {
+    /* margin: 16px; */
+    padding: 16px;
+    color: var(--text);
+    border-radius: 8px;
+    background-color: var(--white);
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.02), 0 4px 6px 1px rgba(0,0,0,0.06);
+
+    /* border: 1px solid var(--text); */
+  }
+  
+  .rwcard__header {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .rwcard__avatar {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    min-height: 42px;
+    background-color: var(--red-v2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+  }
+  
+  .rwcard__avatar span {
+    color: var(--white);
+    font: 18px/28px "Lato-Regular";
+  }
+
+  .rwcard__name{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .rwcard__name span {
+    font: 12px/16px "Lato-Regular";
+    display: table-cell;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .rwcard__star {
+    margin-right: 4px;
+  }
+  
+  .rwcard__date {
+    font: 12px/20px "Lato-Regular";
+  }
+  
+  .rwcard__star,
+  .rwcard__date {
+    display: inline-block;
+  }
+  
+  .rwcard__title {
+    font: 16px/24px "Lato-Bold";
+    margin-bottom: 4px;
+  }
+  
+  .rwcard__review {
+    font: 14px/20px "Lato-Regular";
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+  
+  /* ratings */
+  .rating-stars {
+    width: 54px;
+    height: 12px;
+    background-image: url(https://images8.content-hcs.com/wu-cont/images/rat_star.png);
+    background-size: 110px;
+  }
+  
+  .rating-stars--4 {
+    background-position: -11px 0;
+  }
+  
+  .rating-stars--3 {
+    background-position: -22px 0;
+  }
+  
+  .rating-stars--2 {
+    background-position: -33px 0;
+  }
+  
+  .rating-stars--1 {
+    background-position: -44px 0;
+  }
+  
+  .rating-stars--0 {
+    background-position: -55px 0;
+  }
+  
+  /* ratings */
+  
+  @media screen and (max-width: 425px){
+    .recUni-bg{
+      padding: 40px 0;
+    }
+    .recUni__title h2{
+      margin: 0 16px;
+    }
+    .recUni__title h2{
+      font: 24px/48px "lato-Bold";
+    }
+    .recUni__description {
+      font: 18px/22px "lato-Regular";
+      padding: 0 16px;
+    }
+  }
+  @media screen and (max-width: 990px) {
+    .recUni-cards {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0 16px 16px;
+      scroll-padding: 16px;
+      scroll-snap-align: start;
+      justify-content: start;
+    }
+  
+    .recUni-card {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      margin-right: 4px;
+    }
+  }
+  
+  /* FY24-Q1-Sprint1 */

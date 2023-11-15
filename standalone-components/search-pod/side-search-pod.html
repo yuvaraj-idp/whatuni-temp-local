@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Pod</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../../fy24-q2-sprint5/css/wu_utilities_src.css" media="screen"> -->
+    <link rel="stylesheet" type="text/css" href="./css/wu_side_search_pod.css" media="screen">
+</head>
+<body>
+    <div class="searchPod-wrapper">
+        <div class="searchPod">
+            <h2 class="searchPod__title">Find the perfect uni for you</h2>
+            <form>
+                <input type="text" class="searchPod__textbox" id="uni" name="uni" placeholder="Enter university">
+                <a href="#" id="searchUni" class="btn btn-primary-v2 searchPod__cta">
+                    SEARCH
+                </a>
+            </form>
+        </div>
+    </div>
+
+    <div class="searchPod-wrapper">
+        <div class="searchPod">
+            <h2 class="searchPod__title">Find unis or courses you'll love</h2>
+            <form>
+                <div class="p-relative mb4">
+                    <div class="searchPod__dropdown">
+                        <input type="text" name="qualification" id="searchPodQualDropdown" class="" value="Undergraduate" readonly="readonly" onclick="toggleQualListMob(null,'top_nav');">
+                    </div>
+                    <ul id="searchPodQualList" class="searchPodDropdown__content">
+                        <li class="searchPodDropdown__item" >All</li>
+                        <li class="searchPodDropdown__item" >Undergraduate</li>	
+                        <li class="searchPodDropdown__item" >Postgraduate</li>	
+                    </ul>
+                </div>
+               
+                <input type="text" class="searchPod__textbox" id="university" name="university" placeholder="Enter university">
+                <a href="#" id="searchUniversity" class="btn btn-primary-v2 searchPod__cta">
+                    SEARCH
+                </a>
+            </form>
+        </div>
+    </div>
+
+    <div class="searchPod-wrapper">
+        <div class="searchPod">
+            <h2 class="searchPod__title">Find your perfect course</h2>
+            <form>
+                <div class="p-relative mb4">
+                    <div class="searchPod__dropdown">
+                        <input type="text" name="qualification"  id="searchPodQualDropdown1"  class="" value="Undergraduate" readonly="readonly" onclick="toggleQualListMob(null,'top_nav');">
+                    </div>
+                    <ul id="searchPodQualList1" class="searchPodDropdown__content">
+                        <li class="searchPodDropdown__item" >All</li>
+                        <li class="searchPodDropdown__item" >Undergraduate</li>	
+                        <li class="searchPodDropdown__item" >Postgraduate</li>	
+                    </ul>
+                </div>
+               
+                <input type="text" class="searchPod__textbox" id="subject" name="subject" placeholder="Enter subject">
+                <a href="#" id="searchSubject" class="btn btn-primary-v2 searchPod__cta">
+                    SEARCH
+                </a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

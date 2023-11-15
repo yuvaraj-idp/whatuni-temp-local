@@ -1,0 +1,283 @@
+:root {
+    --lightblue: #1BBFFA;
+    --yellow: #FCD34D;
+    --white: #FFFFFF;
+    --red-v2: #DC2626;
+    --primary-v2: #3460DC;
+    --primary-v2-dark: #173EAD;
+    --primary-v2-focus: #00A0FF;
+    --green-v2: #047857;
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Regular';
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?v=4.0.3);
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.svg?v=4.0.3#Lato-Regular) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Bold';
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?v=4.0.3);
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.svg?v=4.0.3#Lato-Bold) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Black';
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.eot?v=4.0.3);
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.svg?v=4.0.3#Lato-Black) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+.routingBanner__cta.btn-primary-v2 {
+    background-color: var(--primary-v2);
+    color: var(--white);
+    border-color: var(--primary-v2);
+}
+
+.routingBanner__cta.btn-green-v2 {
+    color: var(--white);
+    background-color: var(--green-v2);
+    border-color: var(--green-v2);
+}
+
+.routingBanner__cta.btn-red-v2{
+    color: var(--white);
+    background-color: var(--red-v2);
+    border-color: var(--red-v2);
+}
+
+.routingBanner .routingBanner__cta:hover,
+.routingBanner .routingBanner__cta:focus{
+    text-decoration: none;
+    filter: brightness(110%) saturate(110%);
+}
+
+.routingBanner>* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.routingBanner {
+    border-radius: 4px;
+    margin: 0 auto 16px;
+}
+
+.routingBanner--small {
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.routingBanner--large {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 12px;
+}
+
+.routingBanner--small.routingBanner--searchLightBlue {
+    background: url(./images/routing-banner-bg-desktop-small-search-light-blue.webp) 0 0/cover no-repeat;
+    background-color: var(--lightblue);
+}
+
+.routingBanner--large.routingBanner--searchLightBlue {
+    background: url(./images/routing-banner-bg-desktop-large-search-light-blue.webp) 0 0/cover no-repeat;
+    background-color: var(--lightblue);
+}
+
+.routingBanner--small.routingBanner--commentGreen {
+    background: url(./images/routing-banner-bg-desktop-small-comment-green.webp) 0 0/cover no-repeat;
+    background-color: var(--green-v2-2);
+}
+
+.routingBanner--large.routingBanner--commentGreen {
+    background: url(./images/routing-banner-bg-desktop-large-comment-green.webp) 0 0/cover no-repeat;
+    background-color: var(--green-v2-2);
+}
+
+.routingBanner--small.routingBanner--buildingDarkblue {
+    background: url(./images/routing-banner-bg-desktop-small-building-dark-blue.webp) 0 0/cover no-repeat;
+    background-color: var(--primary-v2);
+}
+
+.routingBanner--large.routingBanner--buildingDarkblue {
+    background: url(./images/routing-banner-bg-desktop-large-building-dark-blue.webp) 0 0/cover no-repeat;
+    background-color: var(--primary-v2);
+}
+
+.routingBanner--small.routingBanner--mapGreen {
+    background: url(./images/routing-banner-bg-desktop-small-map-green.webp) 0 0/cover no-repeat;
+    background-color: var(--green-v2-2);
+}
+
+.routingBanner--large.routingBanner--mapGreen {
+    background: url(./images/routing-banner-bg-desktop-large-map-green.webp) 0 0/cover no-repeat;
+    background-color: var(--green-v2-2);
+}
+
+.routingBanner--small.routingBanner--homeYellow {
+    background: url(./images/routing-banner-bg-desktop-small-home-yellow.webp) 0 0/cover no-repeat;
+    background-color: var(--yellow);
+}
+
+.routingBanner--large.routingBanner--homeYellow {
+    background: url(./images/routing-banner-bg-desktop-large-home-yellow.webp) 0 0/cover no-repeat;
+    background-color: var(--yellow);
+}
+
+.routingBanner--small.routingBanner--calendarDarkblue {
+    background: url(./images/routing-banner-bg-desktop-small-calendar-dark-blue.webp) 0 0/cover no-repeat;
+    background-color: var(--primary-v2);
+}
+
+.routingBanner--large.routingBanner--calendarDarkblue {
+    background: url(./images/routing-banner-bg-desktop-large-calendar-dark-blue.webp) 0 0/cover no-repeat;
+    background-color: var(--primary-v2);
+}
+
+.routingBanner--small .routingBanner__title {
+    font: 20px/28px "Lato-Bold", Arial;
+}
+
+.routingBanner--large .routingBanner__title {
+    font: 18px/28px "Lato-Bold", Arial;
+}
+
+.routingBanner .routingBanner__title,
+.routingBanner .routingBanner__text {
+    color: var(--white);
+}
+
+.routingBanner--homeYellow .routingBanner__title,
+.routingBanner--homeYellow .routingBanner__text{
+    color: var(--text);
+}
+
+.routingBanner .routingBanner__text {
+    font: 14px/20px "Lato-Regular", Arial;
+    margin-top: 4px;
+    margin-bottom: 16px;
+}
+
+.routingBanner .routingBanner__cta {
+    display: inline-block;
+    min-width: 178px;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 24px;
+    font: 14px/20px "Lato-Bold", Arial;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.routingBanner__innerLeft {
+    grid-column: 1/6;
+    padding: 16px;
+}
+
+.routingBanner__innerRight {
+    grid-column: 6/-1;
+    align-self: end;
+}
+
+.routingBanner__innerRight img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+@media screen and (max-width: 480px) {
+    .routingBanner__innerLeft{
+        grid-column: 1/7;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .routingBanner--small.routingBanner--searchLightBlue {
+        background: url(./images/routing-banner-bg-mobile-small-search-light-blue.webp) 0 0/cover no-repeat;
+        background-color: var(--lightblue);
+    }
+    
+    .routingBanner--large.routingBanner--searchLightBlue {
+        background: url(./images/routing-banner-bg-mobile-large-search-light-blue.webp) 0 0/cover no-repeat;
+        background-color: var(--lightblue);
+    }
+    
+    .routingBanner--small.routingBanner--commentGreen {
+        background: url(./images/routing-banner-bg-mobile-small-comment-green.webp) 0 0/cover no-repeat;
+        background-color: var(--green-v2-2);
+    }
+    
+    .routingBanner--large.routingBanner--commentGreen {
+        background: url(./images/routing-banner-bg-mobile-large-comment-green.webp) 0 0/cover no-repeat;
+        background-color: var(--green-v2-2);
+    }
+    
+    .routingBanner--small.routingBanner--buildingDarkblue {
+        background: url(./images/routing-banner-bg-mobile-small-building-dark-blue.webp) 0 0/cover no-repeat;
+        background-color: var(--primary-v2);
+    }
+    
+    .routingBanner--large.routingBanner--buildingDarkblue {
+        background: url(./images/routing-banner-bg-mobile-large-building-dark-blue.webp) 0 0/cover no-repeat;
+        background-color: var(--primary-v2);
+    }
+    
+    .routingBanner--small.routingBanner--mapGreen {
+        background: url(./images/routing-banner-bg-mobile-small-map-green.webp) 0 0/cover no-repeat;
+        background-color: var(--green-v2-2);
+    }
+    
+    .routingBanner--large.routingBanner--mapGreen {
+        background: url(./images/routing-banner-bg-mobile-large-map-green.webp) 0 0/cover no-repeat;
+        background-color: var(--green-v2-2);
+    }
+    
+    .routingBanner--small.routingBanner--homeYellow {
+        background: url(./images/routing-banner-bg-mobile-small-home-yellow.webp) 0 0/cover no-repeat;
+        background-color: var(--yellow);
+    }
+    
+    .routingBanner--large.routingBanner--homeYellow {
+        background: url(./images/routing-banner-bg-mobile-large-home-yellow.webp) 0 0/cover no-repeat;
+        background-color: var(--yellow);
+    }
+    
+    .routingBanner--small.routingBanner--calendarDarkblue {
+        background: url(./images/routing-banner-bg-mobile-small-calendar-dark-blue.webp) 0 0/cover no-repeat;
+        background-color: var(--primary-v2);
+    }
+    
+    .routingBanner--large.routingBanner--calendarDarkblue {
+        background: url(./images/routing-banner-bg-mobile-large-calendar-dark-blue.webp) 0 0/cover no-repeat;
+        background-color: var(--primary-v2);
+    }
+}
+@media screen and (max-width: 320px){
+    .routingBanner__innerLeft{
+        grid-column: 1/8;
+    }
+    .routingBanner--large.routingBanner--searchLightBlue{
+        background-position-x: 50%;
+    }
+    .routingBanner--large.routingBanner--commentGreen {
+        background-position-x: 90%;
+    }
+    .routingBanner--large.routingBanner--buildingDarkblue,
+    .routingBanner--large.routingBanner--homeYellow,
+    .routingBanner--large.routingBanner--calendarDarkblue {
+        background-position-x: 70%;
+    }
+}

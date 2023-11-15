@@ -1,0 +1,194 @@
+:root {
+    --text: #0F172A;
+    --primary-v2: #3460DC;
+    --white: #FFFFFF;
+    --primary: #00bbfd;
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Regular';
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?v=4.0.3);
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.svg?v=4.0.3#Lato-Regular) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Bold';
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?v=4.0.3);
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.svg?v=4.0.3#Lato-Bold) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Black';
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.eot?v=4.0.3);
+    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.svg?v=4.0.3#Lato-Black) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+.searchPod-wrapper{
+    position: sticky;
+    top: 8px;
+}
+.searchPod-wrapper::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    border-radius: 8px;
+    background-color: var(--primary);
+}
+.searchPod>*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.searchPod{
+    box-sizing: border-box;
+    width: 300px;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: var(--white);
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.03), 0 6px 10px 2px rgba(0,0,0,0.08);
+    font-family: "Lato-Regular", Arial;
+    margin-bottom: 24px;
+}
+
+.searchPod__title{
+    font: 24px/32px "Lato-Bold", Arial;
+    width: 220px;
+    color: var(--text);
+}
+.searchPod form{
+    margin-top: 16px;
+}
+.searchPod__textbox{
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(15, 23, 42, 0.25);
+    border-radius: 4px;
+    padding: 12px 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.searchPod__dropdown{
+    background: rgba(112,112,112,.05);
+    border: 1px solid rgba(15, 23, 42, 0.25);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    user-select: none;
+
+}
+.searchPod__dropdown input{
+    width: 100%;
+    padding: 10px 28px 10px 15px;
+    border: 0;
+    border-radius: 4px;
+
+    font: 16px/20px "Lato-Regular" ,Arial;
+    color: #707070;
+    cursor: pointer;
+    background: #f8f8f8 url(https://images8.content-hcs.com/wu-cont/images/grdfiltr_arw.svg) no-repeat 95% 55%;
+    box-sizing: border-box;
+    background-size: 16px;
+}
+.searchPodDropdown__content{
+    display: none;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    width: 268px;
+    position: absolute;
+    z-index: 3;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.searchPodDropdown__item{
+    text-align: left;
+    padding: 2px 16px;
+    color: #707070;
+    border: 1px solid transparent;
+    border-width: 1px 0;
+    cursor: pointer;
+    white-space: nowrap;
+    font: 14px/24px Lato-regular,arial;
+    width: 100%;
+    box-sizing: border-box;
+    list-style: none;
+}
+.searchPodDropdown__item:hover{
+    background: #ebebeb;
+    border-color: #c1c1c1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 25px;
+    border: 1px solid currentColor;
+    font-size: 14px;
+    min-width: 150px;
+    text-align: center;
+    transition: all 0.2s;
+    font-family: "Lato-Bold", Arial;
+}
+
+.btn-primary-v2 {
+    background-color: var(--primary-v2);
+    color: var(--white);
+    border-color: var(--primary-v2);
+}
+
+.searchPod__cta{
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 8px;
+    width: 100%;
+    text-align: center;
+    background: var(--primary-v2) url(https://images-dom.prod.aws.idp-connect.com/wu-cont/images/clr20_icn_src_white.svg) no-repeat 12px center;
+}
+.p-relative{
+    position: relative;
+}
+
+.mb4{
+    margin-bottom: 4px;
+}
+
+.d-block{
+    display: block;
+}
+
+.searchPod-sticky{
+    display: none;
+    background-color: var(--white);
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.03), 0 6px 10px 2px rgba(0,0,0,0.08);
+    width: 100%;
+    padding: 16px;
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+}
+.searchPod-sticky .searchPod__title{
+    width: 100%;
+    font: 18px/32px "Lato-Bold", Arial;
+}
+
+@media screen and (max-width: 768px) {
+    .searchPod-wrapper{
+        display: none;
+    }
+    .searchPod-sticky{
+        display: block;
+    }
+}

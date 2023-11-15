@@ -1,0 +1,91 @@
+/* review rwcard component styles */
+:root {
+  --red: #dc2626;
+  --white: #ffffff;
+  --orange: #ff8b00;
+  --medium-black: #0f172a;
+  --gray: #707070;
+}
+.rwcard > * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Utility - Start */
+.border-bottom-dotted {
+  border-bottom: 1px dotted var(--gray);
+}
+/* Utility - End */
+
+.rwcard {
+  margin: 16px;
+  padding: 16px;
+  color: var(--medium-black);
+  border-radius: 8px;
+  background-color: var(--white);
+  border: 1px solid var(--medium-black);
+}
+.rwcard__header {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.rwcard__avatar {
+  width: 42px;
+  height: 42px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+.rwcard__avatar span {
+  color: var(--white);
+  font: 18px/28px "Lato-Regular";
+}
+.rwcard__name span {
+  font: 12px/16px "Lato-Regular";
+}
+.rwcard__star {
+  margin-right: 4px;
+}
+/* ratings */
+.rating-stars {
+  width: 54px;
+  height: 12px;
+  background-image: url(https://images8.content-hcs.com/wu-cont/images/rat_star.png);
+  background-size: 110px;
+}
+.rating-stars--4 {
+  background-position: -11px 0;
+}
+.rating-stars--3 {
+  background-position: -22px 0;
+}
+.rating-stars--2 {
+  background-position: -33px 0;
+}
+.rating-stars--1 {
+  background-position: -44px 0;
+}
+.rating-stars--0 {
+  background-position: -55px 0;
+}
+/* ratings */
+.rwcard__date {
+  font: 12px/20px "Lato-Regular";
+}
+.rwcard__star,
+.rwcard__date {
+  display: inline-block;
+}
+.rwcard__title {
+  font: 16px/24px "Lato-Bold";
+  margin-bottom: 4px;
+}
+.rwcard__review {
+  font: 14px/20px "Lato-Regular";
+}

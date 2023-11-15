@@ -1,0 +1,93 @@
+:root {
+  --primary: #00bbfd;
+  --gray: #707070;
+  --gray-op5: rgb(119 119 119 / 5%);
+  --light-gray2a: #f3f3f3;
+  --white: #ffffff;
+  /* v2 colors */
+  --text: #0F172A;
+  --primary-v2: #3460DC;
+  --primary-v2-dark: #173EAD;
+  --primary-v2-focus: #00A0FF;
+}
+
+.contextual-pod-wrapper > * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato-Regular", Arial;
+}
+
+.contextual-pod-wrapper {
+  background-color: var(--gray-op5);
+  border-radius: 8px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.contextual-pod-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: -webkit-fill-available;
+  border-radius: 8px;
+  background-color: var(--primary);
+}
+
+.contextual-pod {
+  padding: 24px;
+  width: 100%;
+}
+
+@media only screen and (max-width:767px) {
+  .contextual-pod {
+    padding-bottom: 16px;
+  }
+}
+
+.pod__title {
+  font: 24px/32px "Lato-Bold";
+  margin: 0 !important;
+  float: unset !important;
+}
+
+.pod__description {
+  padding-top: 8px;
+  padding-bottom: 16px;
+  margin: 0;
+}
+
+.pod__title,
+.pod__description {
+  color: var(--text) !important;
+}
+
+/* buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 25px;
+    border: 1px solid currentColor;
+    font-size: 14px;
+    font-family: "Lato-Bold";
+    min-width: 150px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .btn-primary-v2 {
+    background-color: var(--primary-v2);
+    color: var(--white);
+    border-color: var(--primary-v2);
+  }
+  .btn-primary-v2:hover,
+  .btn-primary-v2:focus {
+    background-color: var(--primary-v2-dark);
+    color: var(--white);
+    border-color: var(--primary-v2-dark);
+  }
+  .btn-primary-v2:focus{
+    outline: 2px solid var(--primary-v2-focus);
+    outline-offset: 0;
+  }
+  /* buttons */
+
