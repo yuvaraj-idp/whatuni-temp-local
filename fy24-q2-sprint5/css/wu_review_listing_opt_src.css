@@ -1055,6 +1055,12 @@ body.scroll {overflow:hidden}
 .ml8{
   margin-left: 8px;
 }
+.mb0{
+  margin-bottom: 0;
+}
+.mt8{
+  margin-top: 8px;
+}
 .m-unset{
   margin: unset;
 }
