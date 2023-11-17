@@ -92,7 +92,6 @@
     padding: 10px 28px 10px 15px;
     border: 0;
     border-radius: 4px;
-
     font: 16px/20px "Lato-Regular" ,Arial;
     color: #707070;
     cursor: pointer;
@@ -101,33 +100,55 @@
     background-size: 16px;
 }
 .searchPodDropdown__content{
-    display: none;
     background: #fff;
     border: 1px solid #dfdfdf;
     width: 268px;
+    max-height: 360px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: auto;
     position: absolute;
     z-index: 3;
-    top: 50px;
+    top: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    box-shadow: 0 8px 20px 0 rgba(112,112,112,0.2);
+    transition: all .4s;
+}
+.searchPodDropdown__content::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px
+}
+
+.searchPodDropdown__content::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(112, 112, 112, .25)
 }
 .searchPodDropdown__item{
     text-align: left;
-    padding: 2px 16px;
+    padding: 7px 15px;
     color: #707070;
     border: 1px solid transparent;
     border-width: 1px 0;
     cursor: pointer;
-    white-space: nowrap;
     font: 14px/24px Lato-regular,arial;
     width: 100%;
     box-sizing: border-box;
     list-style: none;
 }
 .searchPodDropdown__item:hover{
-    background: #ebebeb;
-    border-color: #c1c1c1;
+    background: #F0F0F0;
+    color: var(--text);
+}
+.searchPodDropdown__item.searchPodDropdown__itemHeader{
+    background: none repeat scroll 0 0 #959595;
+    color: #fff;
+    cursor: auto;
+    display: block;
+    font-weight: bold;
+    padding: 7px 15px;
+    text-transform: uppercase;
 }
 
 .btn {
@@ -165,8 +186,20 @@
     margin-bottom: 4px;
 }
 
+.ml20{
+    margin-left: 20px;
+}
+
 .d-block{
     display: block;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-flex{
+    display: flex;
 }
 
 .searchPod-sticky{
@@ -179,9 +212,16 @@
     bottom: 0;
     z-index: 2;
 }
+
 .searchPod-sticky .searchPod__title{
     width: 100%;
     font: 18px/32px "Lato-Bold", Arial;
+}
+
+.error-text{
+    font: 14px/20px "Lato-Regular",Arial;
+    color: #F8706C;
+    padding: 8px 0 0;
 }
 
 @media screen and (max-width: 768px) {
