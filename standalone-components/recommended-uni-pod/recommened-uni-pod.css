@@ -216,6 +216,7 @@
   .rating-value {
     font: 14px/20px "lato-Regular";
     color: var(--text);
+    margin-left: 4px;
   }
   
   .recUni__viewLink-wrap {

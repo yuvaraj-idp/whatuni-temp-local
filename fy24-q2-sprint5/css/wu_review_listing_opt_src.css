@@ -1008,9 +1008,20 @@ body.scroll {overflow:hidden}
   padding-top: 8px;
   padding-bottom: 20px;
 }
-.rw-pod__chip{
+.rw-pod__chip-group{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+.rw-pod__body .rw-pod__chip{
   padding: 4px 8px;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: left;
+  min-width: unset;
 }
 .rw-pod__footer .rw-pod__link{
   font-size: 16px;
