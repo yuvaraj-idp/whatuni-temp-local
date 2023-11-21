@@ -12,29 +12,50 @@
 @font-face {
     font-display: fallback;
     font-family: 'Lato-Regular';
-    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?v=4.0.3);
-    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Regular.svg?v=4.0.3#Lato-Regular) format("svg");
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?v=4.0.3);
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.svg?v=4.0.3#Lato-Regular) format("svg");
     font-weight: normal;
     font-style: normal
-}
-
-@font-face {
+  }
+  
+  @font-face {
     font-display: fallback;
     font-family: 'Lato-Bold';
-    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?v=4.0.3);
-    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Bold.svg?v=4.0.3#Lato-Bold) format("svg");
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?v=4.0.3);
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.svg?v=4.0.3#Lato-Bold) format("svg");
     font-weight: normal;
     font-style: normal
-}
-
-@font-face {
+  }
+  
+  @font-face {
     font-display: fallback;
     font-family: 'Lato-Black';
-    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.eot?v=4.0.3);
-    src: url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.woff?v=4.0.3) format("woff"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.ttf?v=4.0.3) format("truetype"), url(https://images1.content-hcs.com/wu-cont/cssstyles/fonts/Lato-Black.svg?v=4.0.3#Lato-Black) format("svg");
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.eot?v=4.0.3);
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.svg?v=4.0.3#Lato-Black) format("svg");
     font-weight: normal;
     font-style: normal
-}
+  }
+  
+  @font-face {
+    font-display: fallback;
+    font-family: 'FontAwesome';
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.eot?v=4.0.3);
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesome) format("svg");
+    font-weight: normal;
+    font-style: normal
+  }
+  
+  .font-regular {
+    font-family: "Lato-Regular", Arial;
+  }
+  
+  .font-bold {
+    font-family: "Lato-Bold", Arial;
+  }
+  
+  .font-black {
+    font-family: "Lato-Black", Arial;
+  }
 
 .routingBanner__cta.btn-primary-v2 {
     background-color: var(--primary-v2);
