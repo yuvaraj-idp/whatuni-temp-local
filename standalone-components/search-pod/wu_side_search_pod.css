@@ -54,7 +54,7 @@
   }
 .searchPod-wrapper{
     position: sticky;
-    top: 8px;
+    top: 24px;
 }
 .searchPod-wrapper::before{
     content: '';
