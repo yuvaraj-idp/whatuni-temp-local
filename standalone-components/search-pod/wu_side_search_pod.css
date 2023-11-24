@@ -158,7 +158,9 @@
     box-sizing: border-box;
     list-style: none;
 }
-.searchPodDropdown__item:hover{
+.searchPodDropdown__item:hover,
+.searchPodDropdown__item:focus,
+.searchPodDropdown__item--focus{
     background: #F0F0F0;
     color: var(--text);
 }
