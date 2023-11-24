@@ -151,6 +151,8 @@
     max-width: 300px;
     position: relative;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
   }
   
   /* .recUni-whole-link {
@@ -190,27 +192,33 @@
     background: transparent;
     padding: 24px 0 16px;
     min-height: 140px;
+    flex-grow: 2;
   }
   
   .recUni-info__name {
     margin: 0;
-    font: 16px/24px "lato-Bold";
     color: var(--text);
+  }
+
+  .recUni-info__name--course{
+    font: 20px/24px "lato-Bold";
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+
+  .recUni-info__name--uni{
+    font: 16px/24px "lato-Bold";
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;  
     overflow: hidden;
   }
 
-  .recUni-info__name--course{
-    font: 20px/24px "lato-Bold";
-    -webkit-line-clamp: 1;
-
-  }
-
-  .recUni-info__name--uni{
+  .recUni-info__name--course + .recUni-info__name--uni{
     font: 14px/24px "lato-Bold";
-    margin-top: 4px;
   }
 
   .rating-value {
@@ -222,13 +230,14 @@
   .recUni__viewLink-wrap {
     position: relative;
     height: 24px;
+    margin-top: 4px;
   }
   
   .recUni-card .recUni__viewLink {
     color: var(--primary-v2);
     font: 16px/24px "lato-Bold";
     text-decoration: none;
-    display: block;
+    display: inline;
   }
 
   .recUni-card .recUni__viewLink:hover {
@@ -330,7 +339,7 @@
   /* ratings */
   .rating-stars {
     width: 54px;
-    height: 12px;
+    height: 14px;
     background-image: url(https://images-dom.aws.test.idp-connect.com/wu-cont/images/rat_star.png);
     background-size: 110px;
   }
