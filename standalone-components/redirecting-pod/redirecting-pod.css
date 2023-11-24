@@ -89,6 +89,7 @@
 .routingBanner {
     border-radius: 4px;
     margin: 0 auto 16px;
+    max-width: 600px;
 }
 
 .routingBanner--small {
@@ -300,5 +301,18 @@
     .routingBanner--large.routingBanner--homeYellow,
     .routingBanner--large.routingBanner--calendarDarkblue {
         background-position-x: 70%;
+    }
+}
+
+@media screen and (min-width: 481px){
+    .routingBanner--searchLightBlue .routingBanner__text,
+    .routingBanner--mapGreen .routingBanner__text{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .routingBanner--large.routingBanner--homeYellow .routingBanner__title{
+        width: 85%;
     }
 }
