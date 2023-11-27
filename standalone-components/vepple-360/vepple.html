@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vepple</title>
+    <link rel="stylesheet" type="text/css" href="./vepple.css" media="screen">
+</head>
+
+<body>
+    <div class="clearfix"></div>
+    <section class="wrapper">
+        <div class="wrapper__container">
+            <div class="wrapper__title">
+                <h2>Virtual tours</h2>
+            </div>
+
+            <!-- Vepple - Start -->
+            <div>
+                <script src="https://rv-vepple-integrate.web.app/vepple-integrate.umd.js">
+                </script>
+                <div class="vepple-wrap">
+                    <vepple-integrate class="vepple__integrate" api="https://api.sheffield.rvhosted.com">
+                    </vepple-integrate>
+                </div>
+                <script>
+                    // target main nav buttons (ps)
+                    var t1 = setTimeout(function () {
+                        let sr1 = $(".vepple__integrate")[0].shadowRoot;
+                        $(sr1).find('.vep-footer a').remove(); // remove CTA from widget (ps)
+                    }, 2000);
+                </script>
+            </div>
+            <!-- Vepple - End -->
+
+        </div>
+    </section>
+</body>
+</html>

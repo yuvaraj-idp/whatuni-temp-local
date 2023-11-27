@@ -1,0 +1,218 @@
+:root {
+    --white: #ffffff;
+    --gray: #707070;
+    --gray2: #767676;
+    --gray-light-op5: rgb(118 118 118 / 5%);
+    --gray-op5: rgb(119 119 119 / 5%);
+    /* v2 colors */
+    --text: #0F172A;
+    --primary-v2: #3460DC;
+    --primary-v2-dark: #173EAD;
+    --primary-v2-focus: #00A0FF;
+    --red-v2: #DC2626;
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Regular';
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?v=4.0.3);
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.svg?v=4.0.3#Lato-Regular) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Bold';
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?v=4.0.3);
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.svg?v=4.0.3#Lato-Bold) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Lato-Black';
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.eot?v=4.0.3);
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.svg?v=4.0.3#Lato-Black) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'FontAwesome';
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.eot?v=4.0.3);
+    src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesome) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+.font-regular {
+    font-family: "Lato-Regular", Arial;
+}
+
+.font-bold {
+    font-family: "Lato-Bold", Arial;
+}
+
+.font-black {
+    font-family: "Lato-Black", Arial;
+}
+
+.wrapper {
+    background-color: var(--gray-light-op5);
+    padding: 32px 0 0;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+}
+
+.wrapper__container * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper__container {
+    max-width: 100%;
+    width: 1106px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.wrapper__title {
+    position: relative;
+    text-align: center;
+    margin: 0 24px;
+}
+
+.wrapper__title::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid var(--text);
+    left: 0;
+    top: 26px;
+    z-index: 0;
+}
+
+.wrapper__title h2 {
+    color: var(--text);
+    margin-bottom: 0;
+    background: #F8F8F8;
+    font: 36px/48px "lato-Bold";
+    display: inline-block;
+    padding: 0 12px;
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (max-width: 425px) {
+    .wrapper {
+        padding: 40px 0 0;
+    }
+
+    .wrapper__title h2 {
+        margin: 0 16px;
+        font: 24px/48px "lato-Bold";
+    }
+}
+
+.vepple-wrap {
+    height: 95vh;
+    max-width: 950px;
+    margin: auto;
+}
+
+.vepple__integrate {
+    /* Global */
+    --vep-font-family: "Lato-Bold";
+    --vep-font-weight: 400;
+    --vep-font-size: 14px;
+    /* CTA button */
+    /* --vep-cta-font-family: Arial; */
+    /* --vep-cta-font-size: 1.05rem; */
+    /* --vep-cta-font-weight: 400; */
+    --vep-cta-text-color: var(--white);
+    --vep-cta-bg-color: var(--primary-v2);
+    --vep-cta-padding: 10px 16px 11px 16px;
+    /* --vep-cta-border: 0; */
+    --vep-cta-border-radius: 25px;
+    --vep-cta-transition: color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    --vep-cta-hover-text-color: var(--white);
+    --vep-cta-hover-bg-color: var(--primary-v2-focus);
+    /* --vep-cta-hover-border: 0; */
+    /* --vep-cta-hover-shadow: 0; */
+    --vep-cta-focus-text-color: var(--white);
+    --vep-cta-focus-bg-color: var(--primary-v2-focus);
+    /* --vep-cta-focus-border: 0; */
+    /* --vep-cta-focus-outline: 0; */
+    --vep-cta-focus-shadow: 0 0 0 0.2rem rgb(22 62 172 / 50%);
+    /* Nav buttons */
+    /* --vep-btn-font-family: Arial; */
+    /* --vep-btn-font-size: 1.05rem; */
+    /* --vep-btn-font-weight: 400; */
+    --vep-btn-text-color: var(--primary-v2);
+    --vep-btn-bg-color: var(--white);
+    --vep-btn-active-bg-color: var(--primary-v2);
+    /* --vep-btn-active-text-color: var(--white) ; */
+    --vep-btn-padding: 10px 16px 11px 16px;
+    --vep-btn-border: 1px solid var(--primary-v2);
+    --vep-btn-border-radius: 25px;
+    --vep-btn-transition: color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    --vep-btn-hover-text-color: var(--white);
+    --vep-btn-hover-bg-color: var(--primary-v2);
+    --vep-btn-hover-border: 1px solid var(--primary-v2);
+    /* --vep-btn-hover-shadow: 0; */
+    --vep-btn-focus-text-color: var(--white);
+    --vep-btn-focus-bg-color: var(--primary-v2-focus);
+    --vep-btn-focus-border: 1px solid var(--primary-v2-focus);
+    /* --vep-btn-focus-outline: 0; */
+    --vep-btn-focus-shadow: 0 0 0 0.2rem rgb(22 62 172 / 50%);
+}
+
+.vepple__integrate::part(vep-cta) {
+    text-transform: uppercase;
+}
+
+.vepple__integrate::part(vep-btn) {
+    margin-right: 8px;
+}
+
+.vepple__integrate::part(vep-header) {
+    padding: 32px 0 16px 0;
+}
+
+.vepple__integrate::part(vep-footer) {
+    padding: 16px 0 32px 0;
+}
+
+.vepple-integrate::part(vep-cta):hover {}
+
+.vepple-integrate::part(vep-cta):focus {}
+
+.vepple-integrate::part(vep-btn) {}
+
+.vepple-integrate::part(vep-btn):hover {}
+
+.vepple-integrate::part(vep-btn):focus {}
+
+@media screen and (max-width: 480px) {
+    .vepple__integrate::part(vep-header) {
+        padding: 0 0 24px 0;
+    }
+    .vepple__integrate::part(vep-btn) {
+        margin-right: 8px;
+        margin-top: 4px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .vepple-wrap{
+        margin: 0 24px;
+    }
+}
