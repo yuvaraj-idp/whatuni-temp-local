@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
 <head>
 <link rel="canonical" href="https://www.whatuni.com"/> 
-<title>Compare the Best University Degrees Courses UK | Whatuni</title> 
+<title>WW-3042 Homepage</title> 
 <meta name="description" content="Find courses at top universities. Free, trusted advice to help you decide which university is best for you. The UK’s biggest student reviews site."/> 
 <meta name="keywords" content="whatuni.com"/> 
 <meta name="ROBOTS" content="index,follow"/>
@@ -33,7 +33,8 @@
 <link rel="preload" href="https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.woff?v=4.0.3" as="font" type="font/woff" crossorigin>
 <!-- <link rel="stylesheet" type="text/css" href="https://css-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/wu_header_styles_20231106.css" media="screen" /> -->
 <link rel="stylesheet" type="text/css" href="css/wu_header_styles_src.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="https://css-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/wu_home_opt_20230801.css" media="screen" />
+<!-- <link rel="stylesheet" type="text/css" href="https://css-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/wu_home_opt_20230801.css" media="screen" /> -->
+<link rel="stylesheet" type="text/css" href="css/wu_home_opt_src.css" media="screen" />
 <script type="text/javascript" language="javascript" src="https://js-dom.prod.aws.idp-connect.com/wu-cont/js/home/jqueryv3.5.1.min.js"></script> 
 <script type="text/javascript" language="javascript" src="https://js-dom.prod.aws.idp-connect.com/wu-cont/js/ticker.js" defer="defer"></script>
 <link rel="stylesheet" id="mobileMainCSS" type="text/css" href="https://css-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/mobile/main_480_20220127.css" media="screen" />
@@ -347,15 +348,16 @@ data-prompt_parent_id="oneTapContainer" data-cancel_on_tap_outside="false">
 </div>
 </div>
 </header>
-<section class="slider_cnt" id="heroslider">
+<section class="slider_cnt hero__section--v2" id="heroslider">
+<div class="hero__image--v2"></div>
 <div class="hm_ldicon" id="load-icon" style="display:none"> <img src="https://images-dom.prod.aws.idp-connect.com/wu-cont/images/hm_ldr.gif" alt="loader icon"> </div>
 <div class="hrosrch_ui fl_w100 z2">
-<div id="homeHeroImgDivId" class="hrobanr_ui fl_w100" style="background: url('https://images-dom.prod.aws.idp-connect.com/wu-cont/images/img_px.gif') no-repeat center center;">
+<div id="homeHeroImgDivId" class="hrobanr_ui fl_w100 hero__container--v2">
 <div class="srch_cnt fl_w100">
 <div class="hrohd_ui fl_w100" data-src="/wu-cont/images/hero_search_bkgimg.jpg">
-<h1>University? We can help.</h1>
-<h2>Find courses, read honest reviews, get expert advice.</h2>
-<input type="hidden" id="heroImgPath" value="https://images-dom.prod.aws.idp-connect.com/wu-cont/images/hero_search_bkgimg.jpg"/>
+<h1 class="hero__title--v2">Your uni search made easier</h1>
+<h2 class="hero__subtitle--v2">Find courses, read honest reviews, get expert advice</h2>
+<!-- <input type="hidden" id="heroImgPath" value="https://images-dom.prod.aws.idp-connect.com/wu-cont/images/hero_search_bkgimg.jpg"/> -->
 </div>
 <div class="srch_ui fl_w100">
 <ul class="tabs" id="srchUlId">
@@ -501,8 +503,14 @@ class="cug_btn_blue cug_btn_prim" onclick="navSearchSubmit('OFF', 'top_nav_popup
 </form>
 </div>
 <div class="advsrc_lnk fl_w100">
-<a href="javascript:void(0);" onclick="openLightBox('interstitial');">Advanced search 
-<i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
+<a href="javascript:void(0);" onclick="openLightBox('interstitial');" class="d-flex gap4">Advanced search 
+<!-- <i aria-hidden="true" class="fa fa-long-arrow-right"></i> -->
+<svg class="arrow--right" width="20px" height="20px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" event_name="findacourse_sub_search" data_label2="Architecture and Design" data_label3="view_all_courses_clicks">
+    <g id="Icon/Arrow---Right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" event_name="findacourse_sub_search" data_label2="Architecture and Design" data_label3="view_all_courses_clicks">
+    <polygon id="Fill" fill="#3460DC" fill-rule="nonzero" points="13.3 5.3 11.9 6.7 16.2 11 4 11 4 13 16.2 13 11.9 17.3 13.3 18.7 20 12" event_name="findacourse_sub_search" data_label2="Architecture and Design" data_label3="view_all_courses_clicks"></polygon>
+    </g>
+    </svg>
+</a>
 </div>
 </div>
 </div>
@@ -545,9 +553,14 @@ onclick="redirectUniHOME(document.getElementById('uniSrchTpId'),'uniSrchTpForm',
 </form>
 </div>
 <div class="advsrc_lnk fl_w100">
-<a href= "/degrees/find-university/" onclick="GANewAnalyticsEventsLogging('University Search', 'View A-Z', 'Clicked');" data-view-all = "university_clicks" data-search-from = "homepage_search">
+<a href= "/degrees/find-university/" onclick="GANewAnalyticsEventsLogging('University Search', 'View A-Z', 'Clicked');" data-view-all = "university_clicks" data-search-from = "homepage_search" class="d-flex gap4">
 View unis A-Z
-<i aria-hidden="true" class="fa fa-long-arrow-right"></i>
+<!-- <i aria-hidden="true" class="fa fa-long-arrow-right"></i> -->
+<svg class="arrow--right" width="20px" height="20px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" event_name="findacourse_sub_search" data_label2="Architecture and Design" data_label3="view_all_courses_clicks">
+    <g id="Icon/Arrow---Right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" event_name="findacourse_sub_search" data_label2="Architecture and Design" data_label3="view_all_courses_clicks">
+    <polygon id="Fill" fill="#3460DC" fill-rule="nonzero" points="13.3 5.3 11.9 6.7 16.2 11 4 11 4 13 16.2 13 11.9 17.3 13.3 18.7 20 12" event_name="findacourse_sub_search" data_label2="Architecture and Design" data_label3="view_all_courses_clicks"></polygon>
+    </g>
+    </svg>
 </a>
 </div>
 </div>
@@ -582,7 +595,14 @@ class="cug_btn_blue cug_btn_prim" onclick="adviceSearchSubmitTp();">
 </form>
 </div>
 <div class="advsrc_lnk fl_w100">
-<a href="/advice/" onclick="GANewAnalyticsEventsLogging('Advice Search', 'Category', 'View All');" data-view-all = "advice_clicks" data-search-from = "homepage_search">View all <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
+<a href="/advice/" onclick="GANewAnalyticsEventsLogging('Advice Search', 'Category', 'View All');" data-view-all = "advice_clicks" data-search-from = "homepage_search" class="d-flex gap4">View all 
+<!-- <i aria-hidden="true" class="fa fa-long-arrow-right"></i> -->
+<svg class="arrow--right" width="20px" height="20px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" event_name="findacourse_sub_search" data_label2="Architecture and Design" data_label3="view_all_courses_clicks">
+    <g id="Icon/Arrow---Right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" event_name="findacourse_sub_search" data_label2="Architecture and Design" data_label3="view_all_courses_clicks">
+    <polygon id="Fill" fill="#3460DC" fill-rule="nonzero" points="13.3 5.3 11.9 6.7 16.2 11 4 11 4 13 16.2 13 11.9 17.3 13.3 18.7 20 12" event_name="findacourse_sub_search" data_label2="Architecture and Design" data_label3="view_all_courses_clicks"></polygon>
+    </g>
+    </svg>
+</a>
 </div>
 <div class="adv_ui fl_w100">
 <!-- <h3>Key topics</h3> -->
@@ -651,7 +671,238 @@ Explore 1000s of available courses, research unis, and easily filter down to one
 <input type="hidden" id="clBannerRedirectUrl" value="" />
 <input type="hidden" id="clBannerGALog" value="0" />
 <!-- You recently search start -->
+<!-- <section class="ltst_art" id="recentSearchFilterPod">
+    <div class="content-bg">
+    <div class="rct_src">
+    <div class="rct_src_lft">
+    <h4 class="rct_head fl">You recently searched for</h4>
+    <div class="srcd_date fl">Searched on 17/11/2023</div>
+    </div>
+    <div class="rct_src_rit">
+    <div class="yrcsr_tag_pod">
+    <a her="javascript:void(0);" class="rcsr_btn">Queen's University Belfast</a>
+    </div>
+    <div class="rtn_to_src fl"><a href="/university-profile/queens-university-belfast/69267/" onclick="GANewAnalyticsEventsLogging('University Search', 'Search', 'queen's university belfast')">RETURN TO SEARCH<span class="blue_arw"></span></a></div>
+    </div>
+    </div>
+    </div>
+    </section> -->
+
+    <div class="clearfix"></div>
+    <section class="wrapper wrapper--white">
+        <div class="wrapper__title">
+            <h2 class="wrapper__title--lg">You recently searched for</h2>
+            <h2 class="wrapper__title--sm">Recent searches</h2>
+        </div>
+
+        <div class="result-pod-wrap">
+            <div class="result-pod">
+                <p class="grey-text mb4">Searched on 17/10/2023</p>
+                <a class="chip btn-primary-v2" href="#">
+                    Nottingham Trent University
+                </a>
+            </div>
+            <div class="result-pod">
+                <p class="grey-text mb4">Searched on 17/10/2023</p>
+                <a class="chip btn-primary-v2" href="#">
+                    Nottingham Trent University
+                </a>
+            </div>
+            <div class="result-pod">
+                <p class="grey-text mb4">Searched on 17/10/2023</p>
+                <a class="chip btn-primary-v2" href="#">
+                    Nottingham Trent University
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="clearfix"></div>
 <!-- You recently search end -->
+
+<!-- Recommended Universities - Start -->
+<section class="recUni-bg">
+    <div class="recUni-wrapper">
+        <div class="recUni__title">
+            <h2>Recommended unis</h2>
+        </div>
+        <p class="recUni__description">
+            Popular unis for law
+        </p>
+        <div class="recUni-cards">
+            <div class="recUni-card"> <!-- art-view  -->
+                <!-- <a href="https://www.whatuni.com/university-profile/university-of-southampton/5625/"
+                    id="suggested_uni_1" data-suggesteduni-collegename="University of Southampton"
+                    class="recUni-whole-link">  -->  <!-- art-whole-link  -->
+                <div class="recUni__bg"> <!-- img_ppn  -->
+                    <img class="recUni__img" src="https://images-dom.prod.aws.idp-connect.com/commimg/myhotcourses/institution/CH/myhc_342316_816px.jpg"
+                        alt="University of Southampton image" /> <!-- nad_main_img  -->
+
+                        <img src="https://images-dom.prod.aws.idp-connect.com/commimg/myhotcourses/institution/myhc_288736.jpg"
+                            alt="University of Southampton Logo" class="recUni__logo"/> <!-- cmp_prf  -->
+                </div>
+                <div class="recUni-info"><!-- art-inc gbg  -->
+                    <!-- div: art_min_hit  -->
+                        <h6 class="recUni-info__name recUni-info__name--uni">
+                            University of Wales Trinity Saint David
+                        </h6>
+                        <div class="rwcard__star d-flex align-items-center mt4">
+                            <div class="rating-stars border-bottom-dotted d-inline-block"></div>
+                            <span class="rating-value">
+                                (4.1)
+                            </span>
+                        </div>
+                        <div class="recUni__viewLink-wrap">
+                            <a href="https://www.whatuni.com/university-profile/university-of-aberdeen/14993/" class="recUni__viewLink">MORE OF THIS UNI</a>
+                        </div>
+                </div>
+                <!-- </a> -->
+                <!-- component structure starts here -->
+                <div class="rwcard">
+                    <div class="rwcard__header">
+                        <div class="rwcard__avatar">
+                            <span>CB</span>
+                        </div>
+                        <div>
+                            <div class="rwcard__name">
+                                <span>Christian Baranowicz</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="rwcard__star">
+                                    <div class="rating-stars border-bottom-dotted"></div>
+                                </div>
+                                <div class="rwcard__date">
+                                    <label>Date reviewed: </label>
+                                    <span>01/01/2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- <h1 class="rwcard__title">Course name</h1> -->
+                        <p class="rwcard__review">There's a lot of building work both at the uni and in my accommodation which is a bit distracting. Overall though it has been a great experience and I'm really happy with my choice.</p>
+                    </div>
+                </div>
+                <!-- component structure ends here -->
+            </div>
+
+            <div class="recUni-card"> <!-- art-view  -->
+                <!-- <a href="https://www.whatuni.com/university-profile/university-of-southampton/5625/"
+                    id="suggested_uni_1" data-suggesteduni-collegename="University of Southampton"
+                    class="recUni-whole-link">  --> <!-- art-whole-link  -->
+                <div class="recUni__bg"> <!-- img_ppn  -->
+                    <img class="recUni__img" src="https://images-dom.prod.aws.idp-connect.com/commimg/myhotcourses/institution/CH/myhc_342316_816px.jpg"
+                        alt="University of Southampton image" /> <!-- nad_main_img  -->
+
+                        <img src="https://images-dom.prod.aws.idp-connect.com/commimg/myhotcourses/institution/myhc_288736.jpg"
+                            alt="University of Southampton Logo" class="recUni__logo"/> <!-- cmp_prf  -->
+                </div>
+                <div class="recUni-info"><!-- art-inc gbg  -->
+                    <!-- div: art_min_hit  -->
+                        <h6 class="recUni-info__name recUni-info__name--uni">
+                            University of Wales Trinity Saint David
+                        </h6>
+                        <div class="rwcard__star d-flex align-items-center mt4">
+                            <div class="rating-stars border-bottom-dotted d-inline-block"></div>
+                            <span class="rating-value">
+                                (4.1)
+                            </span>
+                        </div>
+                        <div class="recUni__viewLink-wrap">
+                            <a href="https://www.whatuni.com/university-profile/university-of-aberdeen/14993/" class="recUni__viewLink">MORE OF THIS UNI</a>
+                        </div>
+                </div>
+                <!-- </a> -->
+                <!-- component structure starts here -->
+                <div class="rwcard">
+                    <div class="rwcard__header">
+                        <div class="rwcard__avatar">
+                            <span>CB</span>
+                        </div>
+                        <div>
+                            <div class="rwcard__name">
+                                <span>Christian Baranowicz</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="rwcard__star">
+                                    <div class="rating-stars border-bottom-dotted"></div>
+                                </div>
+                                <div class="rwcard__date">
+                                    <label>Date reviewed: </label>
+                                    <span>01/01/2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- <h1 class="rwcard__title">Course name</h1> -->
+                        <p class="rwcard__review">There's a lot of building work both at the uni and in my accommodation which is a bit distracting. Overall though it has been a great experience and I'm really happy with my choice.</p>
+                    </div>
+                </div>
+                <!-- component structure ends here -->
+            </div>
+
+            <div class="recUni-card"> <!-- art-view  -->
+                <!-- <a href="https://www.whatuni.com/university-profile/university-of-southampton/5625/"
+                    id="suggested_uni_1" data-suggesteduni-collegename="University of Southampton"
+                    class="recUni-whole-link">  --> <!-- art-whole-link  -->
+                <div class="recUni__bg"> <!-- img_ppn  -->
+                    <img class="recUni__img" src="https://images-dom.prod.aws.idp-connect.com/commimg/myhotcourses/institution/CH/myhc_342316_816px.jpg"
+                        alt="University of Southampton image" /> <!-- nad_main_img  -->
+
+                        <img src="https://images-dom.prod.aws.idp-connect.com/commimg/myhotcourses/institution/myhc_288736.jpg"
+                            alt="University of Southampton Logo" class="recUni__logo"/> <!-- cmp_prf  -->
+                </div>
+                <div class="recUni-info"><!-- art-inc gbg  -->
+                    <!-- div: art_min_hit  -->
+                        <h6 class="recUni-info__name recUni-info__name--uni">
+                            University of Wales Trinity Saint David
+                        </h6>
+                        <div class="rwcard__star d-flex align-items-center mt4">
+                            <div class="rating-stars border-bottom-dotted d-inline-block"></div>
+                            <span class="rating-value">
+                                (4.1)
+                            </span>
+                        </div>
+                        <div class="recUni__viewLink-wrap">
+                            <a href="https://www.whatuni.com/university-profile/university-of-aberdeen/14993/" class="recUni__viewLink">MORE OF THIS UNI</a>
+                        </div>
+                </div>
+                <!-- </a> -->
+                <!-- component structure starts here -->
+                <div class="rwcard">
+                    <div class="rwcard__header">
+                        <div class="rwcard__avatar">
+                            <span>CB</span>
+                        </div>
+                        <div>
+                            <div class="rwcard__name">
+                                <span>Christian Baranowicz</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="rwcard__star">
+                                    <div class="rating-stars border-bottom-dotted"></div>
+                                </div>
+                                <div class="rwcard__date">
+                                    <label>Date reviewed: </label>
+                                    <span>01/01/2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- <h1 class="rwcard__title">Course name</h1> -->
+                        <p class="rwcard__review">There's a lot of building work both at the uni and in my accommodation which is a bit distracting. Overall though it has been a great experience and I'm really happy with my choice.</p>
+                    </div>
+                </div>
+                <!-- component structure ends here -->
+            </div>
+        </div>
+    </div>
+
+</section>
+<div class="clearfix"></div>
+<!-- Recommended Universities - End -->
+
 <!-- WUSCA start -->
 <section class="wusca_hm">
 <div class="wusca_hm_cnt">
