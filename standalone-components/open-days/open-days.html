@@ -6,6 +6,8 @@
     <title>Open Days</title>
     <link rel="stylesheet" type="text/css" href="./open-days.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/fy24-q2-sprint6/css/wu_utilities_src.css" media="screen">
+    <script type="text/javascript" language="javascript" src="https://js-dom.prod.aws.idp-connect.com/wu-cont/js/home/jqueryv3.5.1.min.js"></script> 
+
 </head>
 <body style="margin: 0 auto;">
     <div style="max-width: 705px; width: 100%; margin: 0 auto;">
@@ -75,10 +77,19 @@
 
     <div style="max-width: 581px; width: 100%; margin: 50px auto 100px;">
         <div class="bg-text-op5 p24 font-regular">
+            <h6 class="h6 font-bold color-text">Select open day type you want to attend</h6>
+            <ul class="remove-ul-styles d-flex align-items-center flex-wrap gap8 mt32">
+                <li class="tab-cta">
+                    <a href="#" class="btn btn-sm btn-primary-v2 font-bold no-underline btn-w-auto">Undergraduate</a> <!-- Toggle class name "btn-primary-v2-outlined" when active -->
+                </li>
+                <li class="tab-cta">
+                    <a href="#" class="btn btn-sm btn-primary-v2-outlined font-bold no-underline btn-w-auto">Postgraduate</a> <!-- Toggle class name "btn-primary-v2" when active -->
+                </li>
+            </ul>
             <form class="book-event-form">
                 <div class="btn-radio selected"> <!-- Toggle class name "active" when checked -->
-                    <label for="formevent1" class="d-flex w-100 p24">
-                        <input type="radio" id="formevent1" name="formevent" value="1" class="no-shrink" checked="checked">
+                    <label for="formevent1" class="d-flex w-100 p24" id="dropdownTrigger">
+                        <input type="radio" id="formevent1" name="formevent" value="1" class="no-shrink" checked>
                         <div class="slot d-flex align-items-center w-100">
                             <span class="small no-shrink font-bold">Mon 11 Feb 2020</span>
                             <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
@@ -89,7 +100,7 @@
                 <div class="option-wrap">
                     <div class="btn-radio">
                         <label for="formevent2" class="d-flex w-100 px24 py12">
-                            <input type="radio" id="formevent2" name="formevent" value="2" class="no-shrink">
+                            <input type="radio" id="formevent2" name="formevents" value="2" class="no-shrink" checked>
                             <div class="slot d-flex align-items-center w-100">
                                 <span class="small no-shrink font-bold">Mon 11 Feb 2020</span>
                                 <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
@@ -98,7 +109,7 @@
                     </div>
                     <div class="btn-radio">
                         <label for="formevent3" class="d-flex w-100 px24 py12">
-                            <input type="radio" id="formevent3" name="formevent" value="3" class="no-shrink">
+                            <input type="radio" id="formevent3" name="formevents" value="3" class="no-shrink">
                             <div class="slot d-flex align-items-center w-100">
                                 <span class="small no-shrink font-bold">Mon 11 Feb 2020</span>
                                 <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
@@ -107,7 +118,7 @@
                     </div>
                     <div class="btn-radio">
                         <label for="formevent4" class="d-flex w-100 px24 py12">
-                            <input type="radio" id="formevent4" name="formevent" value="4" class="no-shrink">
+                            <input type="radio" id="formevent4" name="formevents" value="4" class="no-shrink">
                             <div class="slot d-flex align-items-center w-100 flex-wrap-767">
                                 <span class="small no-shrink font-bold">Mon 11 Feb 2020</span>
                                 <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
@@ -118,6 +129,14 @@
             </form>
         </div>
     </div>
+    <script>
+        jQuery("#dropdownTrigger").click(function() {
+          jQuery(".option-wrap").css('display', 'block');
+        });
 
+        jQuery(".option-wrap label").click(function() {
+          jQuery(".option-wrap").css('display', 'none');
+        });
+    </script>
 </body>
 </html>
