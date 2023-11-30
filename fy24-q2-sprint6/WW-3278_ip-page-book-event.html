@@ -18,6 +18,8 @@
 <link rel="stylesheet" type="text/css" href="https://css-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/wu_faq_20221214.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="https://css-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/wu_chub_main_20230829.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="https://css-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/wu_review_rating_component_20230829.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/standalone-components/open-days/open-days.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="./css/wu_utilities_src.css" media="screen" />
 <script type="text/javascript" language="javascript" src="https://js-dom.prod.aws.idp-connect.com/wu-cont/js/home/jqueryv3.5.1.min.js"> </script>
 <script type="text/javascript" language="javascript" src="https://js-dom.prod.aws.idp-connect.com/wu-cont/js/content_hub/jquery.easing.1.3.js"></script>
 <script type="text/javascript" language="javascript" src="https://js-dom.prod.aws.idp-connect.com/wu-cont/js/slick.min.js"> </script>
@@ -882,9 +884,6 @@ class="Carousal image" alt="thumbnail image" width="100%" height="100%">
 <li class="tab-link " id="leftNavLiTagId_4" data-tab = "Accommodation">
 <a href="#Accommodation" onclick="GANewAnalyticsEventsLogging('Content Impression','Accommodation & facilities','Viewed')">Accommodation & facilities</a>
 </li>
-<li class="tab-link " id="leftNavLiTagId_11" data-tab = "OpenDays">
-<a href="#OpenDays" onclick="GANewAnalyticsEventsLogging('Content Impression','Accommodation & facilities','Viewed')">Open days</a>
-</li>
 <li class="tab-link" id="leftNavLiTagId_5" data-tab = "StudentReviews">
 <a href="#StudentReviews" onclick="GANewAnalyticsEventsLogging('Content Impression','Student reviews','Viewed')">Student reviews<span class="count">2527</span></a> 
 </li>
@@ -903,6 +902,11 @@ class="Carousal image" alt="thumbnail image" width="100%" height="100%">
 <li class="tab-link " id="leftNavLiTagId_10" data-tab = "Scholarships">
 <a href="#Scholarships" onclick="GANewAnalyticsEventsLogging('Content Impression','Scholarships and funding','Viewed')">Scholarships and funding</a>
 </li>
+<!-- Book event -  Start -->
+<li class="tab-link " id="leftNavLiTagId_11" data-tab = "OpenDays">
+    <a href="#OpenDays" onclick="GANewAnalyticsEventsLogging('Content Impression','Accommodation & facilities','Viewed')">Open days</a>
+</li>
+<!-- Book event -  end -->
 </ul>
 </div>
 <div class="chuni_rgt">
@@ -1293,8 +1297,6 @@ The Accommodation ranking was decided by students from this institution rating t
 <input type="hidden" id="sectSubOrderItemId_4" name="sectSubOrderItemId_4" value="104249"/>
 <input type="hidden" id="sectionName_4" name="sectionName_4" value="Accommodation"/>
 <input type="hidden" id="sectionNameStats_4" name="sectionNameStats_4" value="Accommodation"/>
-<div class="clearfix"></div>
-<h2 id="OpenDays">Open days</h2>
 <div class="clearfix"></div>
 <div class="univ_cont" id="statsId_5" data-stats-logged="N">
 <h3 data-log-id="sectionName_5" class="sub_cat" id="skiplink_4_id">Facilities</h3>
@@ -1939,6 +1941,73 @@ ASK A QUESTION
 </div>
 </div>
 <div class="clearfix"></div>
+
+<!-- Book event -  Start -->
+<h2 id="OpenDays">Open days at <span class="font-bold">Bangor University</span></h2>
+<div class="no-result color-text font-regular small mb24">
+    <p class="mb24">We're afraid there are no upcoming open days at [uni]. Open days usually happen from September to December and April to June, so it's worth checking back around those months.</p>
+    <p>Stay up to date by signing up to our <a href="#" class="color-primary-v2 no-underline hover-underline hover-opacity8">newsletter</a> or check out our <a href="#" class="color-primary-v2 no-underline hover-underline hover-opacity8">open days hub</a> to see if there are other unis that you're interested in hosting open days. </p>
+</div>
+<div>
+<form class="btn-radio-wrap font-regular d-flex flex-column gap12">
+    <div class="btn-radio active"> <!-- Toggle class name "active" when checked -->
+        <label for="event1" class="d-flex w-100 p24">
+            <input type="radio" id="event1" name="event" value="1" class="no-shrink">
+            <div class="slot d-flex align-items-center w-100 flex-wrap-767">
+                <span class="small no-shrink">Mon 11 Feb 2020</span>
+                <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
+                <a href="#" class="btn btn-green-v2 font-bold no-underline no-shrink btn-w-auto uppercase">BOOK OPEN DAYS</a>
+            </div>
+        </label>
+    </div>
+    <div class="btn-radio">
+        <label for="event2" class="d-flex w-100 p24">
+            <input type="radio" id="event2" name="event" value="2" class="no-shrink">
+            <div class="slot d-flex align-items-center w-100 flex-wrap-767">
+                <span class="small no-shrink">Mon 11 Feb 2020</span>
+                <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
+                <a href="#" class="btn btn-disabled-v2 font-bold no-underline no-shrink btn-w-auto uppercase">BOOK OPEN DAYS</a>
+            </div>
+        </label>
+    </div>
+    <div class="btn-radio">
+        <label for="event3" class="d-flex w-100 p24">
+            <input type="radio" id="event3" name="event" value="3" class="no-shrink">
+            <div class="slot d-flex align-items-center w-100 flex-wrap-767">
+                <span class="small no-shrink">Mon 11 Feb 2020</span>
+                <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
+                <a href="#" class="btn btn-disabled-v2 font-bold no-underline no-shrink btn-w-auto uppercase">BOOK OPEN DAYS</a>
+            </div>
+        </label>
+    </div>
+    <div class="btn-radio">
+        <label for="event4" class="d-flex w-100 p24">
+            <input type="radio" id="event4" name="event" value="4" class="no-shrink">
+            <div class="slot d-flex align-items-center w-100 flex-wrap-767">
+                <span class="small no-shrink">Mon 11 Feb 2020</span>
+                <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
+                <a href="#" class="btn btn-disabled-v2 font-bold no-underline no-shrink btn-w-auto uppercase">BOOK OPEN DAYS</a>
+            </div>
+        </label>
+    </div>
+    <div class="btn-radio">
+        <label for="event5" class="d-flex w-100 p24">
+            <input type="radio" id="event5" name="event" value="5" class="no-shrink">
+            <div class="slot d-flex align-items-center w-100 flex-wrap-767">
+                <span class="small no-shrink">Mon 11 Feb 2020</span>
+                <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
+                <a href="#" class="btn btn-disabled-v2 font-bold no-underline no-shrink btn-w-auto uppercase">BOOK OPEN DAYS</a>
+            </div>
+        </label>
+    </div>
+</form>
+<div class="text-center">
+    <a href="#" class="btn-white-v2 icon-plus"><span class="ml22 font-bold">View More</span></a> 
+    <!-- <a href="#" class="btn-white-v2 icon-minus"><span class="ml22 font-bold">View Less</span></a> -->
+</div>
+</div>
+<div class="clearfix"></div>
+<!-- Book event -  End -->
 <input type="hidden" id="contextCtaRqtInfoForm" value="0"/>
 <input type="hidden" id="sectionProfileId_14" name="sectionProfileId_14" value="130114"/>
 <input type="hidden" id="sectMyhcProfileId_14" name="sectMyhcProfileId_14" value="124738"/>
