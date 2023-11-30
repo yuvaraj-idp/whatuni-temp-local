@@ -2021,4 +2021,9 @@
 .more_opd a,.more_opd span {
     font: 16px/24px "Lato-Bold",arial;
 }
+@media screen and (max-width: 480px) {
+  .opd_wrap .opd_lft{
+    display: none;
+  }
+}
   /* FY24 Q2 Sprint 6 */
