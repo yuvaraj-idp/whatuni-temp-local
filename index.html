@@ -1,11 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Whatuni</title>
+    <link rel="shortcut icon" href="https://images-dom.prod.aws.idp-connect.com/wu-cont/images/icons/wuicon.ico" type="x-icon" />
+    <style>
+        :root {
+            --white: #ffffff;
+            --gray: #707070;
+            --gray2: #767676;
+            --gray-light-op5: rgb(118 118 118 / 5%);
+            --gray-op5: rgb(119 119 119 / 5%);
+            /* v2 colors */
+            --text: #0F172A;
+            --text-op5: rgb(15 23 42 / 5%);
+            --primary-v2: #3460DC;
+            --primary-v2-dark: #173EAD;
+            --primary-v2-focus: #00A0FF;
+            --red-v2: #DC2626;
+            --green-v2: #047857;
+            --text-light: #343434;
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: 'Lato-Regular';
+            src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?v=4.0.3);
+            src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Regular.svg?v=4.0.3#Lato-Regular) format("svg");
+            font-weight: normal;
+            font-style: normal
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: 'Lato-Bold';
+            src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?v=4.0.3);
+            src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Bold.svg?v=4.0.3#Lato-Bold) format("svg");
+            font-weight: normal;
+            font-style: normal
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: 'Lato-Black';
+            src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.eot?v=4.0.3);
+            src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Lato-Black.svg?v=4.0.3#Lato-Black) format("svg");
+            font-weight: normal;
+            font-style: normal
+        }
+
+        @font-face {
+            font-display: fallback;
+            font-family: 'FontAwesome';
+            src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.eot?v=4.0.3);
+            src: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3) format("embedded-opentype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.woff?v=4.0.3) format("woff"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.ttf?v=4.0.3) format("truetype"), url(https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesome) format("svg");
+            font-weight: normal;
+            font-style: normal
+        }
+
+        .font-regular {
+            font-family: "Lato-Regular", Arial;
+        }
+
+        .font-bold {
+            font-family: "Lato-Bold", Arial;
+        }
+
+        .font-black {
+            font-family: "Lato-Black", Arial;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0 auto;
+            font-family: "Lato-Regular", Arial;
+        }
+        .container{
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        .text-center{
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-   <h1>Home</h1> 
+    <div class="container">
+        <h1 class="text-center">Whatuni - Sprint 6</h1>
+        <table width="100%" border="1" cellpadding="16">
+            <thead>
+                <tr>
+                    <th align="left">S.no</th>
+                    <th align="left">Story card</th>
+                    <th align="left">Story name</th>
+                    <th>Demo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <a href="https://idpchange.atlassian.net/browse/WW-3042">WW-3042</a>
+                    </td>
+                    <td>Page interlinking Home page changes (Dev only)</td>
+                    <td align="center">
+                        <a href="./fy24-q2-sprint6/WW-3042_home-page.html" target="_blank">Demo</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <a href="https://idpchange.atlassian.net/browse/WW-3217">WW-3217</a>
+                    </td>
+                    <td>Vepple integration</td>
+                    <td align="center">
+                        <a href="./fy24-q2-sprint6/WW-3217_ip-page-vepple.html" target="_blank">Demo</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        <a href="https://idpchange.atlassian.net/browse/WW-3278">WW-3278</a>
+                    </td>
+                    <td>Adding open days to IP page sub section(Dev only)</td>
+                    <td align="center">
+                        <a href="./fy24-q2-sprint6/WW-3278_ip-page-book-event.html" target="_blank">Demo</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        <a href="https://idpchange.atlassian.net/browse/WW-3279">WW-3279</a>
+                    </td>
+                    <td>Open days optimization in CD & PR page</td>
+                    <td align="center">
+                        <a href="./fy24-q2-sprint6/WW-3279_cd-page.html" target="_blank">Demo</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>
+                        <a href="https://idpchange.atlassian.net/browse/WW-3281">WW-3281</a>
+                    </td>
+                    <td>Open days optimizations in Book event form </td>
+                    <td align="center">
+                        <a href="#" target="_blank">Demo</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>
+                        <a href="https://idpchange.atlassian.net/browse/WW-3286">WW-3286</a>
+                    </td>
+                    <td>Add open day prompt to course detail page</td>
+                    <td align="center">
+                        <a href="./fy24-q2-sprint6/WW-3279_cd-page.html" target="_blank">Demo</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
+
 </html>
