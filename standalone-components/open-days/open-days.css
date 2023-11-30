@@ -135,6 +135,7 @@
     background-size: 10px;
 }
 .icon-minus{
+    display: none;
     background: var(--white) url(https://images-dom.aws.test.idp-connect.com/wu-cont/images/ch21_minus_blue_v2.svg) no-repeat 20px 19px;;
 }
 .icon-minus:hover{
@@ -189,6 +190,9 @@
 .btn-radio .slot span{
     font-size: 14px;
     line-height: 20px;
+}
+.btn-radio.hide{
+    display: none;
 }
 .btn:hover{
     filter: brightness(0.95)

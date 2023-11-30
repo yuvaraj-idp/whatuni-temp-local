@@ -1952,7 +1952,7 @@ ASK A QUESTION
 <form class="btn-radio-wrap font-regular d-flex flex-column gap12">
     <div class="btn-radio active"> <!-- Toggle class name "active" when checked -->
         <label for="event1" class="d-flex w-100 p24">
-            <input type="radio" id="event1" name="event" value="1" class="no-shrink">
+            <input type="radio" id="event1" name="event" value="1" class="no-shrink" checked>
             <div class="slot d-flex align-items-center w-100 flex-wrap-767">
                 <span class="small no-shrink">Mon 11 Feb 2020</span>
                 <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
@@ -2000,13 +2000,47 @@ ASK A QUESTION
             </div>
         </label>
     </div>
+    <div class="btn-radio hide">
+        <label for="event6" class="d-flex w-100 p24">
+            <input type="radio" id="event6" name="event" value="6" class="no-shrink">
+            <div class="slot d-flex align-items-center w-100 flex-wrap-767">
+                <span class="small no-shrink">Mon 11 Feb 2020</span>
+                <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
+                <a href="#" class="btn btn-disabled-v2 font-bold no-underline no-shrink btn-w-auto uppercase">BOOK OPEN DAYS</a>
+            </div>
+        </label>
+    </div>
+    <div class="btn-radio hide">
+        <label for="event7" class="d-flex w-100 p24">
+            <input type="radio" id="event7" name="event" value="7" class="no-shrink">
+            <div class="slot d-flex align-items-center w-100 flex-wrap-767">
+                <span class="small no-shrink">Mon 11 Feb 2020</span>
+                <span class="small max-w-100 w-100">Westdown Campus, Atlantis</span>
+                <a href="#" class="btn btn-disabled-v2 font-bold no-underline no-shrink btn-w-auto uppercase">BOOK OPEN DAYS</a>
+            </div>
+        </label>
+    </div>
 </form>
-<div class="text-center">
-    <a href="#" class="btn-white-v2 icon-plus"><span class="ml22 font-bold">View More</span></a> 
-    <!-- <a href="#" class="btn-white-v2 icon-minus"><span class="ml22 font-bold">View Less</span></a> -->
+<div class="text-center trigger">
+    <div class="btn-white-v2 icon-plus"><span class="ml22 font-bold">View More</span></div> 
+    <div class="btn-white-v2 icon-minus"><span class="ml22 font-bold">View Less</span></div>
 </div>
 </div>
 <div class="clearfix"></div>
+<script>
+    jQuery(".icon-plus").click(function() {
+      jQuery(".hide").css('display', 'flex');
+      jQuery(".icon-minus").css('display', 'inline-flex');
+      jQuery(".icon-plus").css('display', 'none');
+    });
+
+    jQuery(".icon-minus").click(function() {
+      jQuery(".hide").css('display', 'none');
+      jQuery(".icon-minus").css('display', 'none');
+      jQuery(".icon-plus").css('display', 'inline-flex');
+    });
+
+</script>
 <!-- Book event -  End -->
 <input type="hidden" id="contextCtaRqtInfoForm" value="0"/>
 <input type="hidden" id="sectionProfileId_14" name="sectionProfileId_14" value="130114"/>
