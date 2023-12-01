@@ -235,6 +235,9 @@
     height: 6px;
 
 }
+.book-event-form .btn-radio{
+    box-shadow: none;
+}
 
 .btn-radio.selected{
     border: 1px solid var(--primary-v2);
@@ -274,9 +277,6 @@
 @media screen and (max-width: 480px)  {
     .book-event-form .btn-radio label {
         align-items: center;
-    }
-    .book-event-form .arrow-down{
-        margin-bottom: auto;
     }
 }
 

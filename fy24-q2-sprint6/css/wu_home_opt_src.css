@@ -724,7 +724,29 @@ h2{font-size:36px;color:#fff;text-align:center;margin:0;padding:0}
 .recUni-cards.recUni-cards-mob{
   display: none;
 }
-
+@media screen and (max-width: 1024px){
+    .recUni-wrapper .recUni-cards.owl-carousel{
+        display: none;
+        padding: 0;
+      }
+      .recUni-cards.recUni-cards-mob{
+        display: flex;
+      }
+      .recUni-cards.recUni-cards-mob {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 0 16px 16px;
+        scroll-padding: 16px;
+        scroll-snap-align: start;
+        justify-content: start;
+      }
+    
+      .recUni-cards.recUni-cards-mob .recUni-card {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        margin-right: 4px;
+      }
+}
 @media screen and (max-width: 768px) {
   .recUni-cards.owl-carousel{
     padding: 0 58px;
@@ -739,13 +761,13 @@ h2{font-size:36px;color:#fff;text-align:center;margin:0;padding:0}
 }
 
 @media screen and (max-width: 480px){
-  .recUni-cards.owl-carousel{
+  /* .recUni-wrapper .recUni-cards.owl-carousel{
     display: none;
     padding: 0;
   }
   .recUni-cards.recUni-cards-mob{
-    display: block;
-  }
+    display: flex;
+  } */
   .recUni-cards.owl-carousel .owl-item{
     width: unset !important;
   }
