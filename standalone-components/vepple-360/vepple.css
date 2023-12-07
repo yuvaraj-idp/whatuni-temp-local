@@ -132,7 +132,6 @@
 }
 
 .vepple-wrap {
-    height: 95vh;
     max-width: 950px;
     margin: auto;
 }
@@ -222,9 +221,22 @@
         margin-right: 8px;
         margin-top: 4px;
     }
+    .vepple__integrate::part(vep-content) {
+        min-height: 587px;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .vepple__integrate::part(vep-content) {
+        min-height: 525px;
+    }
 }
 @media screen and (max-width: 768px) {
     .vepple-wrap{
         margin-top: 8px;
+    }
+}
+@media screen and (min-width: 769px) {
+    .vepple__integrate::part(vep-content) {
+        min-height: 690px;
     }
 }
