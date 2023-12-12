@@ -50,7 +50,7 @@
 
 .univs-carousel-v2 .featured-univs__body{
     padding: 16px;
-    min-height: 160px;
+    min-height: 172px;
 }
 
 .univs-carousel-v2 .featured-univs__title{
@@ -75,13 +75,17 @@
     object-fit: cover;
 }
 
-/* .univs-carousel-v2-small .owl-item {
-    max-width: 240px;
+.univs-carousel-v2.univs-carousel-v2-small .owl-stage {
+    padding-left: 7px!important;
 }
 
-.univs-carousel-v2-large .owl-item {
-    max-width: 260px;
-} */
+.univs-carousel.univs-carousel-v2 .owl-nav button span::after{
+    background-image: url(https://images-dom.aws.test.idp-connect.com/wu-cont/images/chub_gallery_right_arw-v2.svg);
+}
 
+.truncateText--2,
+.truncateText.truncateText--2{
+    -webkit-line-clamp: 2;
+}
 
 /* FY24 - Q1 - Sprint 4 - End */
