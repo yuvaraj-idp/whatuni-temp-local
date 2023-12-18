@@ -1928,9 +1928,11 @@
   /* FY24 Q2 Sprint 6 */
   .uni-logo-wrap{
     width: 226px;
+    flex-shrink: 0;
   }
   .uni-logo-wrap img{
-    margin-left: 48px;
+    margin: 0 auto;
+    display: block;
   }
   .snippet{
     font-size: 13px;
@@ -1939,13 +1941,7 @@
   .top_fixed .snippet{
     display: none;
   }
-  @media screen and (max-width: 480px) {
-    .uni-logo-wrap{
-      display: none;
-    }
-  }
-
-
+  
   /* prompt css */
 
 .opd_wrap {
