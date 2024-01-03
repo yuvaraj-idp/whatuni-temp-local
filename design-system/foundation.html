@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation</title>
+    <link rel="stylesheet" type="text/css" href="./foundation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--neutral-900);
+        }
+
+        .border-collapse {
+            border-collapse: collapse;
+        }
+
+        section {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* Color */
+
+        .bgcolor {
+            height: 52px;
+        }
+        
+        .color__title {
+            font: 700 18px/28px'Poppins', sans-serif;
+            color: var(--neutral-900);
+        }
+
+        .color__details,
+        .color__description {
+            color: var(--neutral-500);
+        }
+
+        /* Typography */
+        section.typography {
+            padding: 64px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .typo_title {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 28px;
+            display: block;
+        }
+
+        .typo_details {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            display: block;
+            color: var(--neutral-500);
+        }
+
+        .typo-table th,
+        .typo-table td{
+            padding: 16px;
+        }
+
+        @media screen and (max-width: 599px) {
+            .heading-sm-h1 {
+                font-size: 36px;
+                line-height: 44px;
+            }
+
+            .heading-sm-h2 {
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+            .heading-sm-h3 {
+                font-size: 28px;
+                line-height: 36px;
+            }
+
+            .heading-sm-h4 {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .heading-sm-h5 {
+                font-size: 20px;
+                line-height: 28px;
+            }
+
+            .heading-sm-h6 {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+
+        /* Shadow */
+
+        section.shadow .circle{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--white);
+        }
+        .shadow-wrap{
+            gap: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--neutral-200);
+            background: var(--neutral-50);
+            padding: 32px;
+        }
+        .shadow-set{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .shadow-title{
+            color: var(--neutral-500);  
+        }
+
+        section.spacing tbody tr{
+            border-bottom: 1px solid var(--neutral-300);
+        }
+
+        /* spacing */
+        .spacing-table th,
+        .spacing-table td{
+            padding: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="colors">
+        <h1>Colors</h1>
+
+        <table width="100%" border="0" class="border-collapse" cellpadding="24">
+            <!-- neutral colors -->
+            <tr>
+                <td width="384">
+                    <h2 class="color__title">Neutral</h2>
+                    <p class="color__description">These colors are used as supporting secondary colors in backgrounds,
+                        text colors, seperators, models, etc</p>
+                </td>
+                <td class="d-flex flex-wrap">
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-neutral-50"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>50</td>
+                            <td align="right">#F8FAFC</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-neutral-100"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>100</td>
+                            <td align="right">#F1F5F9</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-neutral-200"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>200</td>
+                            <td align="right">#E2E8F0</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-neutral-300"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>300</td>
+                            <td align="right">#CBD5E1</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-neutral-400"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>400</td>
+                            <td align="right">#94A3B8</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-neutral-500"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>500</td>
+                            <td align="right">#64748B</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-neutral-600"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>600</td>
+                            <td align="right">#475569</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-neutral-700"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>700</td>
+                            <td align="right">#3B3D52</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-neutral-800"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>800</td>
+                            <td align="right">#1E293B</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-neutral-900"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>900</td>
+                            <td align="right">#0F172A</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- primary colors -->
+            <tr>
+                <td width="384">
+                    <h2 class="color__title">Primary</h2>
+                    <p class="color__description">The primary color palette is used across all the interactive elements
+                        such as CTA’s, links, inputs, active states, etc</p>
+                </td>
+                <td class="d-flex flex-wrap">
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-primary-50"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>50</td>
+                            <td align="right">#EEFBFF</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-primary-100"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>100</td>
+                            <td align="right">#DDF6FF</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-primary-200"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>200</td>
+                            <td align="right">#BAEDFF</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-primary-300"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>300</td>
+                            <td align="right">#87E0FF</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-primary-400"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>400</td>
+                            <td align="right">#54D2FF</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-primary-500"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>500</td>
+                            <td align="right">#00BBFD</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-primary-600"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>600</td>
+                            <td align="right">#00A4DD</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-primary-700"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>700</td>
+                            <td align="right">#00759E</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-primary-800"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>800</td>
+                            <td align="right">#00465F</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-primary-900"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>900</td>
+                            <td align="right">#001720</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- secondary colors -->
+            <tr>
+                <td width="384">
+                    <h2 class="color__title">Secondary</h2>
+                    <p class="color__description">The secondary color palette is used across all the interactive
+                        elements such as CTA’s, links, inputs, active states, etc</p>
+                </td>
+                <td class="d-flex flex-wrap">
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-secondary-50"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>50</td>
+                            <td align="right">#F1F4FD</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-secondary-100"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>100</td>
+                            <td align="right">#E4EAFA</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-secondary-200"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>200</td>
+                            <td align="right">#C9D5F6</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-secondary-300"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>300</td>
+                            <td align="right">#A0B5EF</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-secondary-400"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>400</td>
+                            <td align="right">#6A8AE5</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-secondary-500"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>500</td>
+                            <td align="right">#3460DC</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-secondary-600"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>600</td>
+                            <td align="right">#173EAD</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-secondary-700"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>700</td>
+                            <td align="right">#112F82</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-secondary-800"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>800</td>
+                            <td align="right">#0C1F56</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-secondary-900"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>900</td>
+                            <td align="right">#06102B</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- success colors -->
+            <tr>
+                <td width="384">
+                    <h2 class="color__title">Success</h2>
+                    <p class="color__description">These colors convey an emotion of positivity. Generally used across
+                        success, complete states.</p>
+                </td>
+                <td class="d-flex flex-wrap">
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-success-50"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>50</td>
+                            <td align="right">#ECFDF5</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-success-100"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>100</td>
+                            <td align="right">#D1FAE5</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-success-200"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>200</td>
+                            <td align="right">#A7F3D0</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-success-300"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>300</td>
+                            <td align="right">#6EE7B7</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-success-400"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>400</td>
+                            <td align="right">#34D399</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-success-500"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>500</td>
+                            <td align="right">#10B981</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-success-600"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>600</td>
+                            <td align="right">#059669</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-success-700"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>700</td>
+                            <td align="right">#047857</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-success-800"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>800</td>
+                            <td align="right">#065F46</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-success-900"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>900</td>
+                            <td align="right">#064E3B</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- warning colors -->
+            <tr>
+                <td width="384">
+                    <h2 class="color__title">Warning</h2>
+                    <p class="color__description">These colors convey the feeling of caution. Generally used across
+                        warning states.</p>
+                </td>
+                <td class="d-flex flex-wrap">
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-warning-50"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>50</td>
+                            <td align="right">#FFFBEB</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-warning-100"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>100</td>
+                            <td align="right">#FEF3C7</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-warning-200"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>200</td>
+                            <td align="right">#FDE68A</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-warning-300"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>300</td>
+                            <td align="right">#FCD34D</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-warning-400"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>400</td>
+                            <td align="right">#FBBF24</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-warning-500"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>500</td>
+                            <td align="right">#F59E0B</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-warning-600"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>600</td>
+                            <td align="right">#D97706</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-warning-700"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>700</td>
+                            <td align="right">#B45309</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-warning-800"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>800</td>
+                            <td align="right">#92400E</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-warning-900"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>900</td>
+                            <td align="right">#78350F</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- error colors -->
+            <tr>
+                <td width="384">
+                    <h2 class="color__title">Error</h2>
+                    <p class="color__description">These colors convey an emotion of negativity. Generally used across
+                        error states.</p>
+                </td>
+                <td class="d-flex flex-wrap">
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-error-50"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>50</td>
+                            <td align="right">#FEF2F2</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-error-100"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>100</td>
+                            <td align="right">#FEE2E2</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-error-200"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>200</td>
+                            <td align="right">#FECACA</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-error-300"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>300</td>
+                            <td align="right">#FCA5A5</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-error-400"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>400</td>
+                            <td align="right">#F87171</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-error-500"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>500</td>
+                            <td align="right">#EF4444</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-error-600"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>600</td>
+                            <td align="right">#DC2626</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-error-700"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>700</td>
+                            <td align="right">#B91C1C</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-error-800"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>800</td>
+                            <td align="right">#991B1B</td>
+                        </tr>
+                    </table>
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-error-900"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>900</td>
+                            <td align="right">#7F1D1D</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- error colors -->
+            <tr>
+                <td width="384">
+                    <h2 class="color__title">Shades</h2>
+                    <p class="color__description">Shades come in black and white. Use these freely in your designs.</p>
+                </td>
+                <td class="d-flex flex-wrap">
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-white"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>00</td>
+                            <td align="right">#FFFFFF</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-black"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>100</td>
+                            <td align="right">#000000</td>
+                        </tr>
+                    </table>
+
+                    <table width="148" cellspacing="8">
+                        <tr>
+                            <td colspan="2" class="bgcolor bg-grey-500"></td>
+                        </tr>
+                        <tr class="color__details">
+                            <td>00</td>
+                            <td align="right">#767676</td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+    </section>
+
+
+    <section class="typography">
+        <h1>Typography</h1>
+
+        <div class="d-flex align-items-center justify-content-between w100">
+            <div class="typo-set">
+                <span class="typo_title">Display Large</span>
+                <span class="typo_details">Font size: 52px | Line height: 56px | Tracking: -2%</span>
+                <h1 class="display-large">Display Large</h1>
+            </div>
+
+            <div class="typo-set">
+                <span class="typo_title">Display Small</span>
+                <span class="typo_details">Font size: 44px | Line height: 48px | Tracking: -2%</span>
+                <h1 class="display-small">Display Small</h1>
+            </div>
+        </div>
+
+        <table width="100%" border="1" class="typo-table border-collapse">
+            <thead>
+                <tr>
+                    <th>Desktop</th>
+                    <th>Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H1</span>
+                            <span class="typo_details">Font size: 40px | Line height: 48px | Tracking: -2%</span>
+                            <h1 class="heading-h1">Heading H1</h1>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H1</span>
+                            <span class="typo_details">Font size: 36px | Line height: 44px | Tracking: -2%</span>
+                            <h1 class="heading-sm-h1">Heading H1</h1>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H2</span>
+                            <span class="typo_details">Font size: 36px | Line height: 44px | Tracking: -2%</span>
+                            <h2 class="heading-h2">Heading H2</h2>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H2</span>
+                            <span class="typo_details">Font size: 32px | Line height: 40px | Tracking: -2%</span>
+                            <h2 class="heading-sm-h2">Heading H2</h2>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H3</span>
+                            <span class="typo_details">Font size: 32px | Line height: 40px | Tracking: -2%</span>
+                            <h3 class="heading-h3">Heading H3</h3>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H3</span>
+                            <span class="typo_details">Font size: 28px | Line height: 36px | Tracking: -2%</span>
+                            <h3 class="heading-h3">Heading H3</h3>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H4</span>
+                            <span class="typo_details">Font size: 28px | Line height: 36px | Tracking: -2%</span>
+                            <h4 class="heading-h4">Heading H4</h4>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H4</span>
+                            <span class="typo_details">Font size: 24px | Line height: 32px | Tracking: -2%</span>
+                            <h4 class="heading-h4">Heading H4</h4>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H5</span>
+                            <span class="typo_details">Font size: 24px | Line height: 32px | Tracking: -2%</span>
+                            <h5 class="heading-h5">Heading H5</h5>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H5</span>
+                            <span class="typo_details">Font size: 20px | Line height: 28px | Tracking: -2%</span>
+                            <h5 class="heading-h5">Heading H5</h5>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H6</span>
+                            <span class="typo_details">Font size: 20px | Line height: 28px | Tracking: -2%/span>
+                                <h6 class="heading-h6">Heading H6</h6>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="typo-set">
+                            <span class="typo_title">Heading H6</span>
+                            <span class="typo_details">Font size: 18px | Line height: 24px | Tracking: -2%</span>
+                            <h6 class="heading-h6">Heading H6</h6>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="typo-set">
+            <span class="typo_title">Paragraph Large</span>
+            <span class="typo_details">Font size: 18px | Line height: 28px</span>
+            <p class="para-large">Become a legendary UX/UI designer through real world and practical courses.</p>
+        </div>
+
+        <div class="typo-set">
+            <span class="typo_title">Paragraph Medium</span>
+            <span class="typo_details">Font size: 16px | Line height: 24px</span>
+            <p class="para-medium">Become a legendary UX/UI designer through real world and practical courses.</p>
+        </div>
+
+        <div class="typo-set">
+            <span class="typo_title">Paragraph Small</span>
+            <span class="typo_details">Font size: 14px | Line height: 20px</span>
+            <p class="para-small">Become a legendary UX/UI designer through real world and practical courses.</p>
+        </div>
+
+        <div class="typo-set">
+            <span class="typo_title">Paragraph Xsmall</span>
+            <span class="typo_details">Font size: 12px | Line height: 20px</span>
+            <p class="para-xsmall">Become a legendary UX/UI designer through real world and practical courses.</p>
+        </div>
+
+        <div class="typo-set">
+            <span class="typo_title">Overline</span>
+            <span class="typo_details">Font sizes: 14px</span>
+            <p class="overline">Become a legendary designer</p>
+        </div>
+    </section>
+
+    
+    <section class="shadow">
+        <h1>Shadows</h1>
+
+        <div class="d-flex align-items-center flex-wrap shadow-wrap">
+            <div class="shadow-set">
+                <span class="shadow-title">shadow-xsmall</span>
+                <div class="circle shadow-xsmall"></div>
+            </div>
+            <div class="shadow-set">
+                <span class="shadow-title">shadow-small</span>
+                <div class="circle shadow-small"></div>
+            </div>
+            <div class="shadow-set">
+                <span class="shadow-title">shadow-medium</span>
+                <div class="circle shadow-medium"></div>
+            </div>
+            <div class="shadow-set">
+                <span class="shadow-title">shadow-large</span>
+                <div class="circle shadow-large"></div>
+            </div>
+            <div class="shadow-set">
+                <span class="shadow-title">shadow-xlarge</span>
+                <div class="circle shadow-xlarge"></div>
+            </div>
+            <div class="shadow-set">
+                <span class="shadow-title">shadow-xxlarge</span>
+                <div class="circle shadow-xxlarge"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="spacing">
+        <h1>Spacing</h1>
+
+        <table width="100%" border="0" class="spacing-table border-collapse" aria-describedby="Spacing table">
+            <thead>
+                <tr>
+                    <th align="left">S.No</th>
+                    <th align="left">Token</th>
+                    <th align="left">Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>--spacing-xx-sm</td>
+                    <td>4px</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>--spacing-x-sm</td>
+                    <td>8px</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>--spacing-sm</td>
+                    <td>12px</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>--spacing-md</td>
+                    <td>16px</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>--spacing-big</td>
+                    <td>20px</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>--spacing-x-big</td>
+                    <td>24px</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>--spacing-xx-big</td>
+                    <td>28px</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>--spacing-xxx-big</td>
+                    <td>32px</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>--spacing-lg</td>
+                    <td>40px</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>--spacing-x-lg</td>
+                    <td>48px</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>--spacing-xx-lg</td>
+                    <td>64px</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>--spacing-xxx-lg</td>
+                    <td>80px</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>--spacing-huge</td>
+                    <td>96px</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>--spacing-x-huge</td>
+                    <td>128px</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>--spacing-xx-huge</td>
+                    <td>160px</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>--spacing-xxx-huge</td>
+                    <td>192px</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="alerts-inline">
+        <h1>Alerts (Inline)</h1>
+
+        <div>
+            <img src="" alt="">
+            <div>
+                <p class="para-small"></p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

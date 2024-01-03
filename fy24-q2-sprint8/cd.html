@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD page</title>
+    <link rel="stylesheet" href="../design-system/foundation.css">
+    <style>
+        .dropdown-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--secondary-500);
+        }
+
+        .dropdown-link:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown-link::after {
+            content: '';
+            background: url('./heroicons/heroicon-chevron-down-blue.svg');
+            width: 20px;
+            height: 20px;
+        }
+
+        .course-highlight {
+            padding: 16px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 16px;
+            grid-row-gap: 24px;
+        }
+
+        .course-highlight__title {
+            grid-area: 1 / 1 / 2 / 3;
+        }
+
+        .course-highlight__data {
+            grid-area: 1 / 3 / 2 / 5;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .course-highlight__details {
+            grid-area: 2 / 1 / 3 / 5;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .course-highlight__title {
+                grid-area: 1 / 1 / 2 / 5;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .course-highlight__data {
+                grid-area: 3 / 1 / 4 / 5;
+                justify-content: flex-start;
+            }
+
+            .course-highlight__details {
+                grid-area: 2 / 1 / 3 / 5;
+            }
+        }
+        @media screen and (min-width: 1132px) {
+            .course-highlight {
+                padding: 32px 0 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="bg-primary-100">
+        <div class="container-lg course-highlight">
+            <div class="course-highlight__title font-bold d-flex align-items-center gap12">
+                <h6 class="heading-h6">Different course options</h6>
+                <a href="#" class="dropdown-link">2 options available </a>
+            </div>
+            <div class="course-highlight__data para-xsmall">
+                <label class="text-black">DATA SOURCE:</label>
+                <a href="#">UNISTATS / UCAS / HESA</a>
+            </div>
+
+            <div class="course-highlight__details d-flex align-items-start flex-column-768 gap24">
+                <div class="d-flex align-items-start flex-column flex-row-768 gap16 w100">
+                    <img src="./heroicons/heroicon-academic-cap-grey.svg" alt="academic-cap" width="32" height="32" />
+                    <div class="d-flex flex-column gap8 text-neutral-0">
+                        <span class="para-medium font-bold">Qualification</span>
+                        <p class="para-medium">Bachelor of Arts (with Honours) - BA (Hons)</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start flex-column flex-row-768 gap16 w100">
+                    <img src="./heroicons/heroicon-location-pin-grey.svg" alt="location-pin" width="32" height="32" />
+                    <div class="d-flex flex-column gap8 text-neutral-0">
+                        <span class="para-medium font-bold">Location</span>
+                        <p class="para-medium">Norwich University of the Arts</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start flex-column flex-row-768 gap16 w100">
+                    <img src="./heroicons/heroicon-beaker-grey.svg" alt="beaker" width="32" height="32" />
+                    <div class="d-flex flex-column gap8 text-neutral-0">
+                        <span class="para-medium font-bold">Study mode</span>
+                        <p class="para-medium">Full time</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start flex-column flex-row-768 gap16 w100">
+                    <img src="./heroicons/heroicon-calendar-grey.svg" alt="calendar" width="32" height="32" />
+                    <div class="d-flex flex-column gap8 text-neutral-0">
+                        <span class="para-medium font-bold">Start date</span>
+                        <p class="para-medium">SEP-24</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start flex-column flex-row-768 gap16 w100">
+                    <img src="./heroicons/heroicon-time-grey.svg" alt="time" width="32" height="32" />
+                    <div class="d-flex flex-column gap8 text-neutral-0">
+                        <span class="para-medium font-bold">Duration</span>
+                        <p class="para-medium">3 years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

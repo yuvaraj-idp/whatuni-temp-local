@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --heading-h2-bold-desktop: Lato;
+    --font-inter: Inter;
+    --font-fontawesome: FontAwesome;
+  
+    /* font sizes */
+    --paragraph-small-regular-size: 14px;
+    --font-size-2xl: 21px;
+    --paragraph-large-semibold-size: 18px;
+    --paragraph-medium-semibold-size: 16px;
+    --heading-h5-bold-desktop-size: 24px;
+    --heading-h2-bold-desktop-size: 36px;
+    --font-size-xs: 12px;
+    --heading-h6-bold-desktop-size: 20px;
+    --heading-h4-bold-desktop-size: 28px;
+    --heading-h3-bold-desktop-size: 32px;
+    --paragraph-overline-xsmall-size: 10px;
+  
+    /* Colors */
+    --neutral-100: #f1f5f9;
+    --neutral-200: #e2e8f0;
+    --primary-500-main: #00bbfd;
+    --color-steelblue: #007ab3;
+    --color-black: #000;
+    --color-dimgray-100: #707070;
+    --color-gray-100: #0f172a;
+    --color-gray-200: rgba(0, 0, 0, 0.75);
+    --color-gray-300: rgba(255, 255, 255, 0.5);
+    --neutral-300: #cbd5e1;
+    --neutral-700: #334155;
+    --generic-white: #fff;
+    --secondary-500: #3460dc;
+    --neutral-50: #f8fafc;
+    --warning-700-main: #b45309;
+    --primary-100: #ddf6ff;
+    --color-crimson: #dc2626;
+    --success-700-main: #047857;
+    --success-100: #d1fae5;
+    --success-500: #10b981;
+    --neutral-400: #94a3b8;
+    --warning-500: #f59e0b;
+  
+    /* Gaps */
+    --gap-2xl: 21px;
+    --gap-5xs: 8px;
+    --gap-13xl: 32px;
+    --gap-5xl: 24px;
+    --gap-base: 16px;
+    --gap-3xs: 10px;
+    --gap-7xs: 6px;
+    --gap-9xs: 4px;
+    --gap-4xs: 9px;
+    --gap-609xl: 628px;
+    --gap-11xs: 2px;
+  
+    /* Paddings */
+    --padding-3xs: 10px;
+    --padding-base: 16px;
+    --padding-mini: 15px;
+    --padding-5xs: 8px;
+  
+    /* Border radiuses */
+    --br-xl: 20px;
+    --br-10xs: 3px;
+    --br-11xs: 2px;
+    --br-5xs: 8px;
+    --br-9xs: 4px;
+    --br-5xl: 24px;
+    --br-31xl: 50px;
+    --br-21xl: 40px;
+    --br-2xl: 21px;
+  
+    /* Effects */
+    --drop-shadow-small: 0px 1px 3px rgba(16, 24, 40, 0.1),
+      0px 1px 2px -1px rgba(16, 24, 40, 0.1);
+    --drop-shadow-xsmall: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  }
+  
