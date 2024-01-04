@@ -24,6 +24,10 @@
         section {
             max-width: 1280px;
             margin: 0 auto;
+            padding: 64px 0;
+        }
+        section h1{
+            margin-bottom: 16px;
         }
 
         /* Color */
@@ -31,7 +35,7 @@
         .bgcolor {
             height: 52px;
         }
-        
+
         .color__title {
             font: 700 18px/28px'Poppins', sans-serif;
             color: var(--neutral-900);
@@ -44,7 +48,6 @@
 
         /* Typography */
         section.typography {
-            padding: 64px 0;
             display: flex;
             flex-direction: column;
             gap: 80px;
@@ -66,7 +69,7 @@
         }
 
         .typo-table th,
-        .typo-table td{
+        .typo-table td {
             padding: 16px;
         }
 
@@ -104,38 +107,42 @@
 
         /* Shadow */
 
-        section.shadow .circle{
+        section.shadow .circle {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             background: var(--white);
         }
-        .shadow-wrap{
+
+        .shadow-wrap {
             gap: 32px;
             border-radius: 12px;
             border: 1px solid var(--neutral-200);
             background: var(--neutral-50);
             padding: 32px;
         }
-        .shadow-set{
+
+        .shadow-set {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 20px;
         }
-        .shadow-title{
-            color: var(--neutral-500);  
+
+        .shadow-title {
+            color: var(--neutral-500);
         }
 
-        section.spacing tbody tr{
+        section.spacing tbody tr {
             border-bottom: 1px solid var(--neutral-300);
         }
 
         /* spacing */
         .spacing-table th,
-        .spacing-table td{
+        .spacing-table td {
             padding: 24px;
         }
+        
     </style>
 </head>
 
@@ -966,7 +973,7 @@
         </div>
     </section>
 
-    
+
     <section class="shadow">
         <h1>Shadows</h1>
 
@@ -1097,14 +1104,138 @@
     <section class="alerts-inline">
         <h1>Alerts (Inline)</h1>
 
-        <div>
-            <img src="" alt="">
-            <div>
-                <p class="para-small"></p>
+        <div class="d-flex flex-column gap20">
+            <!-- Alert neutral -->
+            <div class="alert-inline alert-inline--neutral">
+                <!-- Add class name "alert-inline__noslot" for remiving icon slots for both start and end -->
+                <img src="../fy24-q2-sprint8/heroicons/heroicon-heart-outline-neutral.svg" width="20" height="20"
+                    alt="heart-outline-neutral">
+                <div class="w100">
+                    <h6 class="para-small font-bold alert-inline__title">Alert line which displays the main function or
+                        reason of the alert.</h6>
+                    <p class="para-small font-regular alert-inline__description">Become a legendary UX/UI designer
+                        through
+                        real world and practical courses.</p>
+                    <div class="d-flex align-items-center gap20">
+                        <a href="#" class="alert-inline__cta">Action 1</a>
+                        <a href="#" class="alert-inline__cta">Action 1</a>
+                    </div>
+                </div>
+                <a href="#">
+                    <img src="../fy24-q2-sprint8/heroicons/heroicon-close-neutral.svg" width="20" height="20"
+                        alt="close-neutral">
+                </a>
+            </div>
+
+            <!-- Alert primary -->
+            <div class="alert-inline alert-inline--primary">
+                <div class="icon--start-slot">
+                    <img src="../fy24-q2-sprint8/heroicons/heroicon-heart-outline-primary.svg" width="20" height="20"
+                        alt="heart-outline-primary">
+                </div>
+                <div class="w100">
+                    <h6 class="para-small font-bold alert-inline__title">Alert line which displays the main function or
+                        reason of the alert.
+                    </h6>
+                    <p class="para-small font-regular alert-inline__description">Become a legendary UX/UI designer
+                        through
+                        real world and practical
+                        courses.</p>
+                    <div class="d-flex align-items-center gap20">
+                        <a href="#" class="alert-inline__cta">Action 1</a>
+                        <a href="#" class="alert-inline__cta">Action 1</a>
+                    </div>
+                </div>
+                <a href="#" class="icon--end-slot">
+                    <img src="../fy24-q2-sprint8/heroicons/heroicon-close-primary.svg" width="20" height="20"
+                        alt="close-primary">
+                </a>
+            </div>
+
+            <!-- Alert success -->
+            <div class="alert-inline alert-inline--success">
+                <div class="icon--start-slot">
+                    <img src="../fy24-q2-sprint8/heroicons/heroicon-heart-outline-success.svg" width="20" height="20"
+                        alt="heart-outline-success">
+                </div>
+                <div class="w100">
+                    <h6 class="para-small font-bold alert-inline__title">Alert line which displays the main function or
+                        reason of the alert.
+                    </h6>
+                    <p class="para-small font-regular alert-inline__description">Become a legendary UX/UI designer
+                        through
+                        real world and practical
+                        courses.</p>
+                    <div class="d-flex align-items-center gap20">
+                        <a href="#" class="alert-inline__cta">Action 1</a>
+                        <a href="#" class="alert-inline__cta">Action 1</a>
+                    </div>
+                </div>
+                <a href="#" class="icon--end-slot">
+                    <img src="../fy24-q2-sprint8/heroicons/heroicon-close-success.svg" width="20" height="20"
+                        alt="close-success">
+                </a>
+            </div>
+
+            <!-- Alert warning -->
+            <div class="alert-inline alert-inline--warning">
+                <div class="icon--start-slot">
+                    <img src="../fy24-q2-sprint8/heroicons/heroicon-heart-outline-warning.svg" width="20" height="20"
+                        alt="heart-outline-warning">
+                </div>
+                <div class="w100">
+                    <h6 class="para-small font-bold alert-inline__title">Alert line which displays the main function or
+                        reason of the alert.
+                    </h6>
+                    <p class="para-small font-regular alert-inline__description">Become a legendary UX/UI designer
+                        through
+                        real world and practical
+                        courses.</p>
+                    <div class="d-flex align-items-center gap20">
+                        <a href="#" class="alert-inline__cta">Action 1</a>
+                        <a href="#" class="alert-inline__cta">Action 1</a>
+                    </div>
+                </div>
+                <a href="#" class="icon--end-slot">
+                    <img src="../fy24-q2-sprint8/heroicons/heroicon-close-warning.svg" width="20" height="20"
+                        alt="close-warning">
+                </a>
+            </div>
+
+            <!-- Alert error -->
+            <div class="alert-inline alert-inline--error">
+                <div class="icon--start-slot">
+                    <img src="../fy24-q2-sprint8/heroicons/heroicon-heart-outline-error.svg" width="20" height="20"
+                        alt="heart-outline-error">
+                </div>
+                <div class="w100">
+                    <h6 class="para-small font-bold alert-inline__title">Alert line which displays the main function or
+                        reason of the alert.
+                    </h6>
+                    <p class="para-small font-regular alert-inline__description">Become a legendary UX/UI designer
+                        through
+                        real world and practical
+                        courses.</p>
+                    <div class="d-flex align-items-center gap20">
+                        <a href="#" class="alert-inline__cta">Action 1</a>
+                        <a href="#" class="alert-inline__cta">Action 1</a>
+                    </div>
+                </div>
+                <a href="#" class="icon--end-slot">
+                    <img src="../fy24-q2-sprint8/heroicons/heroicon-close-error.svg" width="20" height="20"
+                        alt="close-error">
+                </a>
             </div>
         </div>
     </section>
 
+    <section class="alerts-inline">
+        <h1>Alerts Existing</h1>
+
+        <div class="alert alert--success">
+            <a href="#" class="alert__link para-small font-regular d-inline-flex gap8">Check upcoming open days and book your place</a>
+        </div>
+    </section>
 </body>
 
 </html>
