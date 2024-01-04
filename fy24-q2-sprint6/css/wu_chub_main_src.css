@@ -2520,6 +2520,13 @@ a.cki_prmybtn{width:325px;max-width:100%;}
     width: 630px;
 }
 
+@media only screen and (max-width:767px) {
+    .ibtn_sec.top {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
+
 .opd_rit .event_btn {
     width: 170px;
 }
