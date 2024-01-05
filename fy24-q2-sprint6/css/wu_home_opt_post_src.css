@@ -862,7 +862,7 @@ h2 {
 
 .app-download-banner{
     float: none;
-    background-color: var(--primary-v2);
+    background-color: var(--primary-v2-dark);
     padding: 56px 15px;
 }
 .app-download-banner__inner{
@@ -1131,6 +1131,10 @@ h2 {
     text-align: left;
     transition: all 0.2s;
     font-family: "Lato-Bold", Arial;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .chip:hover,
