@@ -2531,3 +2531,12 @@ a.cki_prmybtn{width:325px;max-width:100%;}
     width: 170px;
 }
 /* FY24 Q2 Sprint 6 updates */
+
+/* FY24 Q2 Sprint 7 updates */
+.chuni_sec .chuni_lft.lftnav_stky .nav-tabs{
+    max-height: calc(100% - 80px);
+    overflow-y: auto;
+    height: 100%;
+    padding-left: 2px;
+}
+/* FY24 Q2 Sprint 7 updates */
