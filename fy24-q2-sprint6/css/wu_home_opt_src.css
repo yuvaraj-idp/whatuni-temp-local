@@ -569,13 +569,13 @@ h2{font-size:36px;color:#fff;text-align:center;margin:0;padding:0}
     }
     .hero__section--v2 h1.hero__title--v2{
         padding: 0 26px 8px;
-        font: 24px/27px "Lato-Bold",Arial !important;
+        font: 24px/27px "Lato-Bold", Arial !important;
     }
     .hero__section--v2 h2.hero__subtitle--v2{
         padding: 0 18px;
     }
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .hero__section--v2 .hero__title--v2::after,
     .hero__section--v2 .hero__image--v2{
         display: none;
@@ -688,6 +688,11 @@ h2{font-size:36px;color:#fff;text-align:center;margin:0;padding:0}
     text-align: left;
     transition: all 0.2s;
     font-family: "Lato-Bold", Arial;
+    max-width: 30ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
 }
 
 .chip:hover,
