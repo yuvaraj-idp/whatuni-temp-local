@@ -46,7 +46,23 @@
         }
 
         .course-highlight__details {
+            display: grid;
+            grid-column-gap: 24px;
+            grid-row-gap: 24px;
             grid-area: 2 / 1 / 3 / 5;
+        }
+
+
+        @media screen and (max-width: 500px) {
+            .course-highlight__details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (min-width: 501px) and (max-width: 1099px) {
+            .course-highlight__details {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media screen and (max-width: 768px) {
@@ -67,117 +83,568 @@
             }
         }
 
-        @media screen and (min-width: 1132px) {
+        @media screen and (min-width: 1100px) {
             .course-highlight {
                 padding: 32px 0 24px;
+            }
+
+            .course-highlight__details {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        .keystat-highlight {
+            padding: 24px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 16px;
+            grid-row-gap: 24px;
+        }
+
+        .keystat-highlight__title {
+            grid-area: 1 / 1 / 2 / 3;
+        }
+
+        .keystat-highlight__data {
+            grid-area: 1 / 3 / 2 / 5;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .keystat-highlight__details {
+            grid-area: 2 / 1 / 3 / 5;
+        }
+
+        @media screen and (max-width: 500px) {
+            .keystat-highlight {
+                padding: 24px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+
+            .keystat-highlight__title {
+                grid-area: 1 / 1 / 2 / 5;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .keystat-highlight__data {
+                grid-area: 3 / 1 / 4 / 5;
+                justify-content: flex-start;
+            }
+
+            .keystat-highlight__details {
+                grid-area: 2 / 1 / 3 / 5;
             }
         }
     </style>
 </head>
 
 <body>
-    <section class="bg-primary-100">
-        <div class="container-lg course-highlight">
-            <div class="course-highlight__title font-bold d-flex align-items-center gap12">
-                <h6 class="heading-h6">Different course options</h6>
-                <a href="#" class="dropdown-link">2 options available </a>
+    <div class="bg-neutral-100">
+        <section class="bg-primary-100">
+            <div class="container-lg course-highlight">
+                <div class="course-highlight__title font-bold d-flex align-items-center gap12">
+                    <h6 class="heading-h6 no-shrink">Different course options</h6>
+                    <a href="#" class="dropdown-link no-shrink">2 options available </a>
+                </div>
+                <div class="course-highlight__data para-xsmall">
+                    <label class="text-black">DATA SOURCE:</label>
+                    <a href="#">UNISTATS / UCAS / HESA</a>
+                </div>
+
+                <div class="course-highlight__details">
+                    <div class="course-highlight__option d-flex align-items-start flex-column flex-row-1100 gap16 w100">
+                        <img src="./heroicons/heroicon-academic-cap-grey.svg" alt="academic-cap" width="32"
+                            height="32" />
+                        <div class="d-flex flex-column gap4 text-neutral-0">
+                            <span class="para-medium font-bold">Qualification</span>
+                            <p class="para-medium">Bachelor of Arts (with Honours) - BA (Hons)</p>
+                        </div>
+                    </div>
+
+                    <div class="course-highlight__option d-flex align-items-start flex-column flex-row-1100 gap16 w100">
+                        <img src="./heroicons/heroicon-location-pin-grey.svg" alt="location-pin" width="32"
+                            height="32" />
+                        <div class="d-flex flex-column gap4 text-neutral-0">
+                            <span class="para-medium font-bold">Location</span>
+                            <p class="para-medium">Norwich University of the Arts</p>
+                        </div>
+                    </div>
+
+                    <div class="course-highlight__option d-flex align-items-start flex-column flex-row-1100 gap16 w100">
+                        <img src="./heroicons/heroicon-beaker-grey.svg" alt="beaker" width="32" height="32" />
+                        <div class="d-flex flex-column gap4 text-neutral-0">
+                            <span class="para-medium font-bold">Study mode</span>
+                            <p class="para-medium">Full time</p>
+                        </div>
+                    </div>
+
+                    <div class="course-highlight__option d-flex align-items-start flex-column flex-row-1100 gap16 w100">
+                        <img src="./heroicons/heroicon-calendar-grey.svg" alt="calendar" width="32" height="32" />
+                        <div class="d-flex flex-column gap4 text-neutral-0">
+                            <span class="para-medium font-bold">Start date</span>
+                            <p class="para-medium">SEP-24</p>
+                        </div>
+                    </div>
+
+                    <div class="course-highlight__option d-flex align-items-start flex-column flex-row-1100 gap16 w100">
+                        <img src="./heroicons/heroicon-time-grey.svg" alt="time" width="32" height="32" />
+                        <div class="d-flex flex-column gap4 text-neutral-0">
+                            <span class="para-medium font-bold">Duration</span>
+                            <p class="para-medium">3 years</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="course-highlight__data para-xsmall">
-                <label class="text-black">DATA SOURCE:</label>
-                <a href="#">UNISTATS / UCAS / HESA</a>
+        </section>
+
+        <section class="container-lg">
+            <!-- ALERT -->
+            <div class="alert alert--success mt24">
+                <a href="#" class="alert__link para-small font-regular d-inline-flex gap8">Check upcoming open days and
+                    book your place</a>
             </div>
+            <!-- ALERT -->
 
-            <div class="course-highlight__details d-flex align-items-start flex-column-768 gap24">
-                <div class="d-flex align-items-start flex-column flex-row-768 gap16 w100">
-                    <img src="./heroicons/heroicon-academic-cap-grey.svg" alt="academic-cap" width="32" height="32" />
-                    <div class="d-flex flex-column gap8 text-neutral-0">
-                        <span class="para-medium font-bold">Qualification</span>
-                        <p class="para-medium">Bachelor of Arts (with Honours) - BA (Hons)</p>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-start flex-column flex-row-768 gap16 w100">
-                    <img src="./heroicons/heroicon-location-pin-grey.svg" alt="location-pin" width="32" height="32" />
-                    <div class="d-flex flex-column gap8 text-neutral-0">
-                        <span class="para-medium font-bold">Location</span>
-                        <p class="para-medium">Norwich University of the Arts</p>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-start flex-column flex-row-768 gap16 w100">
-                    <img src="./heroicons/heroicon-beaker-grey.svg" alt="beaker" width="32" height="32" />
-                    <div class="d-flex flex-column gap8 text-neutral-0">
-                        <span class="para-medium font-bold">Study mode</span>
-                        <p class="para-medium">Full time</p>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-start flex-column flex-row-768 gap16 w100">
-                    <img src="./heroicons/heroicon-calendar-grey.svg" alt="calendar" width="32" height="32" />
-                    <div class="d-flex flex-column gap8 text-neutral-0">
-                        <span class="para-medium font-bold">Start date</span>
-                        <p class="para-medium">SEP-24</p>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-start flex-column flex-row-768 gap16 w100">
-                    <img src="./heroicons/heroicon-time-grey.svg" alt="time" width="32" height="32" />
-                    <div class="d-flex flex-column gap8 text-neutral-0">
-                        <span class="para-medium font-bold">Duration</span>
-                        <p class="para-medium">3 years</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <div class="alert alert--success">
-        <a href="#" class="alert__link para-small font-regular d-inline-flex gap8">Check upcoming open days and book
-            your place</a>
-    </div>
-
-    <div class="d-flex gap20">
-        <h2 class="heading-h2 text-black title-highlight">Course Info</h2>
-
-        <div class="text-neutral-0 para-medium">
-            <p class="mb24">The BA (Hons) Animation course at Norwich University of the Arts (Norwich) is designed to inspire and
-                capture the imagination of its students, balancing fundamental principles with cutting edge techniques.
-                We embrace creativity in all aspects of the course and aim for outcomes with artistry and storytelling
-                at their core which explore innovative methods of moving image creation and inspire new audiences. </p>
-             <h6 class="para-medium font-bold">Key features</h6>
-            <p class="mb24">Share the first-year curriculum with BA (Hons) Animation and Visual Effects, allowing you to study the
-                fundamental skills of thinking and working in animation and visual effects and provide students with a
-                solid grounding in the basics needed for both disciplines.</p>
-            <ul class="mb24">
-                <li>Develop an understanding of visual/film language components such as narrative structure, design,
-                    colour and composition </li>
-                <li>Work in relation to sustainability, diversity and global contexts; question how the work you create,
-                    and the methods you use, can be used to make a difference to others </li>
-                <li>Progress towards project outcomes through a process of conceptualisation, experimentation and
-                    iteration, with each stage refining communication, meaning and resolve </li>
-                <li>Learn the importance of collaborative working, presenting/pitching, time/project management,
-                    communication skills, responding to creative briefs, academic writing, and giving and receiving
-                    feedback </li>
-                <li>Attend guest lectures and masterclasses, portfolio reviews, and participate in internal/external
-                    conferences, exhibitions and careers events, as appropriate </li>
-                <li>Develop the observation, reflection, criticality, emotional intelligence, organisation and autonomy
-                    required of a contemporary artist together with an aptitude for problem solving </li>
-                <li>Participate in a studio culture which facilitates peer-learning and helps build working
-                    relationships in support of collaborative practice </li>
-                <li>From Year 2, specialise in either 2D (computer-generated imagery) or stop motion </li>
+            <!-- TAB -->
+            <ul class="tab mt24">
+                <li class="tab__item tab__item--active"><a href="#tab1">Course info</a></li>
+                <li class="tab__item"><a href="#">Modules</a></li>
+                <li class="tab__item"><a href="#">Entry requirements</a></li>
+                <li class="tab__item"><a href="#">Tuition fees</a></li>
+                <li class="tab__item"><a href="#">Latest reviews</a></li>
+                <li class="tab__item"><a href="#">Uni info</a></li>
             </ul>
-             <h6 class="para-medium font-bold">Your future</h6>
-            <p class="mb24">In your final year, you will produce a personal showcase of your specialist skills and an original
-                animated film, getting you career-ready after university. BA (Hons) Animation prepares you to join
-                Norwich graduates who have already gone on to work at Lupus Films, Blue Zoo, Meantime Media, Cartoon
-                Saloon and more. It also prepares you with a transferable skillset that supports your career beyond the
-                existing creative industries – where team working, collaboration, problem solving, an ability to
-                research, and project manage are always highly desirable. </p>
-             <h6 class="para-medium font-bold">Your future</h6>
-            <p class="mb24">Explore our online showreel – celebrating the very best Norwich University of the Arts graduate work.
-                Scroll each reel to explore at <a href="#">nuagradshowcase.com</a></p>
-        </div>
+            <!-- TAB -->
+
+            <div class="d-flex flex-column gap56">
+                <!-- Course info -->
+                <div class="d-flex gap20 flex-column-768">
+                    <div class="title-highlight-wrap">
+                        <h2 id="tab1" class="heading-h2 text-black title-highlight">Course Info</h2>
+                    </div>
+
+                    <div>
+                        <div class="text-neutral-0 para-medium">
+                            <p class="mb24">The BA (Hons) Animation course at Norwich University of the Arts (Norwich) is
+                                designed to
+                                inspire and
+                                capture the imagination of its students, balancing fundamental principles with cutting edge
+                                techniques.
+                                We embrace creativity in all aspects of the course and aim for outcomes with artistry and
+                                storytelling
+                                at their core which explore innovative methods of moving image creation and inspire new
+                                audiences. </p>
+                            <h6 class="para-medium font-bold">Key features</h6>
+                            <p class="mb24">Share the first-year curriculum with BA (Hons) Animation and Visual Effects,
+                                allowing you to
+                                study the
+                                fundamental skills of thinking and working in animation and visual effects and provide students
+                                with a
+                                solid grounding in the basics needed for both disciplines.</p>
+                            <ul class="mb24">
+                                <li>Develop an understanding of visual/film language components such as narrative structure,
+                                    design,
+                                    colour and composition </li>
+                                <li>Work in relation to sustainability, diversity and global contexts; question how the work you
+                                    create,
+                                    and the methods you use, can be used to make a difference to others </li>
+                                <li>Progress towards project outcomes through a process of conceptualisation, experimentation
+                                    and
+                                    iteration, with each stage refining communication, meaning and resolve </li>
+                                <li>Learn the importance of collaborative working, presenting/pitching, time/project management,
+                                    communication skills, responding to creative briefs, academic writing, and giving and
+                                    receiving
+                                    feedback </li>
+                                <li>Attend guest lectures and masterclasses, portfolio reviews, and participate in
+                                    internal/external
+                                    conferences, exhibitions and careers events, as appropriate </li>
+                                <li>Develop the observation, reflection, criticality, emotional intelligence, organisation and
+                                    autonomy
+                                    required of a contemporary artist together with an aptitude for problem solving </li>
+                                <li>Participate in a studio culture which facilitates peer-learning and helps build working
+                                    relationships in support of collaborative practice </li>
+                                <li>From Year 2, specialise in either 2D (computer-generated imagery) or stop motion </li>
+                            </ul>
+                            <h6 class="para-medium font-bold">Your future</h6>
+                            <p class="mb24">In your final year, you will produce a personal showcase of your specialist skills
+                                and an
+                                original
+                                animated film, getting you career-ready after university. BA (Hons) Animation prepares you to
+                                join
+                                Norwich graduates who have already gone on to work at Lupus Films, Blue Zoo, Meantime Media,
+                                Cartoon
+                                Saloon and more. It also prepares you with a transferable skillset that supports your career
+                                beyond the
+                                existing creative industries – where team working, collaboration, problem solving, an ability to
+                                research, and project manage are always highly desirable. </p>
+                            <h6 class="para-medium font-bold">Your future</h6>
+                            <p class="mb24">Explore our online showreel – celebrating the very best Norwich University of the
+                                Arts
+                                graduate work.
+                                Scroll each reel to explore at <a href="#">nuagradshowcase.com</a></p>
+                        </div>
+                        
+                        <div class="bg-white mt24">
+                            <div class="container-lg keystat-highlight">
+                                <div class="keystat-highlight__title font-bold d-flex align-items-center gap12">
+                                    <h4 class="heading-h4 no-shrink">Key stats</h4>
+                                    <a href="#" class="dropdown-link no-shrink">Art and Design</a>
+                                </div>
+                                <div class="keystat-highlight__data para-xsmall">
+                                    <label class="text-black">DATA SOURCE:</label>
+                                    <a href="#">UNISTATS / UCAS / HESA</a>
+                                </div>
+            
+                                <div class="keystat-highlight__details d-flex flex-column gap24">
+                                    <div class="d-flex justify-content-between flex-wrap flex-column-700 gap24">
+                                        <div class="min-w180px d-flex flex-column gap8 flex-row-700  gap16-700">
+                                            <div class="icon__solid--green">
+                                                <!-- trending-up -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                                    fill="none">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M19.25 11.125C18.3525 11.125 17.625 10.3975 17.625 9.5C17.625 8.60254 18.3525 7.875 19.25 7.875H27.375C28.2725 7.875 29 8.60254 29 9.5V17.625C29 18.5225 28.2725 19.25 27.375 19.25C26.4775 19.25 25.75 18.5225 25.75 17.625V13.4231L18.774 20.399C18.1394 21.0337 17.1106 21.0337 16.476 20.399L12.75 16.6731L5.77405 23.6491C5.13945 24.2837 4.11055 24.2837 3.47595 23.6491C2.84135 23.0144 2.84135 21.9856 3.47595 21.351L11.601 13.226C12.2356 12.5914 13.2644 12.5914 13.899 13.226L17.625 16.9519L23.4519 11.125H19.25Z"
+                                                        fill="#000000" />
+                                                </svg>
+                                            </div>
+                                            <div class="d-flex flex-column gap4">
+                                                <div class="d-flex align-items-center gap8">
+                                                    <span class="d-inline-block para-medium font-bold">WUSCA ranking</span>
+                                                    <div class="icon__solid--grey">
+                                                        <!-- question-mark-circle -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10" fill="none">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.00001 3.125C4.76946 3.125 4.56725 3.24951 4.45824 3.43795C4.2854 3.73674 3.90307 3.83884 3.60428 3.666C3.30549 3.49316 3.20339 3.11083 3.37623 2.81205C3.69949 2.25324 4.30521 1.875 5.00001 1.875C6.03554 1.875 6.87501 2.71447 6.87501 3.75C6.87501 4.56639 6.35325 5.26091 5.62501 5.51831V5.625C5.62501 5.97018 5.34519 6.25 5.00001 6.25C4.65483 6.25 4.37501 5.97018 4.37501 5.625V5C4.37501 4.65482 4.65483 4.375 5.00001 4.375C5.34519 4.375 5.62501 4.09518 5.62501 3.75C5.62501 3.40482 5.34519 3.125 5.00001 3.125ZM5 8.125C5.34518 8.125 5.625 7.84518 5.625 7.5C5.625 7.15482 5.34518 6.875 5 6.875C4.65482 6.875 4.375 7.15482 4.375 7.5C4.375 7.84518 4.65482 8.125 5 8.125Z"
+                                                                fill="#000000" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <span class="d-inline-block para-medium">56/81</span>
+                                            </div>
+                                        </div>
+            
+                                        <div class="min-w180px d-flex flex-column gap8 flex-row-700 gap16-700">
+                                            <div class="icon__solid--green">
+                                                <!-- chart-bar -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                                    fill="none">
+                                                    <path
+                                                        d="M3 17.625C3 16.7275 3.72754 16 4.625 16H7.875C8.77246 16 9.5 16.7275 9.5 17.625V25.75C9.5 26.6475 8.77246 27.375 7.875 27.375H4.625C3.72754 27.375 3 26.6475 3 25.75V17.625Z"
+                                                        fill="#000000" />
+                                                    <path
+                                                        d="M12.75 11.125C12.75 10.2275 13.4775 9.5 14.375 9.5H17.625C18.5225 9.5 19.25 10.2275 19.25 11.125V25.75C19.25 26.6475 18.5225 27.375 17.625 27.375H14.375C13.4775 27.375 12.75 26.6475 12.75 25.75V11.125Z"
+                                                        fill="#000000" />
+                                                    <path
+                                                        d="M22.5 6.25C22.5 5.35254 23.2275 4.625 24.125 4.625H27.375C28.2725 4.625 29 5.35254 29 6.25V25.75C29 26.6475 28.2725 27.375 27.375 27.375H24.125C23.2275 27.375 22.5 26.6475 22.5 25.75V6.25Z"
+                                                        fill="#000000" />
+                                                </svg>
+                                            </div>
+                                            <div class="d-flex flex-column gap4">
+                                                <div class="d-flex align-items-center gap8">
+                                                    <span class="d-inline-block para-medium font-bold">CUG subject ranking</span>
+                                                    <div class="icon__solid--grey">
+                                                        <!-- question-mark-circle -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10" fill="none">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.00001 3.125C4.76946 3.125 4.56725 3.24951 4.45824 3.43795C4.2854 3.73674 3.90307 3.83884 3.60428 3.666C3.30549 3.49316 3.20339 3.11083 3.37623 2.81205C3.69949 2.25324 4.30521 1.875 5.00001 1.875C6.03554 1.875 6.87501 2.71447 6.87501 3.75C6.87501 4.56639 6.35325 5.26091 5.62501 5.51831V5.625C5.62501 5.97018 5.34519 6.25 5.00001 6.25C4.65483 6.25 4.37501 5.97018 4.37501 5.625V5C4.37501 4.65482 4.65483 4.375 5.00001 4.375C5.34519 4.375 5.62501 4.09518 5.62501 3.75C5.62501 3.40482 5.34519 3.125 5.00001 3.125ZM5 8.125C5.34518 8.125 5.625 7.84518 5.625 7.5C5.625 7.15482 5.34518 6.875 5 6.875C4.65482 6.875 4.375 7.15482 4.375 7.5C4.375 7.84518 4.65482 8.125 5 8.125Z"
+                                                                fill="#000000" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <span class="d-inline-block para-medium">56th</span>
+                                            </div>
+                                        </div>
+            
+                                        <div class="min-w180px d-flex flex-column gap8 flex-row-700 gap16-700">
+                                            <div class="icon__solid--green">
+                                                <!-- chart-bar -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                                    fill="none">
+                                                    <path
+                                                        d="M3 17.625C3 16.7275 3.72754 16 4.625 16H7.875C8.77246 16 9.5 16.7275 9.5 17.625V25.75C9.5 26.6475 8.77246 27.375 7.875 27.375H4.625C3.72754 27.375 3 26.6475 3 25.75V17.625Z"
+                                                        fill="#000000" />
+                                                    <path
+                                                        d="M12.75 11.125C12.75 10.2275 13.4775 9.5 14.375 9.5H17.625C18.5225 9.5 19.25 10.2275 19.25 11.125V25.75C19.25 26.6475 18.5225 27.375 17.625 27.375H14.375C13.4775 27.375 12.75 26.6475 12.75 25.75V11.125Z"
+                                                        fill="#000000" />
+                                                    <path
+                                                        d="M22.5 6.25C22.5 5.35254 23.2275 4.625 24.125 4.625H27.375C28.2725 4.625 29 5.35254 29 6.25V25.75C29 26.6475 28.2725 27.375 27.375 27.375H24.125C23.2275 27.375 22.5 26.6475 22.5 25.75V6.25Z"
+                                                        fill="#000000" />
+                                                </svg>
+                                            </div>
+                                            <div class="d-flex flex-column gap4">
+                                                <div class="d-flex align-items-center gap8">
+                                                    <span class="d-inline-block para-medium font-bold">CUG ranking</span>
+                                                    <div class="icon__solid--grey">
+                                                        <!-- question-mark-circle -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10" fill="none">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.00001 3.125C4.76946 3.125 4.56725 3.24951 4.45824 3.43795C4.2854 3.73674 3.90307 3.83884 3.60428 3.666C3.30549 3.49316 3.20339 3.11083 3.37623 2.81205C3.69949 2.25324 4.30521 1.875 5.00001 1.875C6.03554 1.875 6.87501 2.71447 6.87501 3.75C6.87501 4.56639 6.35325 5.26091 5.62501 5.51831V5.625C5.62501 5.97018 5.34519 6.25 5.00001 6.25C4.65483 6.25 4.37501 5.97018 4.37501 5.625V5C4.37501 4.65482 4.65483 4.375 5.00001 4.375C5.34519 4.375 5.62501 4.09518 5.62501 3.75C5.62501 3.40482 5.34519 3.125 5.00001 3.125ZM5 8.125C5.34518 8.125 5.625 7.84518 5.625 7.5C5.625 7.15482 5.34518 6.875 5 6.875C4.65482 6.875 4.375 7.15482 4.375 7.5C4.375 7.84518 4.65482 8.125 5 8.125Z"
+                                                                fill="#000000" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <span class="d-inline-block para-medium">56th</span>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="d-flex flex-column gap8 gap16-700">
+                                        <h6 class="heading-h6">Animation</h6>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center justify-content-between gap80 flex-column-700 gap16-700 w100 ">
+                                                <div class="w100">
+                                                    <div class="d-flex align-items-center justify-content-between w100 gap8">
+                                                        <div class="d-flex align-items-center gap8">
+                                                            <span class="d-inline-block para-medium font-bold mr8">Drop-out
+                                                                rate</span>
+                                                            <div class="icon__solid--grey">
+                                                                <!-- question-mark-circle -->
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                                    viewBox="0 0 10 10" fill="none">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.00001 3.125C4.76946 3.125 4.56725 3.24951 4.45824 3.43795C4.2854 3.73674 3.90307 3.83884 3.60428 3.666C3.30549 3.49316 3.20339 3.11083 3.37623 2.81205C3.69949 2.25324 4.30521 1.875 5.00001 1.875C6.03554 1.875 6.87501 2.71447 6.87501 3.75C6.87501 4.56639 6.35325 5.26091 5.62501 5.51831V5.625C5.62501 5.97018 5.34519 6.25 5.00001 6.25C4.65483 6.25 4.37501 5.97018 4.37501 5.625V5C4.37501 4.65482 4.65483 4.375 5.00001 4.375C5.34519 4.375 5.62501 4.09518 5.62501 3.75C5.62501 3.40482 5.34519 3.125 5.00001 3.125ZM5 8.125C5.34518 8.125 5.625 7.84518 5.625 7.5C5.625 7.15482 5.34518 6.875 5 6.875C4.65482 6.875 4.375 7.15482 4.375 7.5C4.375 7.84518 4.65482 8.125 5 8.125Z"
+                                                                        fill="#000000" />
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <span class="d-inline-block para-medium font-bold">89%</span>
+                                                    </div>
+            
+                                                    <!-- PROGRESS BAR -->
+                                                    <div class="progess-bar__wrapper progess-bar--xxs mt8">
+                                                        <div style="width: 89%;" class="progess-bar__line"></div>
+                                                    </div>
+                                                    <!-- PROGRESS BAR -->
+                                                </div>
+            
+                                                <div class="w100">
+                                                    <div class="d-flex align-items-center justify-content-between w100 gap8">
+                                                        <div class="d-flex align-items-center gap8">
+                                                            <span class="d-inline-block para-medium font-bold mr8">Employment
+                                                                rate</span>
+                                                            <div class="icon__solid--grey">
+                                                                <!-- question-mark-circle -->
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                                    viewBox="0 0 10 10" fill="none">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.00001 3.125C4.76946 3.125 4.56725 3.24951 4.45824 3.43795C4.2854 3.73674 3.90307 3.83884 3.60428 3.666C3.30549 3.49316 3.20339 3.11083 3.37623 2.81205C3.69949 2.25324 4.30521 1.875 5.00001 1.875C6.03554 1.875 6.87501 2.71447 6.87501 3.75C6.87501 4.56639 6.35325 5.26091 5.62501 5.51831V5.625C5.62501 5.97018 5.34519 6.25 5.00001 6.25C4.65483 6.25 4.37501 5.97018 4.37501 5.625V5C4.37501 4.65482 4.65483 4.375 5.00001 4.375C5.34519 4.375 5.62501 4.09518 5.62501 3.75C5.62501 3.40482 5.34519 3.125 5.00001 3.125ZM5 8.125C5.34518 8.125 5.625 7.84518 5.625 7.5C5.625 7.15482 5.34518 6.875 5 6.875C4.65482 6.875 4.375 7.15482 4.375 7.5C4.375 7.84518 4.65482 8.125 5 8.125Z"
+                                                                        fill="#000000" />
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <span class="d-inline-block para-medium font-bold">89%</span>
+                                                    </div>
+            
+                                                    <!-- PROGRESS BAR -->
+                                                    <div class="progess-bar__wrapper progess-bar--xxs mt8">
+                                                        <div style="width: 89%;" class="progess-bar__line"></div>
+                                                    </div>
+                                                    <!-- PROGRESS BAR -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="d-flex flex-column gap8 gap16-700">
+                                        <h6 class="heading-h6">Average salary</h6>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center justify-content-between gap80 flex-column-700 gap16-700 w100">
+                                                <div class="w100">
+                                                    <div class="d-flex align-items-center gap8">
+                                                        <span class="d-inline-block para-medium font-bold mr8">Politics graduate
+                                                            salary at this uni</span>
+                                                        <div class="icon__solid--grey">
+                                                            <!-- question-mark-circle -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                                viewBox="0 0 10 10" fill="none">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.00001 3.125C4.76946 3.125 4.56725 3.24951 4.45824 3.43795C4.2854 3.73674 3.90307 3.83884 3.60428 3.666C3.30549 3.49316 3.20339 3.11083 3.37623 2.81205C3.69949 2.25324 4.30521 1.875 5.00001 1.875C6.03554 1.875 6.87501 2.71447 6.87501 3.75C6.87501 4.56639 6.35325 5.26091 5.62501 5.51831V5.625C5.62501 5.97018 5.34519 6.25 5.00001 6.25C4.65483 6.25 4.37501 5.97018 4.37501 5.625V5C4.37501 4.65482 4.65483 4.375 5.00001 4.375C5.34519 4.375 5.62501 4.09518 5.62501 3.75C5.62501 3.40482 5.34519 3.125 5.00001 3.125ZM5 8.125C5.34518 8.125 5.625 7.84518 5.625 7.5C5.625 7.15482 5.34518 6.875 5 6.875C4.65482 6.875 4.375 7.15482 4.375 7.5C4.375 7.84518 4.65482 8.125 5 8.125Z"
+                                                                    fill="#000000" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="heading-h5 ">£22,000</h5>
+                                                </div>
+            
+                                                <div class="w100">
+                                                    <div class="d-flex align-items-center gap8">
+                                                        <span class="d-inline-block para-medium font-bold mr8">UK Politics graduate
+                                                            salary</span>
+                                                        <div class="icon__solid--grey">
+                                                            <!-- question-mark-circle -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                                viewBox="0 0 10 10" fill="none">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.00001 3.125C4.76946 3.125 4.56725 3.24951 4.45824 3.43795C4.2854 3.73674 3.90307 3.83884 3.60428 3.666C3.30549 3.49316 3.20339 3.11083 3.37623 2.81205C3.69949 2.25324 4.30521 1.875 5.00001 1.875C6.03554 1.875 6.87501 2.71447 6.87501 3.75C6.87501 4.56639 6.35325 5.26091 5.62501 5.51831V5.625C5.62501 5.97018 5.34519 6.25 5.00001 6.25C4.65483 6.25 4.37501 5.97018 4.37501 5.625V5C4.37501 4.65482 4.65483 4.375 5.00001 4.375C5.34519 4.375 5.62501 4.09518 5.62501 3.75C5.62501 3.40482 5.34519 3.125 5.00001 3.125ZM5 8.125C5.34518 8.125 5.625 7.84518 5.625 7.5C5.625 7.15482 5.34518 6.875 5 6.875C4.65482 6.875 4.375 7.15482 4.375 7.5C4.375 7.84518 4.65482 8.125 5 8.125Z"
+                                                                    fill="#000000" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="heading-h5 ">£21,000</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modules -->
+                <div class="d-flex gap20 flex-column-768">
+                    <div class="title-highlight-wrap">
+                        <h2 id="tab2" class="heading-h2 text-black title-highlight">Modules</h2>
+                    </div>
+
+                    <div class="text-neutral-0 para-medium flex-grow">
+                        <form>
+                            <div class="accordion accordion--large">   
+                                <input type="checkbox" id="accordion1" name="accordion"/>
+                                <label for="accordion1" class="accordion__header">
+                                    <h5 class="heading-h5 text-secondary-500">Modules (Year 1)</h5>
+                                    <span class="icon--plus"></span>
+                                    <span class="icon--minus"></span>
+                                </label>
+                                <div class="accordion__body">
+                                    <!-- Accordion small -->
+                                    <div class="accordion accordion--small">   
+                                        <input type="checkbox" id="smallaccordion1" name="smallaccordion"/>
+                                        <label for="smallaccordion1" class="accordion__header">
+                                            <span class="icon--plus"></span>
+                                            <span class="icon--minus"></span>
+                                            <h5 class="para-large font-bold text-secondary-500">Explore and Experiment (80 credits)</h5>
+                                        </label>
+                                        <div class="accordion__body">
+                                            <p>In this unit you will explore and experiment with techniques, materials and media. You will learn how iterative processes allow you to develop and refine your work. There will be a focus on awareness of sustainable and responsible ways of thinking and working which will become embedded in your practice as you progress through the course.</p>
+                                        </div>
+                                    </div>
+                
+                                    <!-- Accordion small -->
+                                    <div class="accordion accordion--small">   
+                                        <input type="checkbox" id="smallaccordion1" name="smallaccordion"/>
+                                        <label for="smallaccordion1" class="accordion__header">
+                                            <span class="icon--plus"></span>
+                                            <span class="icon--minus"></span>
+                                            <h5 class="para-large font-bold text-secondary-500">Creative Learning (40 credits)</h5>
+                                        </label>
+                                        <div class="accordion__body">
+                                            <p>In this unit you will explore and experiment with techniques, materials and media. You will learn how iterative processes allow you to develop and refine your work. There will be a focus on awareness of sustainable and responsible ways of thinking and working which will become embedded in your practice as you progress through the course.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="accordion accordion--large">   
+                                <input type="checkbox" id="accordion2" name="accordion"/>
+                                <label for="accordion2" class="accordion__header">
+                                    <h5 class="heading-h5 text-secondary-500">Modules (Year 2)</h5>
+                                    <span class="icon--plus"></span>
+                                    <span class="icon--minus"></span>
+                                </label>
+                                <div class="accordion__body">
+                                    <p>In this unit you will explore and experiment with techniques, materials and media. You will learn how iterative processes allow you to develop and refine your work. There will be a focus on awareness of sustainable and responsible ways of thinking and working which will become embedded in your practice as you progress through the course.</p>
+                                </div>
+                            </div>
+                
+                            <div class="accordion accordion--large">   
+                                <input type="checkbox" id="accordion3" name="accordion"/>
+                                <label for="accordion3" class="accordion__header">
+                                    <h5 class="heading-h5 text-secondary-500">Modules (Year 3)</h5>
+                                    <span class="icon--plus"></span>
+                                    <span class="icon--minus"></span>
+                                </label>
+                                <div class="accordion__body">
+                                    <p>In this unit you will explore and experiment with techniques, materials and media. You will learn how iterative processes allow you to develop and refine your work. There will be a focus on awareness of sustainable and responsible ways of thinking and working which will become embedded in your practice as you progress through the course.</p>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="para-xsmall mt24">
+                            <label class="text-black">DATA SOURCE:</label>
+                            <a href="#">UNISTATS / UCAS / HESA</a>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Entry requirement -->
+                <div class="d-flex gap20 a-level flex-column-768">
+                    <div class="title-highlight-wrap">
+                        <h2 id="tab2" class="heading-h2 text-black title-highlight">Entry requirements</h2>
+                    </div>
+
+                    <div class="bg-white text-neutral-0 para-medium d-flex flex-column gap16 flex-grow p24">
+                        <div class="font-bold d-flex align-items-center gap12">
+                            <p class="para-medium no-shrink">Exam type</p>
+                            <a href="#" class="dropdown-link no-shrink">A Level</a>
+                        </div>
+
+                        <div class="bg-primary-100 p16">
+                            <p class="font-bold para-medium">A level: AAB</p>
+                            <p class="para-small">104 - 120 Grades/points required</p>
+                        </div>
+                        <p>Although many of our students do come in with top grades and high UCAS points, these aren’t necessarily essential for entry. We typically ask for a minimum of 104 UCAS points, but we understand that talented artists, designers and makers can have a wide range of relevant strengths and skills beyond formal qualifications. We’re just as interested in exploring your portfolio as we are in seeing your grades.</p>
+                    </div>
+
+                </div>
+
+                <!-- Tuition fees -->
+                <div class="d-flex gap20 a-level flex-column-768">
+                    <div class="title-highlight-wrap">
+                        <h2 id="tab2" class="heading-h2 text-black title-highlight">Tuition fees</h2>
+                    </div>
+
+                    <div class="bg-white text-neutral-0 para-medium d-flex flex-column gap16 flex-grow p24">
+                        <div class="font-bold d-flex align-items-center gap12">
+                            <p class="para-medium no-shrink">Students living in</p>
+                            <a href="#" class="dropdown-link no-shrink">England</a>
+                        </div>
+
+                        <div class="bg-primary-100 p16">
+                            <div class="d-flex align-items-center gap8">
+                                <p class="font-bold para-medium">£9,250 per year</p>
+                                <div class="icon__solid--grey">
+                                    <!-- question-mark-circle -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                        viewBox="0 0 10 10" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.00001 3.125C4.76946 3.125 4.56725 3.24951 4.45824 3.43795C4.2854 3.73674 3.90307 3.83884 3.60428 3.666C3.30549 3.49316 3.20339 3.11083 3.37623 2.81205C3.69949 2.25324 4.30521 1.875 5.00001 1.875C6.03554 1.875 6.87501 2.71447 6.87501 3.75C6.87501 4.56639 6.35325 5.26091 5.62501 5.51831V5.625C5.62501 5.97018 5.34519 6.25 5.00001 6.25C4.65483 6.25 4.37501 5.97018 4.37501 5.625V5C4.37501 4.65482 4.65483 4.375 5.00001 4.375C5.34519 4.375 5.62501 4.09518 5.62501 3.75C5.62501 3.40482 5.34519 3.125 5.00001 3.125ZM5 8.125C5.34518 8.125 5.625 7.84518 5.625 7.5C5.625 7.15482 5.34518 6.875 5 6.875C4.65482 6.875 4.375 7.15482 4.375 7.5C4.375 7.84518 4.65482 8.125 5 8.125Z"
+                                            fill="#000000" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center gap8">
+                                <p class="para-small">Students from England</p>
+                                <div class="icon__solid--grey">
+                                    <!-- question-mark-circle -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                        viewBox="0 0 10 10" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.00001 3.125C4.76946 3.125 4.56725 3.24951 4.45824 3.43795C4.2854 3.73674 3.90307 3.83884 3.60428 3.666C3.30549 3.49316 3.20339 3.11083 3.37623 2.81205C3.69949 2.25324 4.30521 1.875 5.00001 1.875C6.03554 1.875 6.87501 2.71447 6.87501 3.75C6.87501 4.56639 6.35325 5.26091 5.62501 5.51831V5.625C5.62501 5.97018 5.34519 6.25 5.00001 6.25C4.65483 6.25 4.37501 5.97018 4.37501 5.625V5C4.37501 4.65482 4.65483 4.375 5.00001 4.375C5.34519 4.375 5.62501 4.09518 5.62501 3.75C5.62501 3.40482 5.34519 3.125 5.00001 3.125ZM5 8.125C5.34518 8.125 5.625 7.84518 5.625 7.5C5.625 7.15482 5.34518 6.875 5 6.875C4.65482 6.875 4.375 7.15482 4.375 7.5C4.375 7.84518 4.65482 8.125 5 8.125Z"
+                                            fill="#000000" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>This is the fee you pay if you live in England. Please note, this fee has been confirmed.</p>
+                        <div class="para-xsmall mt24">
+                            <label class="text-black">DATA SOURCE:</label>
+                            <a href="#">UNISTATS / UCAS / HESA</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 
