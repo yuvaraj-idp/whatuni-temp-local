@@ -542,13 +542,17 @@ h2{font-size:36px;color:#fff;text-align:center;margin:0;padding:0}
   display: block;
 }
 
+.hero__section--v2 .hrosrch_ui{
+    padding: 0 15px;
+    box-sizing: border-box;
+}
 .hero__section--v2 .hrosrch_ui .srch_cnt{
     position: unset;
     transform: unset;
 }
 .hero__section--v2.slider_cnt .hrobanr_ui{
-    height: 412px;
-    padding: 22px 15px 56px;
+    height: 445px;
+    padding: 22px 0px 56px;
     max-width: 100%;
     width: 1106px;
     margin: 0 auto;
