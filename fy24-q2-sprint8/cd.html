@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CD page</title>
-    <link rel="stylesheet" href="../design-system/foundation.css">
+    <link rel="stylesheet" type="text/css" href="../design-system/foundation.css">
+    <link rel="stylesheet" type="text/css" href="../standalone-components/review-widget/wu_review_widget_component.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../design-system/icons.css" media="screen" />
+
     <style>
         .dropdown-link {
             display: inline-flex;
@@ -27,11 +30,12 @@
         }
 
         .course-highlight {
-            padding: 16px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-column-gap: 16px;
             grid-row-gap: 24px;
+            padding-top: 32px;
+            padding-bottom: 24px;   
         }
 
         .course-highlight__title {
@@ -84,12 +88,15 @@
         }
 
         @media screen and (min-width: 1100px) {
-            .course-highlight {
-                padding: 32px 0 24px;
-            }
 
             .course-highlight__details {
                 grid-template-columns: repeat(5, 1fr);
+            }
+        }
+        @media screen and (max-width: 1100px) {
+            .course-highlight {
+                padding-top: 16px;
+                padding-bottom: 16px;
             }
         }
 
@@ -139,11 +146,166 @@
                 grid-area: 2 / 1 / 3 / 5;
             }
         }
+
+
+        .course__sticky{
+            padding-top: 32px;
+            padding-bottom: 24px;
+        }
+        .course__sticky .univ__logo{       
+            width: 120px;
+            height: 120px;
+            padding: 4px;
+            border-radius: 8px;
+            box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.10), 0px 0px 8px 2px rgba(0, 0, 0, 0.03);
+        }
+
+
+        .univ-wrap{
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 24px;
+        }
+        .univ-logo-wrap{
+            grid-area: 1 / 1 / 3 / 2;
+        }
+        .univ-detail-wrap{
+            grid-area: 1 / 2 / 2 / 3;
+        }
+        .univ-cta-wrap{
+            grid-area: 2 / 2 / 3 / 3;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            gap: 8px;
+        }
+
+        @media screen and (max-width: 500px){
+            .univ-cta-wrap{
+                grid-template-columns: repeat(1, auto);
+            }
+        }
+
+        @media screen and (min-width: 501px) and (max-width: 900px){
+            .univ-cta-wrap{
+                grid-template-columns: repeat(2, auto);
+            }
+        }
+
+        @media screen and (min-width: 1100px){
+            .course__sticky-wrap{
+                margin-bottom: 4px;
+                box-shadow: 1px 6px 6px -6px rgba(6, 0, 0, 0.40);
+            }
+        }
+        @media screen and (max-width: 1100px){
+            .univ-logo-wrap{
+                grid-area: 2 / 1 / 3 / 2;
+            }
+            .univ-detail-wrap{
+                grid-area: 1 / 1 / 2 / 2;
+            }
+            .univ-cta-wrap{
+                grid-area: 3 / 1 / 4 / 2;
+            }
+            .course__sticky .univ__logo{
+                display: none;
+            }
+        }
+
+
+        /* Review pod wrap */
+        .review-pod-wrap{
+            width: 100%;
+            overflow-x: auto;
+            padding: 0 4px 16px;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 16px;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .review-pod-wrap .rwcard--v2{
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
     </style>
 </head>
 
 <body>
     <div class="bg-neutral-100">
+        <section class="bg-white  course__sticky-wrap">
+            <div class="container-lg course__sticky">
+                <div class="d-flex flex-column gap24">
+                    <div class="d-flex align-items-center justify-content-between d-none-1100">
+                        <!-- BREADCRUMB -->
+                        <ul class="breadcrumb-wrap">
+                            <li class="breadcrumb__item"><a href="#" class="breadcrumb__item--active">Home</a></li>
+                            <li class="breadcrumb__item"><a href="#" class="breadcrumb__item--active">Degree</a></li>
+                            <li class="breadcrumb__item"><a href="#" class="breadcrumb__item--active">All Art and design</a></li>
+                            <li class="breadcrumb__item">Animation BA(Hons)</li>
+                        </ul>
+                        <!-- BREADCRUMB -->
+
+                        <a href="#" class="d-flex align-items-center text-neutral-0 gap6 cursor-pointer">
+                            <!-- print -->
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.85714 15H12.8571V12.4286H3.85714V15ZM3.85714 8.57143H12.8571V4.71429H11.25C10.7176 4.71429 10.2857 4.28237 10.2857 3.75V2.14286H3.85714V8.57143ZM15.4286 9.21429C15.4286 8.86272 15.1373 8.57143 14.7857 8.57143C14.4342 8.57143 14.1429 8.86272 14.1429 9.21429C14.1429 9.56585 14.4342 9.85714 14.7857 9.85714C15.1373 9.85714 15.4286 9.56585 15.4286 9.21429ZM16.7143 9.21429V13.3929C16.7143 13.5636 16.5636 13.7143 16.3929 13.7143H14.1429V15.3214C14.1429 15.8538 13.7109 16.2857 13.1786 16.2857H3.53571C3.00335 16.2857 2.57143 15.8538 2.57143 15.3214V13.7143H0.321429C0.15067 13.7143 0 13.5636 0 13.3929V9.21429C0 8.1596 0.873884 7.28571 1.92857 7.28571H2.57143V1.82143C2.57143 1.28906 3.00335 0.857142 3.53571 0.857142H10.2857C10.8181 0.857142 11.5513 1.15848 11.933 1.54018L13.4598 3.06696C13.8415 3.44866 14.1429 4.18192 14.1429 4.71429V7.28571H14.7857C15.8404 7.28571 16.7143 8.1596 16.7143 9.21429Z" fill="#334155"/>
+                            </svg>
+                            <span class="para-xsmall">Print</span>
+                        </a>
+                    </div>
+                
+                    <div class="univ-wrap">
+                        <div class="univ-logo-wrap d-flex flex-column align-items-center gap24 align-items-start-1100">
+                            <div class="univ__logo bg-white d-flex align-items-center justify-content-center">
+                                <img src="./images/uni-logo.jpg" alt="uni logo" width="100%"/>
+                            </div>
+                            <a href="#" class="cta cta__link--neutral-grey">
+                                <div class="d-flex align-items-center justify-content-center gap8">
+                                    <span class="icon__outline--light-grey d-flex">
+                                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1_27385)">
+                                            <path d="M17.5363 9.79606C15.3665 12.3159 10.8116 16.1894 10.1052 16.7858C10.0494 16.833 9.97488 16.8334 9.91849 16.7871C9.13467 16.1432 3.67028 11.629 2.26032 9.79606C1.24162 8.47175 0.894331 7.22399 1.34832 5.61606C1.83887 3.87863 2.9253 2.79417 4.69232 2.42406C6.0598 2.13763 6.94715 2.54253 8.18832 3.18406C8.81761 3.50933 9.60011 4.18293 9.89371 4.44472C9.95886 4.5028 10.0593 4.49613 10.1168 4.43052C10.3983 4.1097 11.1996 3.24006 11.9123 2.88006C13.0363 2.31237 13.8525 2.1185 15.1043 2.42406C16.757 2.82746 17.8874 3.69319 18.3723 5.38806C18.8302 6.98856 18.6489 8.50406 17.5363 9.79606Z" stroke="#334155" stroke-width="1.52"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_1_27385">
+                                            <rect width="19" height="19" fill="white" transform="translate(0.392578)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <span class="para-small">Compare</span>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="univ-detail-wrap d-flex flex-column gap8">
+                            <h5 class="heading-h5 text-neutral-0">Animation BA (Hons)</h5>
+                            <a href="#" class="d-block para-large text-secondary-500">Norwich University of the Arts</a>
+                            <div class="d-flex align-items-center gap4 para-small">
+                                <span class="text-neutral-0">Student rating</span>
+                                <div class="bb-dashed-grey"><div class="rating-stars border-bottom-dotted"></div></div>
+                                <span class="text-neutral-0">(4.3)</span>
+                                <a href="#" class="text-secondary-500">View reviews</a>
+                            </div>
+                            <p class="para-small text-neutral-0">Want to know what it's like to study this course at uni? We've got all the key info, from entry requirements to the modules on offer. If that all sounds good, why not check out reviews from real students or even book onto an upcoming open day?</p>
+                        </div>
+
+                        <div class="univ-cta-wrap gap8">
+                            <a href="#" class="cta cta__primary--orange">Get prospectus</a>
+                            <a href="#" class="cta cta__primary--grey">Visit wesite</a>
+                            <a href="#" class="cta cta__primary--green">Book open days</a>
+                            <a href="#" class="cta cta__primary--blue">Request info</a>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </section>
+
         <section class="bg-primary-100">
             <div class="container-lg course-highlight">
                 <div class="course-highlight__title font-bold d-flex align-items-center gap12">
@@ -288,7 +450,7 @@
                                 Scroll each reel to explore at <a href="#">nuagradshowcase.com</a></p>
                         </div>
                         
-                        <div class="bg-white mt24">
+                        <div class="bg-white mt24 shadow-xsmall">
                             <div class="container-lg keystat-highlight">
                                 <div class="keystat-highlight__title font-bold d-flex align-items-center gap12">
                                     <h4 class="heading-h4 no-shrink">Key stats</h4>
@@ -299,7 +461,7 @@
                                     <a href="#">UNISTATS / UCAS / HESA</a>
                                 </div>
             
-                                <div class="keystat-highlight__details d-flex flex-column gap24">
+                                <div class="keystat-highlight__details d-flex flex-column gap24 text-neutral-0">
                                     <div class="d-flex justify-content-between flex-wrap flex-column-700 gap24">
                                         <div class="min-w180px d-flex flex-column gap8 flex-row-700  gap16-700">
                                             <div class="icon__solid--green">
@@ -419,7 +581,7 @@
             
                                                     <!-- PROGRESS BAR -->
                                                     <div class="progess-bar__wrapper progess-bar--xxs mt8">
-                                                        <div style="width: 89%;" class="progess-bar__line"></div>
+                                                        <div style="width: 89%;" class="progess-bar__line progess-bar__line--green"></div>
                                                     </div>
                                                     <!-- PROGRESS BAR -->
                                                 </div>
@@ -444,7 +606,7 @@
             
                                                     <!-- PROGRESS BAR -->
                                                     <div class="progess-bar__wrapper progess-bar--xxs mt8">
-                                                        <div style="width: 89%;" class="progess-bar__line"></div>
+                                                        <div style="width: 89%;" class="progess-bar__line progess-bar__line--green"></div>
                                                     </div>
                                                     <!-- PROGRESS BAR -->
                                                 </div>
@@ -493,6 +655,71 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="mt40">
+                            <h6 class="heading-h6">What students say</h6>
+                            
+                            <div class="review-pod-wrap">
+                                <!-- component structure starts here -->
+                                
+                                <div class="rwcard--v2 rwcard">
+                                    <div class="rwcard__header">
+                                        <div class="rwcard__avatar">
+                                            <span>CB</span>
+                                        </div>
+                                        <div>
+                                            <div class="rwcard__name">
+                                                <span>Christian Baranowicz</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap4">
+                                                <div class="rwcard__star">
+                                                    <div class="rating-stars border-bottom-dotted"></div>
+                                                </div>
+                                                <div class="rwcard__date">
+                                                    <label>Date reviewed: </label>
+                                                    <span>01/01/2020</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- <h1 class="rwcard__title">Course name</h1> -->
+                                        <p class="rwcard__review">“There's a lot of building work both at the uni and in my accommodation which is a bit distracting. Overall though it has been a great experience and I’m really happy with my choice.”
+                                            <a href="#" class="font-bold">Read more</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="rwcard--v2 rwcard">
+                                    <div class="rwcard__header">
+                                        <div class="rwcard__avatar">
+                                            <span>CB</span>
+                                        </div>
+                                        <div>
+                                            <div class="rwcard__name">
+                                                <span>Christian Baranowicz</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap4">
+                                                <div class="rwcard__star">
+                                                    <div class="rating-stars border-bottom-dotted"></div>
+                                                </div>
+                                                <div class="rwcard__date">
+                                                    <label>Date reviewed: </label>
+                                                    <span>01/01/2020</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- <h1 class="rwcard__title">Course name</h1> -->
+                                        <p class="rwcard__review">“There's a lot of building work both at the uni and in my accommodation which is a bit distracting. Overall though it has been a great experience and I’m really happy with my choice.”
+                                            <a href="#" class="font-bold">Read more</a>
+                                        </p>
+                                    </div>
+                                </div>
+                    
+                                <!-- component structure ends here -->
                             </div>
                         </div>
                     </div>
@@ -569,7 +796,7 @@
 
                         <div class="para-xsmall mt24">
                             <label class="text-black">DATA SOURCE:</label>
-                            <a href="#">UNISTATS / UCAS / HESA</a>
+                            <a href="#">IDP connect</a>
                         </div>
                     </div> 
                 </div>
@@ -595,53 +822,140 @@
 
                 </div>
 
-                <!-- Tuition fees -->
+                <!-- Previous study -->
                 <div class="d-flex gap20 a-level flex-column-768">
                     <div class="title-highlight-wrap">
-                        <h2 id="tab2" class="heading-h2 text-black title-highlight">Tuition fees</h2>
+                        <h2 id="tab2" class="heading-h2 text-black title-highlight">Previous study</h2>
                     </div>
 
                     <div class="bg-white text-neutral-0 para-medium d-flex flex-column gap16 flex-grow p24">
-                        <div class="font-bold d-flex align-items-center gap12">
-                            <p class="para-medium no-shrink">Students living in</p>
-                            <a href="#" class="dropdown-link no-shrink">England</a>
-                        </div>
-
-                        <div class="bg-primary-100 p16">
-                            <div class="d-flex align-items-center gap8">
-                                <p class="font-bold para-medium">£9,250 per year</p>
-                                <div class="icon__solid--grey">
-                                    <!-- question-mark-circle -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
-                                        viewBox="0 0 10 10" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.00001 3.125C4.76946 3.125 4.56725 3.24951 4.45824 3.43795C4.2854 3.73674 3.90307 3.83884 3.60428 3.666C3.30549 3.49316 3.20339 3.11083 3.37623 2.81205C3.69949 2.25324 4.30521 1.875 5.00001 1.875C6.03554 1.875 6.87501 2.71447 6.87501 3.75C6.87501 4.56639 6.35325 5.26091 5.62501 5.51831V5.625C5.62501 5.97018 5.34519 6.25 5.00001 6.25C4.65483 6.25 4.37501 5.97018 4.37501 5.625V5C4.37501 4.65482 4.65483 4.375 5.00001 4.375C5.34519 4.375 5.62501 4.09518 5.62501 3.75C5.62501 3.40482 5.34519 3.125 5.00001 3.125ZM5 8.125C5.34518 8.125 5.625 7.84518 5.625 7.5C5.625 7.15482 5.34518 6.875 5 6.875C4.65482 6.875 4.375 7.15482 4.375 7.5C4.375 7.84518 4.65482 8.125 5 8.125Z"
-                                            fill="#000000" />
-                                    </svg>
-                                </div>
+                        <h6 class="heading-h6">Animation</h6>
+                        <p>Top 5 A-levels taken by students who study this subject at uni.</p>
+                        
+                        <div class="w100 progress-bar-wrap">
+                            <div class="progress-bar__title d-flex">
+                                <span class="d-inline-block para-medium font-bold mr8">History</span>
                             </div>
 
-                            <div class="d-flex align-items-center gap8">
-                                <p class="para-small">Students from England</p>
-                                <div class="icon__solid--grey">
-                                    <!-- question-mark-circle -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
-                                        viewBox="0 0 10 10" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.00001 3.125C4.76946 3.125 4.56725 3.24951 4.45824 3.43795C4.2854 3.73674 3.90307 3.83884 3.60428 3.666C3.30549 3.49316 3.20339 3.11083 3.37623 2.81205C3.69949 2.25324 4.30521 1.875 5.00001 1.875C6.03554 1.875 6.87501 2.71447 6.87501 3.75C6.87501 4.56639 6.35325 5.26091 5.62501 5.51831V5.625C5.62501 5.97018 5.34519 6.25 5.00001 6.25C4.65483 6.25 4.37501 5.97018 4.37501 5.625V5C4.37501 4.65482 4.65483 4.375 5.00001 4.375C5.34519 4.375 5.62501 4.09518 5.62501 3.75C5.62501 3.40482 5.34519 3.125 5.00001 3.125ZM5 8.125C5.34518 8.125 5.625 7.84518 5.625 7.5C5.625 7.15482 5.34518 6.875 5 6.875C4.65482 6.875 4.375 7.15482 4.375 7.5C4.375 7.84518 4.65482 8.125 5 8.125Z"
-                                            fill="#000000" />
-                                    </svg>
-                                </div>
+                            <div class="progress-bar__score d-flex justify-content-end-500">
+                                <span class="d-inline-block para-medium font-bold">70%</span>
                             </div>
 
+                            <!-- PROGRESS BAR -->
+                            <div class="progess-bar__wrapper progess-bar--xxxs mt8">
+                                <div style="width: 70%;" class="progess-bar__line progess-bar__line--lightblue"></div>
+                            </div>
+                            <!-- PROGRESS BAR -->
                         </div>
-                        <p>This is the fee you pay if you live in England. Please note, this fee has been confirmed.</p>
+
+                        <div class="w100 progress-bar-wrap">
+                            <div class="progress-bar__title d-flex">
+                                <span class="d-inline-block para-medium font-bold mr8">English Literature</span>
+                            </div>
+
+                            <div class="progress-bar__score d-flex justify-content-end-500">
+                                <span class="d-inline-block para-medium font-bold">20%</span>
+                            </div>
+
+                            <!-- PROGRESS BAR -->
+                            <div class="progess-bar__wrapper progess-bar--xxxs mt8">
+                                <div style="width: 20%;" class="progess-bar__line progess-bar__line--lightblue"></div>
+                            </div>
+                            <!-- PROGRESS BAR -->
+                        </div>
+
+                        <div class="w100 progress-bar-wrap">
+                            <div class="progress-bar__title d-flex">
+                                <span class="d-inline-block para-medium font-bold mr8">Mathematics</span>
+                            </div>
+
+                            <div class="progress-bar__score d-flex justify-content-end-500">
+                                <span class="d-inline-block para-medium font-bold">7%</span>
+                            </div>
+
+                            <!-- PROGRESS BAR -->
+                            <div class="progess-bar__wrapper progess-bar--xxxs mt8">
+                                <div style="width: 7%;" class="progess-bar__line progess-bar__line--lightblue"></div>
+                            </div>
+                            <!-- PROGRESS BAR -->
+                        </div>
+
+                        <div class="w100 progress-bar-wrap">
+                            <div class="progress-bar__title d-flex">
+                                <span class="d-inline-block para-medium font-bold mr8">Government & Politics</span>
+                            </div>
+
+                            <div class="progress-bar__score d-flex justify-content-end-500">
+                                <span class="d-inline-block para-medium font-bold">2%</span>
+                            </div>
+
+                            <!-- PROGRESS BAR -->
+                            <div class="progess-bar__wrapper progess-bar--xxxs mt8">
+                                <div style="width: 2%;" class="progess-bar__line progess-bar__line--lightblue"></div>
+                            </div>
+                            <!-- PROGRESS BAR -->
+                        </div>
+
+                        <div class="w100 progress-bar-wrap">
+                            <div class="progress-bar__title d-flex">
+                                <span class="d-inline-block para-medium font-bold mr8">Music</span>
+                            </div>
+
+                            <div class="progress-bar__score d-flex justify-content-end-500">
+                                <span class="d-inline-block para-medium font-bold">1%</span>
+                            </div>
+
+                            <!-- PROGRESS BAR -->
+                            <div class="progess-bar__wrapper progess-bar--xxxs mt8">
+                                <div style="width: 1%;" class="progess-bar__line progess-bar__line--lightblue"></div>
+                            </div>
+                            <!-- PROGRESS BAR -->
+                        </div>
+
                         <div class="para-xsmall mt24">
                             <label class="text-black">DATA SOURCE:</label>
-                            <a href="#">UNISTATS / UCAS / HESA</a>
+                            <a href="#">HESA</a>
                         </div>
                     </div>
 
+                </div>
+
+                <!-- Uni info -->
+                <div class="d-flex gap20 a-level flex-column-768">
+                    <div class="title-highlight-wrap">
+                        <h2 id="tab2" class="heading-h2 text-black title-highlight">Uni info</h2>
+                    </div>
+
+                    <div class="d-flex align-items-center bg-white">
+                        <div>
+                            <img src="./images/uni-info-banner.jpg" alt="uni banner info" class="w100"/>
+                        </div>
+                        <div>
+                            <h5 class="heading-h5 text-secondary-500">Norwich University of the Arts</h5>
+                            <p class="para-small text-grey-400">Norwich University of the Arts was founded more than 175 years ago, and today provides students with excellent teaching that...</p>
+
+                            <div>
+                                <div>
+                                    <h6 class="heading-h6">Student rating</h6>
+                                    <div class="d-flex align-items-center gap4 para-small">
+                                        <div class="bb-dashed-grey">
+                                            <div class="rating-stars border-bottom-dotted"></div>
+                                        </div>
+                                        <span class="text-neutral-0">(4.3)</span>
+                                        <a href="#" class="text-secondary-500">View reviews</a>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h6 class="heading-h6">CUG ranking</h6>
+                                    <div class="d-flex align-items-center gap4 para-small">
+                                        <span class="icon__chartbar--orange"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

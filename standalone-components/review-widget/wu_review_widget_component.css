@@ -5,6 +5,9 @@
   --orange: #ff8b00;
   --medium-black: #0f172a;
   --gray: #707070;
+  /* v2 colors */
+  --text: #0F172A;
+  --red-v2: #DC2626;
 }
 .rwcard > * {
   box-sizing: border-box;
@@ -56,7 +59,7 @@
 .rating-stars {
   width: 54px;
   height: 12px;
-  background-image: url(https://images8.content-hcs.com/wu-cont/images/rat_star.png);
+  background-image: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/images/rat_star.png);
   background-size: 110px;
 }
 .rating-stars--4 {
@@ -89,3 +92,116 @@
 .rwcard__review {
   font: 14px/20px "Lato-Regular";
 }
+
+
+/* Review card - V2 based on Design system*/
+
+.rwcard--v2.rwcard {
+  margin: 0;
+  padding: 16px;
+  color: var(--text);
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.06), 0px 0px 1px 1px rgba(0, 0, 0, 0.02);
+  max-height: 190px;
+  min-height: 190px;
+  max-width: 300px;
+  min-width: 300px;
+  height: 100%;
+  border: none;
+}
+
+.rwcard--v2 .rwcard__header {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.rwcard--v2 .rwcard__avatar {
+  width: 42px;
+  min-width: 42px;
+  height: 42px;
+  min-height: 42px;
+  background-color: var(--red-v2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.rwcard--v2 .rwcard__avatar span {
+  color: var(--white);
+  font: 18px/28px "Lato-Regular";
+}
+
+.rwcard--v2 .rwcard__name{
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.rwcard--v2 .rwcard__name span {
+  font: 12px/16px "Lato-Regular";
+  display: table-cell;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rwcard--v2 .rwcard__star {
+  margin-right: 4px;
+}
+
+.rwcard--v2 .rwcard__date {
+  font: 12px/20px "Lato-Regular";
+}
+
+.rwcard--v2 .rwcard__star,
+.rwcard--v2 .rwcard__date {
+  display: inline-block;
+}
+
+.rwcard--v2 .rwcard__title {
+  font: 16px/24px "Lato-Bold";
+  margin-bottom: 4px;
+}
+
+.rwcard--v2 .rwcard__review {
+  font: 14px/20px "Lato-Regular";
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+/* ratings */
+.rwcard--v2  .rating-stars {
+  width: 54px;
+  height: 14px;
+  background-image: url(https://images-dom.prod.aws.idp-connect.com/wu-cont/images/rat_star.png);
+  background-size: 110px;
+}
+
+.rating-stars--4 {
+  background-position: -11px 0;
+}
+
+.rating-stars--3 {
+  background-position: -22px 0;
+}
+
+.rating-stars--2 {
+  background-position: -33px 0;
+}
+
+.rating-stars--1 {
+  background-position: -44px 0;
+}
+
+.rating-stars--0 {
+  background-position: -55px 0;
+}
+
+/* ratings */
