@@ -791,7 +791,7 @@ body * {
     left: 0;
     transition: .5s;
     border-radius: 20px;
-    z-index: 1;
+    z-index: 0;
 }
 
 .progess-bar--xxxs .progess-bar__line{
@@ -1030,6 +1030,11 @@ body * {
     width: 100%;
     min-width: 261px;
 }
+.title-highlight-wrap{
+    max-width: 261px;
+    width: 100%;
+    min-width: 261px;
+}
 .title-highlight::after{
     content: '';
     height: 4px;
@@ -1050,6 +1055,10 @@ body * {
     min-width: 180px;
 }
 
+.mw100 {
+    max-width: 100%;
+}
+
 .d-flex {
     display: flex;
 }
@@ -1064,6 +1073,10 @@ body * {
 
 .align-items-center {
     align-items: center;
+}
+
+.align-items-stretch {
+    align-items: stretch;
 }
 
 .justify-content-between {
@@ -1092,9 +1105,17 @@ body * {
 .no-shrink{
     flex-shrink: 0;
 }
+.flex-equal-width{
+    flex-grow: 1;
+    flex-basis: 0;
+}
 
 .d-grid{
     display: grid;
+}
+
+.grid-column-2{
+    grid-template-columns: 1fr 1fr;
 }
 
 .gap4 {
@@ -1145,6 +1166,10 @@ body * {
     margin-bottom: var(--spacing-xx-big);
 }
 
+.mt4{
+    margin-top: var(--spacing-xx-sm);
+}
+
 .mt8{
     margin-top: var(--spacing-x-sm);
 }
@@ -1169,6 +1194,9 @@ body * {
 .bb-dashed-grey{
     border-bottom: 1px dashed var(--neutral-300);
 }
+.border-radius-8{
+    border-radius: 8px;
+}
 .cursor-pointer{
     cursor: pointer;
 }
@@ -1182,6 +1210,12 @@ a {
 a:hover {
     text-decoration: underline;
     opacity: 0.9;
+}
+
+@media screen and (max-width: 960px) {
+    .{
+        justify-content: flex-end;
+    }
 }
 
 @media screen and (max-width: 1100px) {
@@ -1203,6 +1237,10 @@ a:hover {
 
     .align-items-start-1100 {
         align-items: flex-start;
+    }
+
+    .justify-content-end-1100{
+        justify-content: flex-end;
     }
 }
 
@@ -1239,8 +1277,8 @@ a:hover {
         flex-direction: row;
     }
 
-    .justify-content-end-500{
-        justify-content: flex-end;
+    .grid-column-1-500{
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1286,11 +1324,11 @@ a:hover {
   }
   .progress-bar-wrap .progess-bar__wrapper{
     grid-area: 1 / 2 / 2 / 3;
-    max-width: 500px;
+    max-width: 100%;
     width: 100%;
   }
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 960px){
     .progress-bar-wrap{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto);
