@@ -1113,12 +1113,12 @@
                     <div class="text-neutral-0 para-medium flex-grow">
                         <form>
                             <div class="accordion accordion--large">   
-                                <!-- <input type="checkbox" id="accordion1" name="accordion"/> -->
-                                <div class="accordion__header">
+                                <input type="checkbox" id="accordion1" name="accordion"/>
+                                <label for="accordion1" class="accordion__header">
                                     <h5 class="heading-h5 text-secondary-500">Modules (Year 1)</h5>
                                     <span class="icon--plus"></span>
                                     <span class="icon--minus"></span>
-                                </div>
+                                </label>
                                 <div class="accordion__body">
                                     <!-- Accordion small -->
                                     <div class="accordion accordion--small">   
@@ -2645,8 +2645,8 @@
             $('.read__trigger').css("display","none");
         });
 
-       //Review card read more popup
-       $('.JQreview__popup-trigger').click(function() {
+        //Review card read more popup
+        $('.JQreview__popup-trigger').click(function() {
             $('.review-popup').toggleClass('show');
             $('.review-popup').toggleClass('hide');
         });
