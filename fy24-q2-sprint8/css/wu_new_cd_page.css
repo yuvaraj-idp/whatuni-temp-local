@@ -224,17 +224,26 @@ html{
   }
 }
 
-@media screen and (min-width: 1101px) {
+/* @media screen and (min-width: 1101px) {
   .univ-compare-wrap{
     margin-top: -20px;
   }
   .sticky-top-header .univ-compare-wrap{
     margin-top: unset;
   }
-}
+} */
 
 .course__sticky-wrap .course__sticky{
   padding-top: 24px;
+}
+
+@media screen and (max-width: 336px) {
+  .course__sticky-wrap .course__sticky{
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
 
@@ -424,6 +433,7 @@ html{
 /* WUSCA */
 .wusca-wrap{
   padding: 16px 16px 16px 24px;
+  border-left: 2px solid var(--primary-500);
 }
 .wusca-wrap .heading-h6{
   font-family: 'Lato-Regular', Arial, Helvetica, sans-serif;
@@ -571,4 +581,9 @@ html{
     stroke: var(--grey-400);
     stroke-width: 3.5;
   }
+}
+
+/* Visit website popup */
+.visit-web-popup__close{
+  top: 10px;
 }
