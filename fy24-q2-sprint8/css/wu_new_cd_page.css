@@ -8,6 +8,7 @@ html{
   gap: 8px;
   text-decoration: none;
   color: var(--secondary-500);
+  font-family: "Lato-Bold", Arial, sans-serif;
 }
 
 .dropdown-link:hover {

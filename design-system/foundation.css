@@ -210,7 +210,10 @@ font-style: normal;
 .font-black {
     font-family: "Lato-Black", Arial, sans-serif;
 }
-
+section{
+    float: none;
+    clear: both;
+}
 /* neutral colors */
 .bg-neutral-50 {
     background-color: var(--neutral-50);
@@ -947,6 +950,7 @@ font-style: normal;
 .tab__item--active a,
 .tab__item:hover a,
 .tab__item a:hover{
+    color: var(--secondary-500);
     text-decoration: none;
 }
 
@@ -1056,10 +1060,10 @@ font-style: normal;
     padding-bottom: 16px;
 }
 
-/* .accordion__header .icon--plus,
+.accordion__header .icon--plus,
 .accordion__header .icon--minus{
     display: none;
-} */
+}
 
 #accordion1:checked ~ .accordion__body,
 #accordion2:checked ~ .accordion__body,
