@@ -484,6 +484,16 @@ html{
   border-radius: 0;
   background-color: var(--neutral-200);
 }
+.cd-search-again__auto-complete{
+  top: 49px;
+}
+.cd-search-again__suggestion-tag {
+  background-color: var(--neutral-500);
+  color: var(--neutral-100);
+}
+.auto-suggestion__value--keyword a, .auto-suggestion__value--keyword span{
+  color: var(--secondary-500);
+}
 
 /* Location */
 .location-wrap{
@@ -586,4 +596,62 @@ html{
 /* Visit website popup */
 .visit-web-popup__close{
   top: 10px;
+}
+
+/* Find course section */
+.find-course__dropdown,
+.find-course-textbox{
+  border: 2px solid var(--neutral-300);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 20px;
+}
+.find-course__dropdown{
+  background-color: var(--neutral-200);
+}
+.find-course__dropdown:hover,
+.find-course-textbox:hover{
+  border: 2px solid var(--neutral-900);
+}
+@media screen and (min-width: 1100px) {
+  .find-course__dropdown input{
+    width: 160px;
+  }
+}
+.find-course__dropdown input,
+.find-course-textbox input{
+  background: transparent;
+  border: none;
+  outline: none;
+  user-select: none;
+}
+.find-course-search{
+  min-width: 124px;
+  height: 50px;
+  padding: 16px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.find-course-search:hover{
+  background-color: var(--secondary-600);
+}
+.degree-dropdown-wrap{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  border: 1px solid var(--neutral-300);
+  background: var(--white);
+  z-index: 2;
+}
+.degree-dropdown__item{
+  padding: 8px 20px;
+  color: var(--neutral-500);
+}
+.degree-dropdown__item:hover{
+  background-color: var(--neutral-200);
+  color: var(--neutral-900);
 }
