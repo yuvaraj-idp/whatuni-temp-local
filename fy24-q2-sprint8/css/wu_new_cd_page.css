@@ -393,7 +393,7 @@ html{
 }
 .cta__toggle--less a::before,
 .cta__toggle--more a::before{
-  width: 47px;
+  /* width: 47px; */
   text-align: center;
 }
 

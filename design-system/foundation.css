@@ -925,14 +925,14 @@ section{
 
 .tab__item{
     display: inline-block;
-    padding: 16px;
+    padding: 16px 4px;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
     color: var(--neutral-0);
     border-bottom: 1px solid var(--neutral-300);
     cursor: pointer;
-    flex-basis: 100%;
+    width: 100%;
     text-align: center;
 }
 
@@ -950,7 +950,6 @@ section{
 .tab__item--active a,
 .tab__item:hover a,
 .tab__item a:hover{
-    color: var(--secondary-500);
     text-decoration: none;
 }
 
@@ -983,6 +982,7 @@ section{
 .skip-link.tab .tab__item{
     border: none;
     padding: 0;
+    text-align: left;
 }
 .skip-link.tab .tab__item a{
     text-decoration: underline;
@@ -1395,6 +1395,10 @@ a.cta.cta__outlined--blue:hover {
     padding-top: 12px ;
     padding-bottom: 12px ;
 }
+.py16{
+    padding-top: 16px ;
+    padding-bottom: 16px ;
+}
 .px16{
     padding-left: 16px;
     padding-right: 16px;
@@ -1410,6 +1414,9 @@ a.cta.cta__outlined--blue:hover {
 
 .py64{
     padding-top: 64px;
+    padding-bottom: 64px;
+}
+.pb64{
     padding-bottom: 64px;
 }
 .pt24{
@@ -1970,12 +1977,14 @@ a.btn:hover{
     background: linear-gradient(270deg, #fff 50%, rgba(255, 255, 255, 0.00) 100%);
     position: absolute;
     right: 0;
-}
+    top: 0;}
+    
 .sticky-tab--nav-left-btn-ctn{
     padding-right: 35px;
     background: linear-gradient(90deg, #fff 50%, rgba(255, 255, 255, 0.00) 100%);
     position: absolute;
     left: 0;
+    top: 0;
 }
 .sticky-tab--nav-left-btn {
     transform: rotate(180deg);
@@ -2410,10 +2419,13 @@ a.result-pod--title:hover h5{
     align-items: center;
     width: 595px;
 }
-span.heading-h2-highlight.poppins-extrabold {
+.heading-h2-highlight {
     color: var( --white);
     background: var( --neutral-900, #0F172A);
     padding: 0 4px;
+    border-radius: 2px;
+    height: 44px;
+    display: inline-block;
 }
 .review-pod--content-star-group-three .star-rating--container {
     margin-right: 8px;
@@ -2437,7 +2449,7 @@ span.heading-h2-highlight.poppins-extrabold {
 
 .picture-card-title-ctn{
     display: flex;
-    width: 162px;
+    width: 130px;
     height: 100px;
     flex-direction: column;
     justify-content: flex-end;
@@ -2473,10 +2485,13 @@ span.heading-h2-highlight.poppins-extrabold {
     background-color: var( --success-100);
     color: var( --success-700);
 }
-
 .pic-card-2 .picture-card-content .yrtag{
     background-color: var( --Warning-100, #FEF3C7);
     color: var( --warning-700-main, #B45309);
+}
+.pic-card-4 .picture-card-content .yrtag{
+    background: var(--secondary-50);
+    color: var(--secondary-500);
 }
 .pic-card-1{
     background-color: var( --success-300);
@@ -2493,33 +2508,21 @@ span.heading-h2-highlight.poppins-extrabold {
     background-repeat: no-repeat;
     background-position: right;
 }
-.picture-nav .owl-stage .owl-item .student-bg-1{
-    background-image: url('../fy24-q2-sprint8/img/wusca_careers.png');
+.pic-card-4{
+    background-color: var(--primary-400);
+    background-repeat: no-repeat;
+    background-position: right;
 }
-.picture-nav .owl-stage .owl-item .student-bg-2{
-    background-image: url('../fy24-q2-sprint8/img/wusca_facilities.png');
+.picture-nav .owl-stage .owl-item .student-bg{
+    position: absolute;
+    right: -80px;
+    background-position: center;
+    top: 0;
+    height: 100%;
+    object-fit: scale-down;
+
 }
-.picture-nav .owl-stage .owl-item .student-bg-3{
-    background-image: url('../fy24-q2-sprint8/img/wusca_international.png');
-}
-.picture-nav .owl-stage .owl-item .student-bg-4{
-    background-image: url('../fy24-q2-sprint8/img/wusca_postgraduate.png');
-}
-.picture-nav .owl-stage .owl-item .student-bg-5{
-    background-image: url('../fy24-q2-sprint8/img/wusca_specialist.png');
-}
-.picture-nav .owl-stage .owl-item .student-bg-6{
-    background-image: url('../fy24-q2-sprint8/img/wusca_postgraduate.png');
-}
-.picture-nav .owl-stage .owl-item .student-bg-7{
-    background-image: url('../fy24-q2-sprint8/img/wusca_student-life.png');
-}
-.picture-nav .owl-stage .owl-item .student-bg-8{
-    background-image: url('../fy24-q2-sprint8/img/wusca_students-union.png');
-}
-.picture-nav .owl-stage .owl-item .student-bg-9{
-    background-image: url('../fy24-q2-sprint8/img/wusca_student-support.png');
-}
+
 .pic-card-3 .picture-card-content .yrtag{
     background-color: var( --Destructive-100, #FEE2E2);
     color: var( --succes--Destructive-700, #B91C1C);
