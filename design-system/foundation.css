@@ -1060,10 +1060,10 @@ section{
     padding-bottom: 16px;
 }
 
-.accordion__header .icon--plus,
+/* .accordion__header .icon--plus,
 .accordion__header .icon--minus{
     display: none;
-}
+} */
 
 #accordion1:checked ~ .accordion__body,
 #accordion2:checked ~ .accordion__body,
@@ -1449,7 +1449,7 @@ a.cta.cta__outlined--blue:hover {
 }
 
 .d-none, .hide {
-    display: none !important;
+    display: none;
 }
 
 .d-flex {
@@ -1473,6 +1473,10 @@ a.cta.cta__outlined--blue:hover {
 }
 .align-items-end{
     align-items: flex-end;
+}
+
+.align-self-stretch {
+    align-self: stretch;
 }
 .justify-content-between {
     justify-content: space-between;
@@ -1720,6 +1724,12 @@ a.btn:hover{
     .d-none-768 {
         display: none;
     }
+    .p0-768{
+        padding: 0;
+    }
+    .m0-768{
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1737,6 +1747,9 @@ a.btn:hover{
     }
     .w100-500{
         width: 100%;
+    }
+    .text-center-500{
+        text-align: center;
     }
 }
 
@@ -1886,7 +1899,8 @@ a.btn:hover{
     background: var(--primary-400);
 }
 .hero_banner--heading{
-    width: 60%;
+    width: 100%;
+    max-width: 280px;
     font-weight: 800;
 }
 
@@ -1911,6 +1925,7 @@ a.btn:hover{
 .sticky-tab--button{
     display: inline-flex;
     padding: 8px 12px;
+    height: 36px;
     align-items: flex-start;
     gap: 8px;
     border-radius: 20px;
@@ -1920,8 +1935,10 @@ a.btn:hover{
     font-weight: 600;
     margin-right: 8px;
     white-space: nowrap;
+    font-family: "Poppins-Semibold", sans-serif;
 }
-.sticky-tab--button:hover{
+.sticky-tab--button:hover,
+.sticky-tab--button-active{
     background: var( --neutral-900);
     color: var( --white);
     text-decoration: none;
@@ -1934,13 +1951,16 @@ a.btn:hover{
     background-color: var( --white);
 }
 .sticky-tab--nav-right-btn,.sticky-tab--nav-left-btn {
-    padding: 12px 10px 10px 10px;
     border-radius: 24px;
     border: 1px solid var( --secondary-500);
     background: var( --white);
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
     cursor: pointer;
-    width: 45px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .sticky-tab--sticked.position-sticky{
     position: fixed;
@@ -1957,7 +1977,7 @@ a.btn:hover{
     margin-bottom: 0;
 }
 .sticky-tab--tabs-container{
-    overflow-x: visible;
+    overflow-x: scroll;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -2145,6 +2165,7 @@ a.btn:hover{
     margin-bottom: 24px;
     background-color: var( --white);
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    border-radius: 16px;
 }
 .result-pod.readMre,.result-pod:hover{
     box-shadow: 0px 4px 8px 0px rgba(16, 24, 40, 0.08);
@@ -2155,7 +2176,7 @@ a.btn:hover{
 .result-pod--left{
     position: relative;
     width: 52%;
-    padding: 24px;
+    padding: 16px;
     height: 332px;
     cursor: pointer;
 }
@@ -2220,6 +2241,7 @@ a.btn:hover{
 .result-pod--star-span .country-badge{
     font-size: 10px;
     font-weight: 600;
+    font-family: "Poppins-Semibold", sans-serif;
     line-height: 20px; 
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -2289,6 +2311,7 @@ a.btn:hover{
     color: var(--Secondary-500, #3460DC);
     text-align: center;
     font-weight: 600;
+    font-family: "Poppins-Semibold", sans-serif;
     cursor: pointer;
     position: absolute;
     right: 24px;
@@ -2449,7 +2472,7 @@ a.result-pod--title:hover h5{
 
 .picture-card-title-ctn{
     display: flex;
-    width: 130px;
+    width: 153px;
     height: 100px;
     flex-direction: column;
     justify-content: flex-end;
@@ -2464,13 +2487,11 @@ a.result-pod--title:hover h5{
 }
 .picture-card-content .yrtag{
     padding: 2px 10px;
-    gap: 8px;
     border-radius: 4px;
     width: 53px;
     height: 24px;
     font-weight: 600;
     text-align: center;
-    font-size: 12px;
 }
 .picture-card-content .top10{
     font-weight: 600;
@@ -2479,7 +2500,7 @@ a.result-pod--title:hover h5{
 }
 .picture-card-title {
     font-weight: 600;
-    color: var( --text);
+    color: var( --neutral-900);
 }
 .pic-card-1 .picture-card-content .yrtag{
     background-color: var( --success-100);
@@ -2535,7 +2556,7 @@ a.result-pod--title:hover h5{
 }
 
 .picture-nav--content-cta-container .owl-carousel .owl-nav .owl-prev {
-    background: linear-gradient(90deg, #fff 50%, rgba(255, 255, 255, 0.00) 100%);
+    background: linear-gradient(90deg, rgb(248, 250, 252) 0%, rgba(248, 250, 252, 0.00) 100%);
     padding-right: 35px !important;
     height: 200px;
     position: absolute;
@@ -2543,7 +2564,7 @@ a.result-pod--title:hover h5{
     left: 0;
 }
  .picture-nav--content-cta-container .owl-carousel .owl-nav .owl-next {
-    background: linear-gradient(270deg, #fff 50%, rgba(255, 255, 255, 0.00) 100%);
+    background: linear-gradient(270deg, rgb(248, 250, 252) 0%, rgba(248, 250, 252, 0.00) 100%);
     padding-left: 35px !important;
     height: 200px;
     position: absolute;
@@ -2753,6 +2774,7 @@ a.result-pod--title:hover h5{
     }
     .hero_banner--heading{
         width: 100%;
+        max-width: 220px;
         font-size: 44px;
         line-height: 48px;
     }
@@ -2764,7 +2786,10 @@ a.result-pod--title:hover h5{
         padding-right: 0px;
         padding-left: 0px;
         height: 100%;
-    }    
+    }
+    .flex-column-767{
+        flex-direction: column;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px){
@@ -2840,8 +2865,16 @@ a.result-pod--title:hover h5{
     }
     .sticky-tab--tabs-container{
         overflow-x: scroll;
+        padding-left: 16px;
+        padding-right: 10px;
     }
     .sticky-tab--container{
         padding-right: 0;
+        padding-left: 0;
+    }
+}
+@media screen and (min-width: 1200px){
+    .result-pod--left{
+        padding: 24px;
     }
 }

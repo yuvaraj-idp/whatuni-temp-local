@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+.hero__banner{
+    position: relative;
+}
+.hero__banner--logo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.wusca__about{
+    padding: 64px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 767px){
+    .wusca__about{
+        padding: 40px 16px;
+    }
+}
+
+.wusca-card{
+    /* max-width: 392px; */
+    min-width: 320px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.wusca-card:hover{
+    background-color: var(--neutral-900);
+}
+
+.wusca-card:hover .wusca-card__content{
+    color: var(--white);
+}
+
+.wusca__category,
+.wusca__points{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width: 1300px){
+    .wusca__category{
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        padding: 0 16px 0px;
+        scroll-padding: 16px;
+        display: flex;
+        justify-content: start;
+        gap: 8px;
+    }
+    .wusca__pod{
+        scroll-snap-align: start;
+        max-width: 320px;
+        width: 100%;
+    }
+    .wusca__points{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 24px;
+    }
+    .px20-1300{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .wusca__points{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+        row-gap: 24px;
+    }
+}
+
+.cta.text-transform-none{
+    text-transform: none;
+}
+
+@media only screen and (max-width: 767px){
+    .review-pod {
+        height: 564px;
+        overflow: hidden;
+    }
+
+}
+
+.wusca-card__content .overline-small{
+    display: block;
+}
+.wusca-card .wusca-card__content{
+    width: 164px;
+}
+.display-small,
+.display-large,
+.heading-h1,
+.heading-h2,
+.heading-h3,
+.heading-h4,
+.heading-h5,
+.heading-h6 {
+    letter-spacing: -1px;
+}
+
+@media screen and (max-width: 1200px){
+    .review-pod-container.container-xl{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
