@@ -534,7 +534,8 @@ section{
 .text-uppercase{
     text-transform: uppercase;
 }
-.no-border{
+.no-border,
+.btn.no-border{
     border: none;
 }
 .no-outline{
@@ -1105,6 +1106,12 @@ section{
 .accordion__body{
     padding-top: 16px;
 }
+.accordion.accordion--small{
+    margin-bottom: 16px;
+}
+.accordion.accordion--small:last-child{
+    margin-bottom: 0;
+}
 .accordion.accordion--small .accordion__header{
     padding: 0;
 }
@@ -1628,6 +1635,9 @@ a.cta.cta__outlined--blue:hover {
 .border-radius-8{
     border-radius: 8px;
 }
+.border-rounded{
+    border-radius: 50%;
+}
 .cursor-pointer{
     cursor: pointer;
     user-select: none;
@@ -2010,7 +2020,7 @@ a.btn:hover{
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 999;
+    z-index: 99;
     padding: 10px 0;
 }
 .sticky-tab--sticked.position-sticky .sticky-tab--tabs {
@@ -2293,10 +2303,10 @@ a.btn:hover{
 }
 
 .result-pod--desc{
-    display: -webkit-box;
+    /* display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    overflow: hidden;
+    overflow: hidden; */
     color: var( --neutral-700, #334155);
     text-overflow: ellipsis;
 }
