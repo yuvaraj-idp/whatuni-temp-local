@@ -48,7 +48,7 @@
     gap: 20px;
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1250px){
     .wusca__category{
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
@@ -112,10 +112,259 @@
 .heading-h6 {
     letter-spacing: -1px;
 }
+.wusca-card .wusca-card__content .heading-h5{
+    display: block;
+    width: 130px;
+}
+.wusca__category .wusca-card .wusca-card__content .heading-h5.ext-width{
+    width: 152px;
+}
+.picture-nav .owl-dots {
+    display: none;
+}
+.picture-nav .owl-stage .owl-item .student-bg{
+    position: absolute;
+    right: -80px;
+    background-position: center;
+    top: 0;
+    height: 100%;
+    object-fit: scale-down;
 
-@media screen and (max-width: 1200px){
+}
+/* media query for ipad and mobile  */
+@media only screen and (max-width: 1200px) {
     .review-pod-container.container-xl{
         padding-left: 0px;
         padding-right: 0px;
     }
+    .sticky-tab--nav-left-btn-ctn, .sticky-tab--nav-right-btn-ctn {
+        display: none;
+    }
+    .sticky-tab--desc {
+        padding: 16px;
+        width: 100%;
+    }
+    .sticky-tab--desc h4{
+        padding-right: 21px;
+    }
+    .sticky-tab--tabs-container{
+        overflow-x: scroll;
+        padding-left: 16px;
+        padding-right: 10px;
+    }
+    .sticky-tab--container{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .picture-nav--container{
+        padding-right: 0;
+    }
+    .result-pod .get-proposal-btn {
+        display: block;
+        width: 100%;
+        position: unset;
+        margin-top: 28px;
+    }
+    .review-pod-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .result-pod--left,.result-pod--right{
+        padding: 16px;
+    }
+    .btn-bottom-flex {
+        justify-content: space-between;
+    }
+    .cust-pad-bottom{
+        padding-bottom: 40px;
+    }
+    .result-pod--cta-ctn {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .sticky-tab--tabs{
+        height: 40px;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 16px;
+    }    
+    .sticky-tab--container {
+        padding-bottom: 32px;
+    }
 }
+
+/* ipad screen only  */
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .owl-carousel.owl-drag .owl-item.active{
+        width: 320px !important;
+    }
+    .review-pod--content-star-group-one{
+        position: absolute;
+        left: -12%;
+        height: 300px;
+    }
+    .review-pod--content-text-group-two{
+        margin: 0 auto;
+    }
+    .review-pod--content-star-group-three{
+        position: absolute;
+        right: -19.5%;
+        height: 300px;
+    }
+    .hero-banner-deskImg{
+        display: block;
+    }
+    .hero-banner-mobiImg{
+        display: none;
+    }
+    .hero_banner--bg {
+        padding-right: 0px;
+        overflow: hidden;
+    }
+    .hero_banner--left {
+        width: 30%;
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+    .hero_banner--right {
+        width: 40%;
+        height: 353px;
+    }
+    .hero_banner--heading{
+        width: 100%;
+        font-size: 44px;
+        line-height: 48px;
+    }
+    .hero_banner--bg{
+        height: 352px;
+        padding-left: 16px;
+    }
+    .hero-banner{
+        padding-right: 0px;
+        padding-left: 0px;
+        height: 100%;
+    }
+    .result-pod .get-proposal-btn {
+        width: 100%;
+        position: unset;
+        margin-top: 40px;
+    }
+    .review-pod--container-content {
+        position: relative;
+        overflow: hidden;
+    }
+    
+}
+
+/* Media for mobile only  */
+@media only screen and (max-width: 767px) {
+    .hero-banner-deskImg{
+        display: none;
+    }
+    .hero-banner-mobiImg{
+        display: block;
+    }
+    .hero_banner--bg {
+        padding-right: 0px;
+        overflow: hidden;
+    }
+   
+    .result-pod {
+        flex-direction: column;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    .result-pod--left {
+        width: 100%;
+        height: 228px;
+    }
+    .result-pod--background-img img {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 15px;
+        object-fit: cover;
+    }
+    .result-pod--right {
+        height: auto;
+        padding: 16px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+     
+    .review-pod--container-content {
+        flex-direction: column;
+    }
+    .review-pod--content-star-group-one .rating-group--one, .review-pod--content-star-group-one .rating-group--three {
+        padding-left: 0;
+    }
+    .review-pod--content-star-group-one, .review-pod--content-star-group-three{
+        flex-direction: row;
+        /* margin-left: -30%; */
+    }
+    .review-pod--content-star-group-three .rating-group--one, .review-pod--content-star-group-three .rating-group--three{
+        padding-right: 0;
+    }
+    .review-pod--content-student-rating.rating-group--two{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .review-pod-container.contain-container {
+        padding: 40px 0 40px 0;
+    }
+    .review-pod{
+        height: 588px;
+        overflow: hidden;
+    }
+    .review-pod-content-cta {
+        width: 100%;
+        padding: 0 16px;
+    }
+    .review-pod--content-text-group-two{
+        width: 100%;
+        padding: 24px 0;
+    }
+    .review-pod  .award-logo-holder{
+        margin-bottom: 24px;
+    }
+    .result-pod--star-span {
+        flex-wrap: wrap;
+    }
+    .picture-nav .owl-carousel.owl-drag .owl-item.active {
+        width: 320px !important;
+    }
+    .picture-nav .owl-carousel .owl-stage{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .hero_banner--left {
+        width: 60%;
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+    .hero_banner--right {
+        width: 40%;
+        height: 353px;
+    }
+    .hero_banner--heading{
+        width: 100%;
+        max-width: 220px;
+        font-size: 44px;
+        line-height: 48px;
+    }
+    .hero_banner--bg{
+        height: 352px;
+        padding-left: 16px;
+    }
+    .hero-banner{
+        padding-right: 0px;
+        padding-left: 0px;
+        height: 100%;
+    }
+    .cust-pad-bottom {
+        padding-bottom: 40px;
+    }
+    .sticky-tab--desc{
+        padding-bottom: 0;
+    }
+}
+
+
