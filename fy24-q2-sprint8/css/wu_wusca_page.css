@@ -87,6 +87,16 @@
 .cta.text-transform-none{
     text-transform: none;
 }
+.review-pod-content-cta .cta {
+    text-transform: unset;
+    display: flex;
+    align-items: center;
+}
+.review-pod-content-cta .cta span{
+    height: 20px;
+    width: 20px;
+    margin-left: 6px;
+}
 
 @media only screen and (max-width: 767px){
     .review-pod {
@@ -190,6 +200,29 @@
     }    
     .sticky-tab--container {
         padding-bottom: 32px;
+    }
+    .result-pod .fav-icon:hover .heart-filled{
+        display: none;
+    }
+    .result-pod .fav-icon:hover{
+        border-radius: 24px;
+        border: 1px solid var(--Secondary-500, #3460dc);
+        background: var(--Generic-White, #fff);
+        box-shadow: 0 1px 2px 0 rgba(16,24,40,.05);
+    }
+    .result-pod .fav-icon:hover .heart-outline{
+        display: flex;
+    }
+    .result-pod .fav-icon.heart-favoured .heart-filled{
+        display: flex;
+    }
+    .result-pod .fav-icon.heart-favoured{
+        border: 1px solid var(--Secondary-500, #3460DC);
+        background: var(--primary-200, #BAEDFF);
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    }
+    .result-pod .fav-icon.heart-favoured .heart-outline{
+        display: none;
     }
 }
 

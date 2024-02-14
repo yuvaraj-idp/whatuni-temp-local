@@ -2455,6 +2455,11 @@ a.result-pod--title:hover h5{
 .review-pod--container-content{
     flex-direction: row;
     max-width: 1216px;
+    margin: 0 auto;
+}
+.review-pod-container{
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .review-pod--content-star-group-one, .review-pod--content-star-group-three{
