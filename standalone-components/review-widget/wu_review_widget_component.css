@@ -22,12 +22,12 @@
 /* Utility - End */
 
 .rwcard {
-  margin: 16px;
+  /* margin: 16px; */
   padding: 16px;
   color: var(--medium-black);
   border-radius: 8px;
   background-color: var(--white);
-  border: 1px solid var(--medium-black);
+  /* border: 1px solid var(--medium-black); */
 }
 .rwcard__header {
   margin-bottom: 8px;

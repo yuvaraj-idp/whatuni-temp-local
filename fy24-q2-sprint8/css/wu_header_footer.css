@@ -111,9 +111,12 @@
 
 .v2-header.v2-header--desktop .nav__bottom .sidenav__title-wrap{
     text-decoration: none;
-    padding: 10px 0;
     display: block;
     position: relative;
+}
+
+.v2-header.v2-header--desktop .nav__bottom .sidenav__title-wrap a{
+    padding: 10px 0;
 }
 
 .v2-avatar{
@@ -538,7 +541,7 @@
     flex-direction: column;
 }
 .header-account-popup{
-    width: 245px;
+    width: 270px;
     position: absolute;
     top: 50px;
     right: 0;
@@ -549,6 +552,69 @@
 }
 .header-account-popup .text-success-700{
     margin-left: 36px;
+}
+
+#mbox{
+    background-color:#fff;
+    height:467px;
+    padding:8px;
+    z-index:99999999!important;
+}
+
+#mbox a{
+    display:inline-block;
+}
+
+#mbox .cros{
+    float:right;
+    margin-top:-25px;
+}
+
+#mbox .avmg,.hd_ban2{
+    margin-top:0;
+}
+
+#mbox .cros a{
+    background-position:39px -225px;
+    float:left;
+    padding:2px;
+    padding:3px 30px 3px 0;
+}
+
+#ajax-div.lb_pload{
+    margin:20px auto 14px;
+    text-align:center;
+}
+
+#ajax-div.lb_pload span{
+    display:block;
+    font-size:14px;
+    color:#707070;
+    margin-bottom:20px;
+    margin-top:8px;
+}
+
+#ajax-div.lb_pload input.button{
+    background-color:#00bbfd!important;
+    border:0;
+    padding:8px 15px;
+    border-radius:4px;
+    color:#fff;
+    margin-bottom:20px;
+    cursor:pointer;
+    -webkit-appearance:none;
+    appearance:none;
+}
+
+.popup-modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    overflow: auto;
 }
 @media screen and (max-width: 767px) {
     .flex-column-767{
@@ -684,5 +750,8 @@
         position: unset;
         width: 100%;
         box-shadow: none;
+    }
+    .sidenav__item.show .v2-navmenu__link.active{
+        color: var(--secondary-500)
     }
 }
