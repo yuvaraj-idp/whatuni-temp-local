@@ -543,7 +543,11 @@ html{
   .location-wrap{
     grid-template-columns: 1fr;
   }
-}
+  .cd-body__map{
+    height: 206px;
+  }
+} 
+
 
 /* Other courses you may like */
 .other-courses-wrap{
