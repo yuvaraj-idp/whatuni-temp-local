@@ -3,7 +3,7 @@
 @font-face {
     font-display: swap;
     font-family: 'Poppins-light';
-    src: url('../font/Poppins/Poppins-Light.ttf');
+    src: url('https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Poppins-Light.otf');
     font-weight: 300;
     font-style: normal
 }
@@ -11,7 +11,7 @@
 @font-face {
     font-display: swap;
     font-family: 'Poppins-Regular';
-    src: url('../font/Poppins/Poppins-Regular.ttf');
+    src: url('https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Poppins-Regular.otf');
     font-weight: 400;
     font-style: normal
 }
@@ -19,7 +19,7 @@
 @font-face {
     font-display: swap;
     font-family: 'Poppins-Medium';
-    src: url('../font/Poppins/Poppins-Medium.ttf');
+    src: url('https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Poppins-Medium.otf');
     font-weight: 500;
     font-style: normal
 }
@@ -27,7 +27,7 @@
 @font-face {
     font-display: swap;
     font-family: 'Poppins-Semibold';
-    src: url('../font/Poppins/Poppins-SemiBold.ttf');
+    src: url('https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Poppins-SemiBold.otf');
     font-weight: 600;
     font-style: normal
 }
@@ -35,7 +35,7 @@
 @font-face {
     font-display: swap;
     font-family: 'Poppins-Bold';
-    src: url('../font/Poppins/Poppins-Bold.ttf');
+    src: url('https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Poppins-Bold.otf');
     font-weight: 700;
     font-style: normal
 }
@@ -43,7 +43,7 @@
 @font-face {
     font-display: swap;
     font-family: 'Poppins-Extrabold';
-    src: url('../font/Poppins/Poppins-ExtraBold.ttf');
+    src: url('https://images-dom.prod.aws.idp-connect.com/wu-cont/cssstyles/fonts/Poppins-ExtraBold.otf');
     font-weight: 800;
     font-style: normal
 }
@@ -755,3 +755,62 @@
         color: var(--secondary-500)
     }
 }
+
+/*Sign up/login style stop*/
+.segmt.scs_ntfc {
+    width: auto;
+    background-color: #f2fbf7;
+    border: 1px solid #00b26d;
+    padding: 10px 12px;
+    display: flex;
+    margin-top: 0;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: flex-start;
+    width: 500px;
+    margin: 0 auto;
+    position: absolute;
+    top: 200px;
+    z-index: 99999;
+    left: 0;
+    right: 0
+}
+
+.segmt.scs_ntfc p {
+    color: #00b26d;
+    font-family: 'Lato-Regular';
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 20px;
+    padding: 0;
+    margin-left: 10px;
+    width: 93%;
+    text-align: left
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+    .segmt.scs_ntfc {
+        width: 320px
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .gog_one_tap_container {
+        z-index: 999999;
+        position: absolute;
+        right: 0;
+        top: 12%
+    }
+}
+/* fy23 - sprint 6 */
+.scs_ntfc{
+    align-items: center;
+}
+.scs_ntfc.notification--error{
+    border-color: #FC7169;
+    background-color: #f9eceb;
+}
+.scs_ntfc.notification--error p{
+    color: #FC7169;
+}
+/* fy23 - sprint 6 */
