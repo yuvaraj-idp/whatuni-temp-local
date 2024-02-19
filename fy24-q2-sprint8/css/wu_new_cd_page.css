@@ -459,7 +459,8 @@ html{
   }
   .uniinfo-img-wrap img{
     object-fit: cover;
-    height: 100%;
+    width: 465px;
+    height: 253px;
   }
 }
 
