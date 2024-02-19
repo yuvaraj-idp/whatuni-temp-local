@@ -544,7 +544,7 @@ html{
     grid-template-columns: 1fr;
   }
   .cd-body__map{
-    height: 206px;
+    height: 206px !important;
   }
 } 
 

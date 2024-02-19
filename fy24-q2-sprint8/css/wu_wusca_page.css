@@ -146,6 +146,23 @@
     .owl-item .picture-card:hover {
         background-color: var( --neutral-900) !important;
     }
+    .hero_banner--right {
+        height: 400px;
+    }
+    .hero_banner--left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 400px;
+    }
+    .hero_banner--left .breadcrumb-wrap{
+        padding-top: 24px;
+    }
+    .hero_banner--left .breadcrumb-wrap > div{
+        margin-top: 0px;
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
 }
 /* media query for ipad and mobile  */
 @media only screen and (max-width: 1200px) {
@@ -239,6 +256,9 @@
     }
     .picture-card:hover {
         opacity: 1;
+    }
+    div#lastYearRanking{
+        justify-content: space-between;
     }
 
 }
